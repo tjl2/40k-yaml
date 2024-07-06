@@ -111,11 +111,13 @@ units:
     warlord: true
     attachable_to: [BLOODLETTERS]
     enhancements:
-      - name: Incarnated Rage
+      - id: d27ed074-a24c-4d46-97d0-c8a8a28bdc98
+        name: Incarnated Rage
         effect: While the bearer is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability.
         phases: [fight]
         player_turn: your
-      - name: Warp Locus (Aura)
+      - id: f3acfbe7-77ab-414d-8e91-96541f5ec1f0
+        name: Warp Locus (Aura)
         effect: The area of the battlefield within 3" of the bearer is considered to be within your army's Shadow of Chaos.
         phases:
           - command

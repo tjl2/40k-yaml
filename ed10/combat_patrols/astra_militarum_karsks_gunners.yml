@@ -194,14 +194,16 @@ units:
         phases: [command]
         player_turn: your
     enhancements:
-      - name: Command Laurels
+      - id: 7eafaa20-4a14-443f-be01-d8760e8cbbe4
+        name: Command Laurels
         effect: >-
           In your Command phase, if the bearer is on the battlefield, you gain 1CP. In addition,
           each time the bearer issues an Order, it is issued to all friendly
           **ASTRA MILITARUM** units on the battlefield.
         phases: [command]
         player_turn: your
-      - name: Gunnery Officer (Aura)
+      - id: d3b7c8b3-2eb4-474b-9528-4eb9f5b51d1e
+        name: Gunnery Officer (Aura)
         effect: >-
           In your Command phase, if the bearer is on the battlefield, you gain 1CP. In addition,
           while a friendly ARTILLERY unit is within 6" of the bearer's unit:

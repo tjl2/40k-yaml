@@ -126,13 +126,15 @@ units:
     faction_keywords: [WORLD EATERS]
     faction_abilities: [Blessings of Khorne]
     enhancements:
-      - name: Skulls for Khorne
+      - id: 6d0da6e3-ec22-4bd2-9c96-73cd0deb5ca6
+        name: Skulls for Khorne
         effect: >-
           Each time the bearer destroys an enemy unit with a melee attack, roll
           one D6: on a 2+, you gain 1CP.
         phases: [fight]
         player_turn: your
-      - name: Arch Slaughterer
+      - id: 85058c62-6c01-4dd5-a282-e46b8167fd52
+        name: Arch Slaughterer
         effect: Melee weapons equipped by the bearer have the **[PRECISION]** ability.
         phases: [fight]
         player_turn: your

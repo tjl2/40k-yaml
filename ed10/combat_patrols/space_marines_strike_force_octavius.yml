@@ -103,7 +103,8 @@ units:
         player_turn: your
         mission_steps: [in_battle]
     enhancements:
-      - name: Champion Duellist
+      - id: 37fb4aee-2e0a-40c9-be96-4b160bbf3fd6
+        name: Champion Duellist
         effect: >-
           The bearer's melee weapons have the **[PRECISION]** and **[LETHAL HITS]**
           abilities.
@@ -111,7 +112,8 @@ units:
           - shooting
           - fight
         player_turn: your
-      - name: Oathsworn Determination
+      - id: 5593f62f-c3ac-4ca1-9550-3ae5f918f8b7
+        name: Oathsworn Determination
         effect: >-
           Improve the Objective Control characteristic of models in the bearer's
           unit by 1.

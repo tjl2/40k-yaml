@@ -120,14 +120,16 @@ units:
         phases: [command]
         player_turn: your
     enhancements:
-      - name: Omniballistic Data Tether
+      - id: 4544d5c2-a27d-4dab-997b-0100504b35bc
+        name: Omniballistic Data Tether
         effect: >-
           Each time the bearer's unit is selected to shoot, you can re-roll one
           Hit roll and you can re-roll one Wound roll when resolving those
           attacks.
         phases: [shooting]
         player_turn: your
-      - name: Imperative Surge-Wafer
+      - id: 1e476808-25a0-4ef9-ae90-4dd594f4eda3
+        name: Imperative Surge-Wafer
         effect: >-
           Once per battle, when the bearer's unit is selected to shoot, it can
           use this ability. If it does, until the end of the phase, ranged

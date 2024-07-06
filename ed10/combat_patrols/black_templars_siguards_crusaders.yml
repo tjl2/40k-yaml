@@ -106,11 +106,13 @@ units:
       - Leader
     faction_abilities: [Oath of Moment]
     enhancements:
-      - name: Crusaders' Fervour
+      - id: 893ae7a3-bb93-411a-ac6a-26d38699ecb5
+        name: Crusaders' Fervour
         effect: Add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer's unit.
         phases: [fight]
         player_turn: either
-      - name: Righteous Defiance
+      - id: 400c8d09-b19a-492d-9c0d-d71bb306fc92
+        name: Righteous Defiance
         effect: >-
           The bearer has the Feel No Pain 5+ ability. In addition, once per battle, when the bearer's
           unit is selected as the target of an attack, it can use this ability. If it does, until the

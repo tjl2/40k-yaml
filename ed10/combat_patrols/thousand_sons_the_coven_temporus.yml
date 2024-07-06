@@ -129,13 +129,15 @@ units:
       - THOUSAND SONS
     warlord: true
     enhancements:
-      - name: Temporal Sorceries
+      - id: 7e8a8871-1412-4cf5-b6b5-37d9ecd5cc93
+        name: Temporal Sorceries
         effect: >-
           The bearer has the Deep Strike and Lone Operative abilities. In addition, at the end of
           your Command phase, if the bearer is on the battlefield, you gain D3 Cabal points.
         phases: [command]
         player_turn: your
-      - name: Arch-Diabolist
+      - id: 93367424-6aa1-46d0-bd06-5089bde96c90
+        name: Arch-Diabolist
         effect: >-
           The bearer has the Deep Strike and Lone Operative abilities. In addition, both of the
           bearer's Screamer Invocation weapon profiles have the [PISTOL] ability.

@@ -126,7 +126,8 @@ units:
       - Shadow In The Warp
       - Synapse
     enhancements:
-      - name: Psychostatic Veil
+      - id: 9b9520d6-6921-468f-9579-88bebbd1a26a
+        name: Psychostatic Veil
         effect: >-
           The bearer has the _Lone Operative_ ability and a 4+ invulnerable save.
           In addition, each time a melee attack targets the bearer, subtract 1
@@ -135,7 +136,8 @@ units:
           - shooting
           - fight
         player_turn: opponent
-      - name: Secretion Goad
+      - id: 7f735c8d-1d4f-41ae-ab0e-8c730729f901
+        name: Secretion Goad
         effect: >-
           Once per turn, when a friendly _Tyranids_ unit within 6" of the bearer
           is selected to shoot or fight, the bearer can use this ability. If it

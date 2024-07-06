@@ -118,13 +118,15 @@ units:
     core_abilities:
       - Leader
     enhancements:
-      - name: Aspergilla of Tarentum
+      - id: b0b8ae9f-3037-4765-906c-7f697fed732f
+        name: Aspergilla of Tarentum
         effect: Each time an attack targets the bearer's unit, subtract 1 from the Wound roll.
         phases:
           - shooting
           - fight
         player_turn: opponent
-      - name: Overcharged Electropositors
+      - id: 35630471-3b26-4e3d-8372-5b44c5ed4d41
+        name: Overcharged Electropositors
         effect: >-
           Add 6" to the Range characteristic of ranged weapons equipped by models in the
           bearer's unit, and those weapons have the [IGNORES COVER] ability.

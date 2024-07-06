@@ -146,7 +146,8 @@ units:
     core_abilities:
       - Leader
     enhancements:
-      - name: Foresight (Psychic)
+      - id: 4b062745-42c1-428c-a1fb-6c3769b76b3a
+        name: Foresight (Psychic)
         effect: >-
           Once per turn, you can target the bearer's unit with the Fire Overwatch Stratagem for
           0CP. If the bearer's unit is within range of an objective marker you control, hits are
@@ -156,7 +157,8 @@ units:
           - movement
           - charge
         player_turn: your
-      - name: Eldritch Might (Psychic)
+      - id: 2a3bdf1a-7d4d-4de5-a23e-1aa3f0684ea2
+        name: Eldritch Might (Psychic)
         effect: >-
           Each time the bearer makes a Psychic attack, re-roll a Hit roll of 1, re-roll a Wound
           roll of 1 and re-roll a Damage roll of 1.

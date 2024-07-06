@@ -99,11 +99,13 @@ units:
     core_abilities: [Leader]
     faction_abilities: [Reanimation Protocols]
     enhancements:
-      - name: Overriding Control
+      - id: f8e7c855-5d83-4a8b-9592-6f46442eb754
+        name: Overriding Control
         effect: The bearer's unit is eligible to shoot in a turn in which it Fell Back.
         phases: [shooting]
         player_turn: your
-      - name: Protocol of Resonant Focus
+      - id: b447636c-016b-4c34-8b50-16f1cd814360
+        name: Protocol of Resonant Focus
         effect: >-
           In your Command phase, select one enemy unit within 12" of and visible to the bearer. Until
           the end of the turn, each time a friendly NECRONS model makes an attack that targets that

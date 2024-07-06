@@ -122,14 +122,16 @@ units:
       - Leader
     faction_abilities: [Martial Ka'tah]
     enhancements:
-      - name: Auramite Thunderbolt
+      - id: e71b2f07-4a32-4412-bb23-d2fec4420da3
+        name: Auramite Thunderbolt
         effect: >-
           You can re-roll Advance and Charge rolls made for the bearer's unit.
         phases:
           - movement
           - charge
         player_turn: your
-      - name: Blade of the Vaults
+      - id: ed83ddb6-8c1c-49b6-85fe-0cf4bac5c98b
+        name: Blade of the Vaults
         effect: >-
           Each time the bearer makes an attack, on a Critical Wound, improve the Armour
           Penetration characteristic of that attack by 1.

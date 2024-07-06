@@ -116,11 +116,13 @@ units:
     core_abilities:
       - Leader
     enhancements:
-      - name: Baalite Bladesman
+      - id: abf79757-3f6e-4f56-a270-0ebed35291c8
+        name: Baalite Bladesman
         effect: Improve the Armour Penetration characteristic of melee weapons equipped by models in the bearer's unit by 1.
         phases: [fight]
         player_turn: your
-      - name: Radiant Wrath (Psychic)
+      - id: 9a9f5467-e115-4a9a-b91c-124957ee05ea
+        name: Radiant Wrath (Psychic)
         effect: Both of the bearer's Smite weapon profiles have the [ANTI-MONSTER 5+] and [ANTI-VEHICLE 5+] abilities.
         phases: [shooting]
         player_turn: your

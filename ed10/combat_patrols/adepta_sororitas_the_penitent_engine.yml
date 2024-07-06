@@ -146,7 +146,8 @@ units:
           - fight
         player_turn: your
     enhancements:
-      - name: Armour of Faith
+      - id: f05592d4-3259-4d0f-bda3-ade1e65cdb4b
+        name: Armour of Faith
         effect: >-
           The bearer has the Feel No Pain 4+ ability. In addition, while the
           bearer is leading a unit, other models in that unit have the Feel No
@@ -155,7 +156,8 @@ units:
           - shooting
           - fight
         player_turn: opponent
-      - name: Saintly Relic
+      - id: b5eabc6e-5b02-40e5-8c3c-e610833625fb
+        name: Saintly Relic
         effect: >-
           In your Command phase, if the bearer is not Battle-shocked and is
           within range of an objective marker you control, you gain one Miracle
