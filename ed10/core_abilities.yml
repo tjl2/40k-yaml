@@ -1,0 +1,98 @@
+- name: Firing Deck
+  effect: >-
+    **Firing Deck 'x'**: Each time this Transport shoots, select one weapon from
+    up to _'x'_ models embarked within it; this **Transport** counts as being
+    equipped with those weapons as well.
+  phases: [shooting]
+  player_turn: your
+
+- name: Lone Operative
+  effect: >-
+    Unless part of an Attached unit, this unit can only be selected as the
+    target of a ranged attack if the attacking model is within 12".
+  phases: [shooting]
+  player_turn: opponent
+
+- name: Stealth
+  effect: >-
+    If every model in a unit has this ability, then each time a ranged attack is
+    made against it, subtract 1 from that attack's Hit roll.
+  phases: [shooting]
+  player_turn: opponent
+
+- name: Feel No Pain
+  effect: >-
+    **Feel No Pain x+**: Each time this model would lose a wound, roll one D6: if
+    the result equals or exceeds _'x'_ , that wound is not lost.
+  phases: [shooting, fight]
+  player_turn: opponent
+
+- name: Deadly Demise
+  effect: >-
+    **Deadly Demise x**: When this model is destroyed, roll one D6. On a 6, each
+    unit within 6" suffers 'x' mortal wounds.
+  phases: [shooting, fight]
+  player_turn: opponent
+
+- name: Fights First
+  effect: >-
+    Units with this ability that are eligible to fight do so in the Fights First
+    step, provided every model in the unit has this ability.
+  phases: [fight]
+  player_turn: either
+
+- name: Deep Strike
+  effect: >-
+    * Unit can be set up in Reserves instead of on
+    the battlefield.
+    * Unit can be set up in your Reinforcements step, more than 9"
+    horizontally away from all enemy models.
+  phases: [movement]
+  player_turn: your
+  mission_steps: [pre_battle, in_battle]
+
+- name: Scouts
+  effect: >-
+    * **Scouts x"**: Unit can make a Normal move of up to _x"_ before the first
+    turn begins.
+    * If embarked in a **Dedicated Transport**, that **Dedicated Transport** can
+    make this move instead.
+    * Must end this move more than 9" horizontally away from all enemy models.
+  phases: []
+  player_turn: your
+  mission_steps: [pre_battle]
+
+- name: Infiltrators
+  effect: >-
+    During deployment, if every model in a unit has this ability, then when you
+    set it up, it can be set up anywhere on the battlefield that is more than 9"
+    horizontally away from the enemy deployment zone and all enemy models.
+  phases: []
+  player_turn: your
+  mission_steps: [pre_battle]
+
+- name: Leader
+  effect: >-
+    * Before the battle, Character units with the Leader ability can be attached
+    to one of their Bodyguard units to form an Attached unit.
+    * Attached units can only contain one Leader.
+    * Attacks cannot be allocated to Character models in Attached units.
+  phases: [shooting, fight]
+  player_turn: opponent
+  mission_steps: [pre_battle]
+
+- name: Hover
+  effect: >-
+    Some Aircraft models have **'Hover'** listed in their abilities. When you
+    are instructed to Declare Battle Formations, before doing anything else, you
+    must first declare which models from your army with this ability will be in
+    Hover mode.
+    
+    If a model is in Hover mode, then until the end of the battle, its Move
+    characteristic is changed to 20", it loses the **Aircraft** keyword and it
+    loses all associated rules for being an **Aircraft** model. Models in Hover
+    mode do not start the battle in Reserves, but you can choose to place them
+    into Strategic Reserves following the normal rules if you wish.
+  phases: [movement]
+  player_turn: your
+  mission_steps: [pre_battle, in_battle]
