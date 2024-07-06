@@ -1,0 +1,352 @@
+name: "Tyranids: The Vardenghast Swarm"
+id: 587c6cb2-da18-44e8-9719-dfef5483926b
+abilities:
+  - name: Synapse
+    description: >-
+      Some Tyranids serve as synaptic conduits or nodal relays through which a
+      portion of the Hive Mind's iron will flows, overriding the natural
+      instincts of the swarm to direct the teeming warrior-beasts to function as
+      a single, gestalt organism on the battlefield.
+    usage: >-
+      While a Tyranids unit from your army is within 6" of one or more friendly
+      Synapse models, that Tyranids unit is said to be within Synapse Range of
+      those models and of your army.
+    effect: >-
+      Each time a Tyranids unit from your army takes a Battle-shock test, if it
+      is within Synapse Range of your army, take that test on 3D6 instead of
+      2D6.
+    phases:
+      - command
+      - movement
+      - shooting
+      - charge
+      - fight
+    player_turn: either
+  - name: Shadow In The Warp
+    description: >-
+      Tyranids flood the battlefield with the psychic signature of the hive
+      fleet, an icy, alien dread that gnaws at the minds of their prey and
+      smothers even the most stalwart courage. When faced with such unfathomable
+      horror, many are driven insane or suffer catastrophic neural damage.
+    usage: >-
+      Once per battle, in either player's Command phase, if one or more units
+      from your army with this ability are on the battlefield, you can unleash
+      the Shadow in the Warp.
+    effect: >-
+      Each enemy unit on the battlefield must take a Battle-shock test.
+    phases: [command]
+    player_turn: either
+stratagems:
+  - name: Hyper Reactive
+    category: Battle Tactic
+    cp: 1
+    when: >-
+      Your opponent's Shooting phase or the Fight phase, just after an enemy
+      unit has selected its targets.
+    target: >-
+      One _Tyranids Infantry_ unit from your army that was selected as the
+      target of one or more of the attacking unit's attacks.
+    effect: >-
+      Until the end of the phase, each time an attack targets your unit,
+      subtract 1 from the Hit roll.
+    phases: [shooting, fight]
+    player_turn: opponent
+  - name: Voracious Assualt
+    category: Battle Tactic
+    cp: 1
+    when: Your Shooting phase or the Fight phase.
+    target: >-
+      One _Tyranids_ unit from your army that has not been selected to shoot
+      or fight this phase.
+    effect: >-
+      Until the end of the phase, each time a model in your unit makes an
+      attack that targets the closest eligible target, you can re-roll the Hit
+      roll.
+    phases: [shooting, fight]
+    player_turn: your
+  - name: Teeming Broods
+    category: Strategic Ploy
+    cp: 1
+    when: The Reinforcements step of your Movement phase.
+    target: >-
+      One _Termagants_ unit from your army. You can use this Stratagem on that
+      unit even if it is destroyed.
+    effect: >-
+      If your unit is not destroyed, return up to D6 destroyed models to it.
+      Otherwise, add a new unit to your army identical to your destroyed unit,
+      in Strategic Reserves, containing 2D6 models.
+    phases: [movement]
+    player_turn: your
+
+units:
+  - name: Terror of Vardenghast
+    id: 81308927-e851-4334-b509-75fd2ab79876
+    warlord: true
+    loadout_description: "This model is equipped with: Prime talons."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - FLY
+          - GREAT DEVOURER
+          - SYNAPSE
+          - VANGUARD INVADER
+          - WINGED TYRANID PRIME
+          - TERROR OF VARDENGHAST
+    melee_weapons:
+      - name: Prime talons
+        range: Melee
+        attacks: 6
+        ws: 2+
+        strength: 6
+        ap: 1
+        damage: 2
+    abilities:
+      - name: Death Blow
+        effect: >-
+          If this model is destroyed by a melee attack, if it has not fought
+          this phase, roll one D6: on a 4+, do not remove it from play. The
+          destroyed model can fight after the attacking unit has finished
+          making its attacks, and is then removed from play.
+        phases: [fight]
+        player_turn: either
+    stats:
+      - movement: 12
+        toughness: 5
+        save: 4+
+        wounds: 6
+        leadership: 7+
+        objective_control: 1
+    faction_keywords:
+      - TYRANIDS
+    core_abilities:
+      - Deep Strike
+    faction_abilities:
+      - Shadow In The Warp
+      - Synapse
+    enhancements:
+      - name: Psychostatic Veil
+        effect: >-
+          The bearer has the _Lone Operative_ ability and a 4+ invulnerable save.
+          In addition, each time a melee attack targets the bearer, subtract 1
+          from the Hit roll.
+        phases:
+          - shooting
+          - fight
+        player_turn: opponent
+      - name: Secretion Goad
+        effect: >-
+          Once per turn, when a friendly _Tyranids_ unit within 6" of the bearer
+          is selected to shoot or fight, the bearer can use this ability. If it
+          does, until the end of the phase, improve the Armour Penetration
+          characteristic of weapons equipped by models in that friendly unit by
+          1.
+        phases:
+          - shooting
+          - fight
+        player_turn: your
+
+  - name: Psychophage
+    id: aa280d52-64ba-4a63-adca-cbea8f748c1d
+    loadout_description: "This model is equipped with: psychoclastic torrent; talons and betentacled maw."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - MONSTER
+          - GREAT DEVOURER
+          - HARVESTER
+          - PSYCHOPHAGE
+    ranged_weapons:
+      - name: Psychoclastic torrent
+        keywords:
+          - IGNORES COVER
+          - TORRENT
+        range: 12
+        attacks: D6
+        bs: N/A
+        strength: 6
+        ap: 1
+        damage: 1
+    melee_weapons:
+      - name: Talons and betentacled maw
+        keywords:
+          - ANTI-PSYKER 4+
+          - DEVASTATING WOUNDS
+        range: Melee
+        attacks: D6+1
+        ws: 3+
+        strength: 6
+        ap: 1
+        damage: 2
+    abilities:
+      - name: Feeding Frenzy
+        effect: >-
+          Each time this model makes a melee attack that targets a unit that is
+          below its Starting Strength, add 1 to the Hit roll. If that target is
+          also Below Half-strength, add 1 to the Wound roll as well.
+        phases: [fight]
+        player_turn: your
+    stats:
+      - movement: 8
+        toughness: 9
+        save: 3+
+        wounds: 10
+        leadership: 8+
+        objective_control: 3
+    faction_keywords:
+      - TYRANIDS
+    core_abilities:
+      - Deadly Demise 1
+      - Feel No Pain 5+
+    faction_abilities: [Synapse]
+
+  - name: Termagants
+    id: 52b4fe96-1222-46d5-8e2a-21a2cfc2a868
+    model_count: 20
+    loadout_description: "Every model is equipped with: fleshborer; chitinous claws and teeth."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - GREAT DEVOURER
+          - ENDLESS MULTITUDE
+          - TERMAGANTS
+    ranged_weapons:
+      - name: Fleshborer
+        keywords: [ASSAULT]
+        range: 18
+        attacks: 1
+        bs: 4+
+        strength: 5
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Chitinous claws and teeth
+        range: Melee
+        attacks: 1
+        ws: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+    abilities:
+      - name: Patrol Squads
+        effect: >-
+          At the start of the Declare Battle Formations step, before any units
+          have been set up, this unit can be split into two units, each
+          containing ten models.
+        phases: [command]
+        player_turn: your
+      - name: Skulking Horrors
+        effect: >-
+          Once per turn, when an enemy unit ends a Normal, Advance or Fall Back
+          move within 9" of this unit, if this unit is not within Engagement
+          Range of one or more enemy units, it can make a Normal move of up to D6".
+        phases:
+          - movement
+          - charge
+        player_turn: opponent
+    stats:
+      - movement: 6
+        toughness: 3
+        save: 5+
+        wounds: 1
+        leadership: 8+
+        objective_control: 2
+    faction_keywords:
+      - TYRANIDS
+    faction_abilities: [Synapse]
+
+  - name: Barbgaunts
+    id: 49b5e415-5142-4529-8c50-89474b80cfa1
+    model_count: 5
+    loadout_description: "Every model is equipped with: barblauncher; chitinous claws and teeth."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - GREAT DEVOURER
+          - BARBGAUNTS
+    ranged_weapons:
+      - name: Barblauncher
+        keywords:
+          - BLAST
+          - HEAVY
+        range: 24
+        attacks: D6
+        bs: 4+
+        strength: 5
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Chitinous claws and teeth
+        range: Melee
+        attacks: 1
+        ws: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+    abilities:
+      - name: Disruption Bombardment
+        effect: >-
+          In your Shooting phase, after this unit has shot, select one enemy
+          INFANTRY unit hit by one or more of those attacks. Until the end of
+          your opponent's next turn, that enemy unit is disrupted. While a unit
+          is disrupted, subtract 2 from its Move characteristic and subtract 2
+          from Advance and Charge rolls made for it.
+        phases: [shooting]
+        player_turn: your
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 4+
+        wounds: 2
+        leadership: 8+
+        objective_control: 1
+    faction_keywords:
+      - TYRANIDS
+    faction_abilities: [Synapse]
+
+  - name: Von Ryan's Leapers
+    id: 3b3f5d4a-8753-4057-bfc7-f4168b64af8a
+    model_count: 3
+    loadout_description: "Every model is equipped with: Leaper's talons."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - GREAT DEVOURER
+          - VANGUARD INVADER
+          - VON RYAN'S LEAPERS
+    melee_weapons:
+      - name: Leaper's talons
+        range: Melee
+        attacks: 6
+        ws: 3+
+        strength: 5
+        ap: 1
+        damage: 1
+    abilities:
+      - name: Pouncing Leap
+        effect: >-
+          You can target this unit with the Heroic Intervention Stratagem for
+          0CP, and can do so even if you have already used that Stratagem on a
+          different unit this phase.
+        phases: [fight]
+        player_turn: your
+    stats:
+      - movement: 10
+        toughness: 5
+        save: 4+
+        wounds: 3
+        leadership: 8+
+        objective_control: 1
+        invulnerable_save: 6+
+    faction_keywords:
+      - TYRANIDS
+    core_abilities:
+      - Fights First
+      - Infiltrators
+      - Stealth
+    faction_abilities: [Synapse]

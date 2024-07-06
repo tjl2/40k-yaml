@@ -1,0 +1,380 @@
+name: "Adeptus Mechanicus: Maniple Verask-Alpha"
+id: 97d77e37-a3b2-4adb-829a-8b63fd6c9f3d
+abilities:
+  - name: Doctrina Imperatives
+    effect: >-
+      At the start of the battle round, you can select one of the Doctrina
+      Imperatives below. Until the end of the battle round, that Doctrina
+      Imperative is active for your army, and all units from your army that
+      have the Doctrina Imperatives ability gain the relevant abilities shown below.
+
+      ### Protector Imperative
+
+      * Ranged weapons equipped by models in this unit have the [HEAVY] ability.
+
+      * Each time a ranged attack targets this unit, if this unit is within your
+      deployment zone, worsen the Armour Penetration characteristic of that attack by 1.
+
+      ### Conqueror Imperative
+
+      * Ranged weapons equipped by models in this unit have the [ASSAULT] ability.
+
+      * Each time a model in this unit makes a ranged attack, if the target of that
+      attack is within your opponent's deployment zone, improve the Armour Penetration
+      characteristic of that attack by 1.
+    phases:
+      - command
+      - shooting
+    player_turn: either
+stratagems:
+  - name: Retribution Codes
+    category: Strategic Ploy
+    cp: 1
+    when: Any phase
+    target: >-
+      One TECH-PRIEST model from your army that was just destroyed by an attack
+      made by an enemy model. You can use this Stratagem on that model even though
+      it was just destroyed.
+    effect: >-
+      Until the end of the battle, each time an ADEPTUS MECHANICUS model from your
+      army makes an attack that targets that enemy model's unit, re-roll a Hit roll of 1.
+    phases:
+      - shooting
+      - fight
+    player_turn: your
+  - name: Reactive Field-Shroud
+    category: Battle Tactic
+    cp: 1
+    when: >-
+      Your opponent's Shooting phase or the Fight phase, just after an enemy unit has
+      selected its targets.
+    target: >-
+      One TECH-PRIEST or SKITARII unit from your army that was selected as the target of
+      one or more of the attacking unit's attacks.
+    effect: Until the end of the phase, models in your unit have a 4+ invulnerable save.
+    phases:
+      - shooting
+      - fight
+    player_turn: opponent
+  - name: Retrogradial Targeting
+    category: Strategic Ploy
+    cp: 2
+    when: Your Movement phase, just after a TECH-PRIEST unit from your army ends a Fall Back move.
+    target: That TECH-PRIEST unit.
+    effect: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back.
+    phases: [movement]
+    player_turn: your
+
+units:
+  - name: Enginseer Verask
+    id: 421a4d00-2b15-4c8e-8fa1-0aaef2d3bbbe
+    warlord: true
+    loadout_description: "This model is equipped with: Mechanicus pistol; Omnissian axe; servo-arm."
+    attachable_to: [SKITARII RANGERS]
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - TECH-PRIEST
+          - IMPERIUM
+          - ENGINSEER
+          - VERASK
+    ranged_weapons:
+      - name: Mechanicus pistol
+        keywords:
+          - DEVASTATING WOUNDS
+          - PISTOL
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 6
+        ap: 1
+        damage: 1
+    melee_weapons:
+      - name: Omnissian axe
+        attacks: 3
+        ws: 4+
+        strength: 6
+        ap: 2
+        damage: 2
+      - name: Servo-arm
+        keywords: [EXTRA ATTACKS]
+        attacks: 1
+        ws: 4+
+        strength: 6
+        ap: 2
+        damage: 2
+    abilities:
+      - name: Enginseer
+        effect: >-
+          While this model is within 3" of one or more friendly ADEPTUS MECHANICUS
+          VEHICLE units, unless it is leading a unit, this model has the Lone Operative ability.
+        phases: [shooting]
+        player_turn: opponent
+      - name: Omnissiah's Blessing
+        effect: >-
+          In your Command phase, select one friendly ADEPTUS MECHANICUS model within
+          3" of this model. That model regains up to D3 lost wounds. Each model can only
+          be selected for this ability once per Command phase.
+        phases: [command]
+        player_turn: your
+    enhancements:
+      - name: Omniballistic Data Tether
+        effect: >-
+          Each time the bearer's unit is selected to shoot, you can re-roll one
+          Hit roll and you can re-roll one Wound roll when resolving those
+          attacks.
+        phases: [shooting]
+        player_turn: your
+      - name: Imperative Surge-Wafer
+        effect: >-
+          Once per battle, when the bearer's unit is selected to shoot, it can
+          use this ability. If it does, until the end of the phase, ranged
+          weapons equipped by models in the bearer's unit have the [PRECISION]
+          ability.
+        phases: [shooting]
+        player_turn: your
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 3
+        leadership: 7+
+        objective_control: 1
+        invulnerable_save: 5+
+    faction_keywords:
+      - ADEPTUS MECHANICUS
+    core_abilities:
+      - Leader
+    faction_abilities: []
+
+  - name: Skitarii Rangers
+    id: 98b70dd7-ecae-46ee-8a2c-0bda289855fd
+    model_count: 10
+    loadout_description: >-
+      * 1 Skitarii Ranger Alpha is equipped with: Mechanicus pistol; Alpha combat weapon.
+      * 6 Skitarii Rangers are equipped with: galvanic rifle; close combat weapon.
+      * 1 Skitarii Ranger is equipped with: galvanic rifle; close combat weapon; enhanced data-tether.
+      * 1 Skitarii Ranger is equipped with: arc rifle; close combat weapon.
+      * 1 Skitarii Ranger is equipped with: transuranic arquebus; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - IMPERIUM
+          - SKITARII
+          - RANGERS
+    ranged_weapons:
+      - name: Mechanicus pistol
+        keywords:
+          - DEVASTATING WOUNDS
+          - PISTOL
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 6
+        ap: 1
+        damage: 1
+      - name: Arc rifle
+        keywords:
+          - ANTI-VEHICLE 4+
+          - DEVASTATING WOUNDS
+          - RAPID FIRE 1
+        range: 30
+        attacks: 1
+        bs: 4+
+        strength: 8
+        ap: 1
+        damage: D3
+      - name: Galvanic rifle
+        range: 30
+        attacks: 2
+        bs: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Transuranic arquebus
+        keywords:
+          - HEAVY
+          - PRECISION
+        range: 36
+        attacks: 1
+        bs: 4+
+        strength: 7
+        ap: 2
+        damage: D3
+    melee_weapons:
+      - name: Alpha combat weapon
+        attacks: 2
+        ws: 4+
+        strength: 5
+        ap: 1
+        damage: 1
+      - name: Close combat weapon
+        attacks: 1
+        ws: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+    stats:
+      - movement: 6
+        toughness: 3
+        save: 5+
+        wounds: 1
+        leadership: 7+
+        objective_control: 2
+        invulnerable_save: 6+
+    faction_keywords:
+      - ADEPTUS MECHANICUS
+    core_abilities:
+      - Scouts 6"
+    faction_abilities: [Doctrina Imperatives]
+
+  - name: Kataphron Destroyers
+    id: d4b4ab73-1d71-4939-a8ef-7d05df25a1ca
+    model_count: 3
+    loadout_description: >-
+      * 1 Kataphron Destroyer is equipped with: heavy grav-cannon; phosphor blaster; close combat weapon.
+      * 2 Kataphron Destroyers are equipped with: Kataphron plasma culverin; cognis flamer; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - IMPERIUM
+          - KATAPHRON
+          - DESTROYERS
+    ranged_weapons:
+      - name: Cognis flamer
+        keywords:
+          - IGNORES COVER
+          - TORRENT
+        range: 12
+        attacks: D6
+        bs: N/A
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Heavy grav-cannon
+        keywords: [ANTI-VEHICLE 2+]
+        range: 30
+        attacks: 4
+        bs: 4+
+        strength: 6
+        ap: 1
+        damage: 2
+      - name: Kataphron plasma culverin - standard
+        range: 36
+        attacks: 4
+        bs: 4+
+        strength: 7
+        ap: 2
+        damage: 1
+      - name: Kataphron plasma culverin - supercharge
+        keywords: [HAZARDOUS]
+        range: 36
+        attacks: 4
+        bs: 4+
+        strength: 8
+        ap: 3
+        damage: 2
+      - name: Phosphor blaster
+        keywords:
+          - IGNORES COVER
+          - RAPID FIRE 1
+        range: 24
+        attacks: 1
+        bs: 4+
+        strength: 5
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 2
+        ws: 4+
+        strength: 5
+        ap: 0
+        damage: 1
+    stats:
+      - movement: 5
+        toughness: 6
+        save: 3+
+        wounds: 3
+        leadership: 7+
+        objective_control: 1
+        invulnerable_save: 6+
+    faction_keywords:
+      - ADEPTUS MECHANICUS
+    core_abilities:
+      - Deadly Demise D3
+    faction_abilities: []
+
+  - name: Onager Dunecrawler
+    id: 31ffcbf9-321f-4c52-bdfe-edb853c5abfe
+    model_count: 1
+    loadout_description: >-
+      This model is equipped with: Daedalus missile launcher; cognis heavy stubber; Icarus array;
+      Dunecrawler legs; broad spectrum data-tether.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - VEHICLE
+          - WALKER
+          - IMPERIUM
+          - SKITARII
+          - ONAGER DUNECRAWLER
+    ranged_weapons:
+      - name: Cognis heavy stubber
+        keywords:
+          - RAPID FIRE 3
+          - SUSTAINED HITS 1
+        range: 36
+        attacks: 3
+        bs: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Daedalus missile launcher
+        keywords: [ANTI-FLY 2+]
+        range: 48
+        attacks: 1
+        bs: 4+
+        strength: 10
+        ap: 2
+        damage: D6+1
+      - name: Icarus array
+        keywords:
+          - ANTI-FLY 4+
+          - TWIN-LINKED
+        range: 48
+        attacks: 6
+        bs: 4+
+        strength: 8
+        ap: 1
+        damage: 2
+    melee_weapons:
+      - name: Dunecrawler legs
+        attacks: 3
+        ws: 4+
+        strength: 6
+        ap: 0
+        damage: 1
+    wargear_abilities:
+      - name: Damaged
+        effect: >-
+          While this model has 1-4 wounds remaining, each time this model makes an attack,
+          subtract 1 from the Hit roll.
+        phases: [shooting]
+        player_turn: your
+    stats:
+      - movement: 8
+        toughness: 10
+        save: 2+
+        wounds: 11
+        leadership: 7+
+        objective_control: 3
+    faction_keywords:
+      - ADEPTUS MECHANICUS
+    core_abilities: []
+    faction_abilities: [Doctrina Imperatives]

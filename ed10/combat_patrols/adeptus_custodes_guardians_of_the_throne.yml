@@ -1,0 +1,351 @@
+name: "Adeptus Custodes: Guardians of the Throne"
+id: a3d41f12-cd9a-459d-9b4f-bef03f4c08aa
+abilities:
+  - name: Martial Ka'tah
+    description: >-
+      Created deep in the Emperor's Palace using esoteric gene-alchemies and other,
+      even more mysterious processes, the warriors of the Adeptus Custodes are the
+      Emperor's personal bodyguards. Known as the Ten Thousand, they are the most
+      elite warriors in the entire Imperium, and are armed and armoured to match. In
+      battle, they deploy highly flexible fighting forces, from peerless infantry and
+      lightning-fast jetbikes to indomitable combat walkers and line-shattering battle
+      tanks. It is in melee combat that they truly excel, however, each warrior having
+      mastered the nuanced and subtle fighting stances designed to dominate the
+      Custodians' many enemies.
+    usage: >-
+      At the start of the Fight phase, select one Ka'tah
+      Stance from the list below to be active for your army until the end of the
+      phase. While a Ka'tah Stance is active for your army, each unit from your army
+      with this ability gains the relevant ability.
+    effect: >-
+      DACATARAI STANCE
+      This aggressive fighting style has been adapted for the
+      Custodes to deal with hordes of foes who vastly outnumber them. Melee
+      weapons equipped by models in this unit have the _[SUSTAINED HITS 1]_
+      ability.
+
+      RENDAX STANCE
+      Masters of Rendax are superlative monster and war-machine hunters.
+      Melee weapons equipped by models in this unit have the _[LETHAL HITS]_ ability.
+    phases: [fight]
+    player_turn: your
+stratagems:
+  - name: Wrath of the Host
+    category: Battle Tactic
+    cp: 1
+    when: Any phase
+    target: >-
+      One SHIELD-CAPTAIN model from your army that was just destroyed
+      by an attack made by an enemy model. You can use this Stratagem on that
+      model even though it was just destroyed.
+    effect: >-
+      Until the end of the battle, ranged weapons equipped by _ADEPTUS
+      CUSTODES_ models from your army have the _[SUSTAINED HITS 1]_ ability
+      while targeting that enemy model's unit.
+    phases: [shooting]
+    player_turn: your
+  - name: Gilded Magnificence
+    category: Strategic Ploy
+    cp: 2
+    when: Your command phase
+    target: One ADEPTUS CUSTODES unit from your army.
+    effect: >-
+      Until the start of your next Command phase, add 1 to the Objective
+      Control characteristic of models in your unit.
+    phases: [command]
+    player_turn: your
+  - name: Tireless Pursuit
+    category: Strategic Ploy
+    cp: 1
+    when: >-
+      Your opponent's Movement phase, just after an enemy unit ends a Fall
+      Back move.
+    target: >-
+      One ADEPTUS CUSTODES INFANTRY unit from your army that was within
+      Engagement Range of that enemy unit at the start of the phase.
+    effect: >-
+      If your unit is not within Engagement Range of one or more enemy
+      models, it can make a Normal move.
+    phases: [movement]
+    player_turn: opponent
+
+units:
+  - name: Shield-Captain Tyvan
+    id: d025aba3-8663-42c6-b113-4a22aa7f7bc6
+    warlord: true
+    loadout_description: "This model is equipped with: sentinel blade; praesidium shield."
+    attachable_to: [CUSTODIAN GUARD]
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - IMPERIUM
+          - SHIELD-CAPTAIN
+          - TYVAN
+    ranged_weapons:
+      - name: Sentinel blade
+        keywords:
+          - ASSAULT
+          - PISTOL
+        range: 12
+        attacks: 2
+        bs: 2+
+        strength: 4
+        ap: 1
+        damage: 2
+    melee_weapons:
+      - name: Sentinel blade
+        attacks: 7
+        ws: 2+
+        strength: 6
+        ap: 2
+        damage: 1
+    wargear_abilities:
+      - name: Praesidium Shield
+        effect: Add 1 to the bearer's Wounds characteristic.
+        phases:
+          - shooting
+          - fight
+        player_turn: opponent
+    stats:
+      - movement: 6
+        toughness: 6
+        save: 2+
+        wounds: 6
+        leadership: 6+
+        objective_control: 2
+        invulnerable_save: 4+
+    faction_keywords:
+      - ADEPTUS CUSTODES
+    core_abilities:
+      - Leader
+    faction_abilities: [Martial Ka'tah]
+    enhancements:
+      - name: Auramite Thunderbolt
+        effect: >-
+          You can re-roll Advance and Charge rolls made for the bearer's unit.
+        phases:
+          - movement
+          - charge
+        player_turn: your
+      - name: Blade of the Vaults
+        effect: >-
+          Each time the bearer makes an attack, on a Critical Wound, improve the Armour
+          Penetration characteristic of that attack by 1.
+        phases:
+          - shooting
+          - fight
+        player_turn: your
+
+  - name: Vertus Praetors
+    id: 10ce02b4-8d62-4e87-86b0-70e3297eae93
+    model_count: 3
+    loadout_description: "Every model is equipped with: Vertus hurricane bolter; interceptor lance."
+    alternative_to: Custodian Guard
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - MOUNTED
+          - FLY
+          - IMPERIUM
+          - VERTUS PRAETORS
+    ranged_weapons:
+      - name: Vertus hurricane bolter
+        keywords:
+          - RAPID FIRE 3
+          - TWIN-LINKED
+        range: 18
+        attacks: 3
+        bs: 2+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Interceptor lance
+        keywords: [LANCE]
+        attacks: 5
+        ws: 2+
+        strength: 7
+        ap: 2
+        damage: 2
+    stats:
+      - movement: 12
+        toughness: 6
+        save: 2+
+        wounds: 4
+        leadership: 6+
+        objective_control: 2
+        invulnerable_save: 4+
+    faction_keywords:
+      - ADEPTUS CUSTODES
+    core_abilities:
+      - Deep Strike
+    faction_abilities: [Martial Ka'tah]
+
+  - name: Custodian Guard
+    id: 4fff5393-5e7a-4c7c-b236-918c26624541
+    model_count: 4
+    loadout_description: >-
+      * 2 models are equipped with: guardian spear.
+      * 1 model is equipped with: misericordia, praesidium shield; vexilla.
+      * 1 model is equipped with: sentinel blade; praesidium shield.
+    alternative_to: Vertus Praetors
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - IMPERIUM
+          - CUSTODIAN GUARD
+    ranged_weapons:
+      - name: Guardian spear
+        keywords: [ASSAULT]
+        range: 24
+        attacks: 2
+        bs: 2+
+        strength: 4
+        ap: 1
+        damage: 2
+      - name: Sentinel blade
+        keywords:
+          - ASSAULT
+          - PISTOL
+        range: 12
+        attacks: 2
+        bs: 2+
+        strength: 4
+        ap: 1
+        damage: 2
+    melee_weapons:
+      - name: Guardian spear
+        attacks: 5
+        ws: 2+
+        strength: 7
+        ap: 2
+        damage: 2
+      - name: Misericordia
+        attacks: 5
+        ws: 2+
+        strength: 5
+        ap: 2
+        damage: 1
+      - name: Sentinel blade
+        attacks: 5
+        ws: 2+
+        strength: 6
+        ap: 2
+        damage: 1
+    wargear_abilities:
+      - name: Praesidium Shield
+        effect: Add 1 to the bearer's Wounds characteristic.
+        phases:
+          - shooting
+          - fight
+        player_turn: opponent
+    abilities:
+      - name: Stand Vigil
+        effect: >-
+          Each time a model in this unit makes an attack, re-roll a Wound roll
+          of 1. While this unit is within range of an objective marker you
+          control, you can re-roll the Wound roll instead.
+        phases:
+          - shooting
+          - fight
+        player_turn: your
+    stats:
+      - movement: 6
+        toughness: 6
+        save: 2+
+        wounds: 3
+        leadership: 6+
+        objective_control: 2
+        invulnerable_save: 4+
+    faction_keywords:
+      - ADEPTUS CUSTODES
+    core_abilities:
+      - Deep Strike
+    faction_abilities: [Martial Ka'tah]
+
+  - name: Prosecutors
+    id: 99bdca56-643e-467b-88ec-3bf0185ac54a
+    model_count: 5
+    loadout_description: "Every model is equipped with: boltgun; close combat weapon."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - IMPERIUM
+          - ANATHEMA PSYKANA
+          - PROSECUTORS
+    ranged_weapons:
+      - name: Boltgun
+        keywords: [RAPID FIRE 1]
+        range: 24
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 2
+        ws: 3+
+        strength: 3
+        ap: 0
+        damage: 1
+    abilities:
+      - name: Purity of Execution
+        effect: >-
+          Each time a model in this unit makes a ranged attack that targets a
+          PSYKER unit, that attack has the _[PRECISION]_ and _[DEVASTATING WOUNDS]_
+          abilities.
+        phases: [shooting]
+        player_turn: your
+    stats:
+      - movement: 6
+        toughness: 3
+        save: 3+
+        wounds: 1
+        leadership: 6+
+        objective_control: 2
+    faction_keywords:
+      - ADEPTUS CUSTODES
+
+  - name: Vigilators
+    id: 821990d2-bc9d-4fa7-9b7d-46dfb6e95c62
+    model_count: 5
+    loadout_description: "Every model is equipped with: executioner greatblade."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - IMPERIUM
+          - ANATHEMA PSYKANA
+          - VIGILATORS
+    melee_weapons:
+      - name: Executioner greatblade
+        keywords:
+          - ANTI-PSYKER 4+
+          - DEVASTATING WOUNDS
+        range: Melee
+        attacks: 2
+        ws: 3+
+        strength: 5
+        ap: 2
+        damage: 2
+    abilities:
+      - name: Deft Parry
+        effect: Each time a melee attack targets this unit, subtract 1 from the Hit roll.
+        phases: [fight]
+        player_turn: opponent
+    stats:
+      - movement: 6
+        toughness: 3
+        save: 3+
+        wounds: 1
+        leadership: 6+
+        objective_control: 1
+    faction_keywords:
+      - ADEPTUS CUSTODES

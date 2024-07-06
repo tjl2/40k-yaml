@@ -1,0 +1,395 @@
+name: "Adeptus Mechanicus: Purge Corps Deltic-9"
+id: 8a5f8b9e-d7d2-4f3c-a9d5-1c8f5e6b0c7a
+abilities:
+  - name: Doctrina Imperatives
+    effect: >-
+      At the start of the battle round, you can select one of the Doctrina
+      Imperatives below. Until the end of the battle round, that Doctrina
+      Imperative is active for your army, and all units from your army that
+      have the Doctrina Imperatives ability gain the relevant abilities shown below.
+
+      ### Protector Imperative
+
+      * Ranged weapons equipped by models in this unit have the [HEAVY] ability.
+
+      * Each time a ranged attack targets this unit, if this unit is within your
+      deployment zone, worsen the Armour Penetration characteristic of that attack by 1.
+
+      ### Conqueror Imperative
+
+      * Ranged weapons equipped by models in this unit have the [ASSAULT] ability.
+
+      * Each time a model in this unit makes a ranged attack, if the target of that
+      attack is within your opponent's deployment zone, improve the Armour Penetration
+      characteristic of that attack by 1.
+    phases:
+      - command
+      - shooting
+    player_turn: either
+stratagems:
+  - name: An Evaluation of Mettle
+    category: Battle Tactic
+    cp: 1
+    when: >-
+      Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected
+      its targets.
+    target: >-
+      One ADEPTUS MECHANICUS unit from your army that was selected as the target of one or more
+      of the attacking unit's attacks.
+    effect: >-
+      Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.
+    phases:
+      - shooting
+      - fight
+    player_turn: opponent
+  - name: Optimised Efficiency
+    category: Strategic Ploy
+    cp: 1
+    when: Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back.
+    target: That ADEPTUS MECHANICUS unit.
+    effect: >-
+      Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn
+      in which it Fell Back.
+    phases: [movement]
+    player_turn: your
+  - name: Acceptable Risk Ratio
+    category: Battle Tactic
+    cp: 1
+    when: Your Shooting phase.
+    target: One ADEPTUS MECHANICUS unit from your army that has not been selected to shoot this phase.
+    effect: >-
+      Until the end of the phase, improve the Armour Penetration characteristic of ranged
+      weapons equipped by models in your unit by 1 and those weapons have the
+      [HAZARDOUS] ability.
+    phases: [shooting]
+    player_turn: your
+
+units:
+  - name: Manipulus Skand
+    id: a5c9d6e1-b9f4-4c8a-9d5b-8a2e7f3c6b1d
+    warlord: true
+    loadout_description: "This model is equipped with: transonic cannon; Omnissian staff."
+    attachable_to: [SKITARII VANGUARD]
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - IMPERIUM
+          - INFANTRY
+          - CHARACTER
+          - CULT MECHANICUS
+          - TECH-PRIEST
+          - MANIPULUS
+          - MANIPULUS SKAND
+    ranged_weapons:
+      - name: Transonic cannon
+        keywords:
+          - DEVASTATING WOUNDS
+          - TORRENT
+        range: 12
+        attacks: D6
+        bs: "-"
+        strength: 4
+        ap: 0
+        damage: 2
+    melee_weapons:
+      - name: Omnissian staff
+        attacks: 4
+        ws: 3+
+        strength: 6
+        ap: 1
+        damage: 2
+    abilities:
+      - name: Galvanic Field
+        effect: >-
+          While this model is leading a unit, weapons equipped by models in that unit have
+          the [LETHAL HITS] ability.
+        phases: [shooting]
+        player_turn: your
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 2+
+        wounds: 4
+        leadership: 7+
+        objective_control: 1
+        invulnerable_save: 5+
+    faction_keywords:
+      - ADEPTUS MECHANICUS
+    core_abilities:
+      - Leader
+    enhancements:
+      - name: Aspergilla of Tarentum
+        effect: Each time an attack targets the bearer's unit, subtract 1 from the Wound roll.
+        phases:
+          - shooting
+          - fight
+        player_turn: opponent
+      - name: Overcharged Electropositors
+        effect: >-
+          Add 6" to the Range characteristic of ranged weapons equipped by models in the
+          bearer's unit, and those weapons have the [IGNORES COVER] ability.
+        phases: [shooting]
+        player_turn: your
+
+  - name: Skitarii Vanguard
+    id: b6d8e9f1-c7e2-4d3a-8a5b-9c6d7e8f0a1b
+    model_count: 10
+    loadout_description: >-
+      * The Skitarii Vanguard Alpha model is equipped with: Mechanicus pistol; Alpha combat weapon.
+      * 1 Skitarii Vanguard model is equipped with: arc rifle; close combat weapon.
+      * 1 Skitarii Vanguard model is equipped with: plasma caliver; close combat weapon.
+      * 7 Skitarii Vanguard models are equipped with: radium carbine; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - IMPERIUM
+          - SKITARII
+          - VANGUARD
+    ranged_weapons:
+      - name: Mechanicus pistol
+        keywords:
+          - DEVASTATING WOUNDS
+          - PISTOL
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 6
+        ap: 1
+        damage: 1
+      - name: Arc rifle
+        keywords:
+          - ANTI-VEHICLE 4+
+          - DEVASTATING WOUNDS
+          - RAPID FIRE 1
+        range: 30
+        attacks: 1
+        bs: 4+
+        strength: 8
+        ap: 1
+        damage: D3
+      - name: Plasma caliver - standard
+        range: 30
+        attacks: 2
+        bs: 4+
+        strength: 7
+        ap: 2
+        damage: 1
+      - name: Plasma caliver - supercharge
+        keywords: [HAZARDOUS]
+        range: 30
+        attacks: 2
+        bs: 4+
+        strength: 8
+        ap: 3
+        damage: 2
+      - name: Radium carbine
+        keywords: [ANTI-INFANTRY 4+]
+        range: 18
+        attacks: 3
+        bs: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Alpha combat weapon
+        attacks: 2
+        ws: 4+
+        strength: 5
+        ap: 1
+        damage: 1
+      - name: Close combat weapon
+        attacks: 1
+        ws: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+    faction_abilities: [Doctrina Imperatives]
+    abilities:
+      - name: Rad-saturation (Aura)
+        effect: >-
+          While an enemy unit (excluding VEHICLE units) is within 3" of this unit, subtract 1
+          from the Objective Control characteristic of models in that enemy unit.
+        phases: [command]
+        player_turn: either
+    stats:
+      - movement: 6
+        toughness: 3
+        save: 4+
+        wounds: 1
+        leadership: 7+
+        objective_control: 2
+        invulnerable_save: 5+
+    faction_keywords:
+      - ADEPTUS MECHANICUS
+
+  - name: Serberys Sulphurhounds
+    id: c7e8f9a1-d5b2-4c3a-9e6f-7d8c9b0a1d5e
+    model_count: 3
+    loadout_description: >-
+      * The Serberys Sulphurhound Alpha model is equipped with: Mechanicus pistol; sulphur
+        breath; cavalry arc maul; clawed limbs.
+      * 1 Serberys Sulphurhound model is equipped with: phosphor blast carbine; phosphor pistol;
+        sulphur breath; clawed limbs.
+      * 1 Serberys Sulphurhound model is equipped with: 2 phosphor pistols; sulphur breath;
+        clawed limbs.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - MOUNTED
+          - IMPERIUM
+          - SKITARII
+          - SERBERYS SULPHURHOUNDS
+    ranged_weapons:
+      - name: Mechanicus pistol
+        keywords:
+          - DEVASTATING WOUNDS
+          - PISTOL
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 6
+        ap: 1
+        damage: 1
+      - name: Phosphor blast carbine
+        keywords:
+          - BLAST
+          - IGNORES COVER
+        range: 18
+        attacks: D6
+        bs: 4+
+        strength: 6
+        ap: 0
+        damage: 1
+      - name: Phosphor pistol
+        keywords:
+          - IGNORES COVER
+          - PISTOL
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Sulphur breath
+        keywords:
+          - IGNORES COVER
+          - PISTOL
+          - TORRENT
+        range: 9
+        attacks: D6
+        bs: "-"
+        strength: 3
+        ap: 1
+        damage: 1
+    melee_weapons:
+      - name: Cavalry arc maul
+        keywords:
+          - ANTI-VEHICLE 4+
+          - DEVASTATING WOUNDS
+          - EXTRA ATTACKS
+        attacks: 1
+        ws: 4+
+        strength: 5
+        ap: 1
+        damage: 1
+      - name: Clawed limbs
+        attacks: 4
+        ws: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+    abilities:
+      - name: Line-breakers
+        effect: >-
+          Each time this unit ends a Charge move, select one enemy unit within Engagement Range
+          of it and roll one D6 for each model in this unit that is within Engagement Range of
+          that enemy unit, adding 2 to the result if this unit started its Charge move within 6"
+          of one or more friendly ADEPTUS MECHANICUS BATTLELINE units. For each 4+, that enemy
+          unit suffers 1 mortal wound.
+        phases: [charge]
+        player_turn: your
+    stats:
+      - movement: 12
+        toughness: 4
+        save: 4+
+        wounds: 2
+        leadership: 7+
+        objective_control: 2
+        invulnerable_save: 5+
+    faction_keywords:
+      - ADEPTUS MECHANICUS
+    faction_abilities: [Doctrina Imperatives]
+
+  - name: Pteraxii Sterylizors
+    id: d8f9a0b1-e5c2-4d2a-9e5f-6d7c8b9a0d1e
+    model_count: 5
+    loadout_description: >-
+      * The Pteraxii Sterylizor Alpha model is equipped with: flechette blaster; taser goad.
+      * Every Pteraxii Sterylizor model is equipped with: phosphor torch; Pteraxii talons.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - FLY
+          - JUMP PACK
+          - IMPERIUM
+          - SKITARII
+          - PTERAXII
+          - STERYLIZORS
+    ranged_weapons:
+      - name: Flechette blaster
+        keywords: [PISTOL]
+        range: 12
+        attacks: 5
+        bs: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+      - name: Phosphor torch
+        keywords:
+          - IGNORES COVER
+          - TORRENT
+        range: 12
+        attacks: D6
+        bs: N/A
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Pteraxii talons
+        attacks: 2
+        ws: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Taser goad
+        keywords: [SUSTAINED HITS 2]
+        attacks: 3
+        ws: 4+
+        strength: 6
+        ap: 0
+        damage: 1
+    abilties:
+      - name: Searing Conflagration
+        effect: >-
+          Each time a model in this unit makes an attack with a phosphor torch that targets an
+          enemy unit within range of an objective marker, re-roll a Wound roll of 1. If this
+          unit is also within 6" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units,
+          each time such an attack targets such a unit, you can re-roll the Wound roll instead.
+        phases: [shooting]
+        player_turn: your
+    stats:
+      - movement: 12
+        toughness: 4
+        save: 4+
+        wounds: 2
+        leadership: 7+
+        objective_control: 1
+        invulnerable_save: 5+
+    faction_keywords:
+      - ADEPTUS MECHANICUS
+    core_abilities:
+      - Deep Strike
+    faction_abilities: [Doctrina Imperatives]

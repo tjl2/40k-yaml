@@ -1,0 +1,360 @@
+name: "Blood Angels: Strike Force Marcellos"
+id: 22b82c94-e8da-465a-bdb3-02b5e09b040b
+abilities:
+  - name: Oath of Moment
+    effect: >-
+      At the start of your Command phase, select one unit from your opponent's army. Until the
+      start of your next Command phase, that enemy unit is your Oath of Moment target. Each time
+      a model with this ability makes an attack that targets your Oath of Moment target, you can
+      re-roll the Hit roll.
+    phases: [command]
+    player_turn: your
+stratagems:
+  - name: Controlled Ferocity
+    category: Battle Tactic
+    cp: 1
+    when: Fight phase, just after an enemy unit has selected its targets.
+    target: >-
+      One Adeptus Astartes Infantry unit from your army that was selected as the target of one or
+      more of the attacking unit's attacks.
+    effect: Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.
+    phases: [fight]
+    player_turn: opponent
+  - name: Harness the Flaw
+    category: Battle Tactic
+    cp: 1
+    when: Fight phase.
+    target: One Adeptus Astartes Infantry unit from your army that has not been selected to fight this phase.
+    effect: >-
+      Until the end of the phase, each time a model in your unit makes an attack, re-roll a Wound
+      roll of 1. If that attack targets a Monster or Vehicle unit, you can re-roll the Wound roll instead.
+    phases: [fight]
+    player_turn: your
+  - name: Rapid Strike
+    category: Strategic Ploy
+    cp: 1
+    when: End of your Shooting phase.
+    target: >-
+      One Intercessor Squad or Incursor Squad unit from your army that is not within Engagement
+      Range of one or more enemy units.
+    effect: Your unit can make a Normal move. It cannot embark within a Transport at the end of that move.
+    restrictions: Until the end of the turn, your unit is not eligible to declare a charge.
+    phases: [shooting]
+    player_turn: your
+
+units:
+  - name: Librarian Marcellos
+    id: cb15f5fc-8e09-4081-893a-6928d346b970
+    warlord: true
+    loadout_description: "This model is equipped with: bolt pistol; Smite; force weapon."
+    attachable_to: [INTERCESSOR SQUAD]
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - PSYKER
+          - IMPERIUM
+          - TACTICUS
+          - LIBRARIAN
+          - MARCELLOS
+    ranged_weapons:
+      - name: Bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Smite - witchfire
+        keywords: [PSYCHIC]
+        range: 24
+        attacks: D6
+        bs: 3+
+        strength: 5
+        ap: 1
+        damage: D3
+      - name: Smite - focused witchfire
+        keywords:
+          - DEVASTATING WOUNDS
+          - HAZARDOUS
+          - PSYCHIC
+        range: 24
+        attacks: D6
+        bs: 3+
+        strength: 6
+        ap: 2
+        damage: D3
+    melee_weapons:
+      - name: Force weapon
+        keywords: [PSYCHIC]
+        attacks: 4
+        ws: 3+
+        strength: 6
+        ap: 1
+        damage: D3
+    faction_abilities:
+      - Oath of Moment
+    abilities:
+      - name: Mental Fortress (Psychic)
+        effect: While this model is leading a unit, models in that unit have a 4+ invulnerable save.
+        phases:
+          - shooting
+          - fight
+        player_turn: opponent
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 4
+        leadership: 6+
+        objective_control: 1
+    faction_keywords:
+      - Adeptus Astartes
+      - Blood Angels
+    core_abilities:
+      - Leader
+    enhancements:
+      - name: Baalite Bladesman
+        effect: Improve the Armour Penetration characteristic of melee weapons equipped by models in the bearer's unit by 1.
+        phases: [fight]
+        player_turn: your
+      - name: Radiant Wrath (Psychic)
+        effect: Both of the bearer's Smite weapon profiles have the [ANTI-MONSTER 5+] and [ANTI-VEHICLE 5+] abilities.
+        phases: [shooting]
+        player_turn: your
+  - name: Intercessor Squad
+    id: fe9f5973-7670-4e78-a1db-fb78314f053d
+    model_count: 5
+    loadout_description: >-
+      * 1 Intercessor Sergeant is equipped with: bolt pistol; Astartes chainsword.
+      * 4 Intercessors are equipped with: bolt rifle; bolt pistol; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - IMPERIUM
+          - TACTICUS
+          - INTERCESSOR sQUAD
+    ranged_weapons:
+      - name: Bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Bolt rifle
+        keywords:
+          - ASSAULT
+          - HEAVY
+        range: 24
+        attacks: 2
+        bs: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+    melee_weapons:
+      - name: Astartes chainsword
+        attacks: 5
+        ws: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+      - name: Close combat weapon
+        attacks: 3
+        ws: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    faction_abilities:
+      - Oath of Moment
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 2
+        leadership: 6+
+        objective_control: 2
+    faction_keywords:
+      - Adeptus Astartes
+      - Blood Angels
+  - name: Incursor Squad
+    id: 34cfe777-3dfa-4dd3-b056-00a4c671496e
+    model_count: 5
+    loadout_description: >-
+      * 1 Incursor Sergeant is equipped with: bolt pistol; occulus bolt carbine; paired combat blades.
+      * 3 Incursors are equipped with: bolt pistol; occulus bolt carbine; paired combat blades.
+      * 1 Incursor is equipped with: bolt pistol; occulus bolt carbine; paired combat blades; haywire mine.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - SMOKE
+          - IMPERIUM
+          - PHOBOS
+          - INCURSOR sQUAD
+    ranged_weapons:
+      - name: Bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Occulus bolt carbine
+        keywords:
+          - ASSAULT
+          - IGNORES COVER
+        range: 24
+        attacks: 2
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Paired combat blades
+        keywords: [SUSTAINED HITS 1]
+        attacks: 3
+        ws: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    faction_abilities:
+      - Oath of Moment
+    abilities:
+      - name: Multi-spectrum Array
+        effect: >-
+          In your Shooting phase, after this unit has shot, select one enemy unit that was hit by
+          one or more attacks made by this unit this phase. Until the end of the phase, each time
+          a friendly Adeptus Astartes unit makes an attack that targets that enemy unit, add 1 to
+          the Hit roll.
+        phases: [shooting]
+        player_turn: your
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 2
+        leadership: 6+
+        objective_control: 1
+    faction_keywords:
+      - Adeptus Astartes
+      - Blood Angels
+    core_abilities:
+      - Scouts 6"
+  - name: Aggressor Squad
+    id: e57362db-f65e-4d56-a31f-b6e1abe265c4
+    model_count: 3
+    loadout_description: "Every model is equipped with: flamestorm gauntlets; twin power fists."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - IMPERIUM
+          - GRAVIS
+          - AGGRESSOR sQUAD
+    ranged_weapons:
+      - name: Flamestorm gauntlets
+        keywords:
+          - IGNORES COVER
+          - TORRENT
+          - TWIN-LINKED
+        range: 12
+        attacks: D6+1
+        bs: N/A
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Twin power fists
+        keywords: [TWIN-LINKED]
+        attacks: 3
+        ws: 4+
+        strength: 8
+        ap: 2
+        damage: 2
+    faction_abilities:
+      - Oath of Moment
+    stats:
+      - movement: 5
+        toughness: 6
+        save: 3+
+        wounds: 3
+        leadership: 6+
+        objective_control: 1
+    faction_keywords:
+      - Adeptus Astartes
+      - Blood Angels
+  - name: Impulsor
+    id: 7f3ca873-1875-404e-adef-9082c9b12718
+    model_count: 1
+    loadout_description: >-
+      This model is equipped with: bellicatus missile array; 2 storm bolters; armoured hull.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - VEHICLE
+          - TRANSPORT
+          - DEDICATED tRANSPORT
+          - IMPERIUM
+          - IMPULSOR
+    ranged_weapons:
+      - name: Bellicatus missile array - frag
+        keywords: [BLAST]
+        range: 48
+        attacks: D6
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Bellicatus missile array - Icarus
+        keywords: [ANTI-FLY 2+]
+        range: 48
+        attacks: D3
+        bs: 3+
+        strength: 8
+        ap: 1
+        damage: 2
+      - name: Bellicatus missile array - krak
+        range: 48
+        attacks: 1
+        bs: 3+
+        strength: 8
+        ap: 2
+        damage: D6
+      - name: Storm bolter
+        keywords: [RAPID FIRE 2]
+        range: 24
+        attacks: 2
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Armoured hull
+        attacks: 3
+        ws: 4+
+        strength: 6
+        ap: 0
+        damage: 1
+    faction_abilities:
+      - Oath of Moment
+    stats:
+      - movement: 12
+        toughness: 9
+        save: 3+
+        wounds: 11
+        leadership: 6+
+        objective_control: 2
+    transport: This model has a transport capacity of 6 Tacticus or Phobos Infantry models.
+    faction_keywords:
+      - Adeptus Astartes
+      - Blood Angels
+    core_abilities:
+      - Deadly Demise D3
+      - Firing Deck 6

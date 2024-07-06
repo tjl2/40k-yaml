@@ -1,0 +1,449 @@
+name: "Astra Militarum: Karsk's Gunners"
+id: 3a8f9d62-7a3c-4f2b-9e8d-c4b6a1d2e0f3
+abilities:
+  - name: Voice of Command
+    effect: >-
+      In your Command phase, OFFICER models from your army with this ability can issue Orders.
+      Each OFFICER's datasheet will specify how many Orders it can issue and which units are
+      eligible to receive those Orders. Each time an OFFICER model issues an Order, select one
+      of the Orders below, then select one eligible friendly unit within 6" of that OFFICER model
+      to issue it to.
+
+      Until the start of your next Command phase, the unit you selected is affected by that Order.
+      Unless otherwise stated, a unit can only be affected by one Order at a time (any Order
+      subsequently issued to that unit replaces the current one). If a unit being affected by an
+      Order becomes Battle-shocked, that Order ceases to affect that unit.
+
+      ### Move! Move! Move!
+
+      Add 3" to the Move characteristic of models in this unit.
+
+      ### Take Aim!
+
+      Improve the Ballistic Skill characteristic of ranged weapons equipped by
+      models in this unit by 1.
+
+      ### Take Cover!
+
+      Improve the Save characteristic of models in this unit by 1 (this cannot
+      improve a model's Save
+      to better than 3+).
+    phases: [command]
+    player_turn: your
+stratagems:
+  - name: Send in the Next Wave
+    category: Strategic Ploy
+    cp: 1
+    when: Reinforcements step of your Movement phase.
+    target: >-
+      One destroyed CADIAN SHOCK TROOPS unit from your army. You can use this
+      Stratagem on that unit even though it is destroyed.
+    effect: >-
+      Add a new unit to your army identical to your destroyed unit, at its
+      original Starting Strength. Set that unit up anywhere on the battlefield
+      wholly within 9" of your battlefield edge and not within Engagement Range
+      of one or more enemy units.
+    phases: [movement]
+    player_turn: your
+  - name: Bring It Down
+    category: Battle Tactic
+    cp: 1
+    when: Your Shooting phase.
+    target: Any number of ASTRA MILITARUM units from your army, and one enemy unit.
+    effect: >-
+      Until the end of the phase, each time a model in one of your selected
+      units makes an attack that targets that enemy unit, you can re-roll the
+      Hit roll.
+    phases: [shooting]
+    player_turn: your
+  - name: Artillery Strike
+    category: Strategic Ploy
+    cp: 2
+    when: Start of your opponent's Command phase.
+    target: One OFFICER model from your army.
+    effect: >-
+      Until the end of the turn, halve the Move characteristic of enemy models,
+      halve Advance rolls made for enemy units, enemy units cannot declare a
+      charge and each time an enemy model makes a ranged attack, subtract 1
+      from the Hit roll.
+    restrictions: You can only use this Stratagem once per battle.
+    phases: [command]
+    player_turn: opponent
+
+units:
+  - name: Command Squad Karsk
+    id: 25ebeb13-9d5b-44d1-8cf3-47cfd4dbda52
+    warlord: true
+    model_count: 5
+    loadout_description: >-
+      - Karsk is equipped with: plasma pistol; power weapon.
+
+      - 1 Cadian Veteran Guardsman is equipped with: bolt pistol; power fist.
+
+      - 1 Cadian Veteran Guardsman is equipped with: lasgun; close combat weapon.
+
+      - 1 Cadian Veteran Guardsman is equipped with: lasgun; close combat weapon; medi-pack.
+
+      - 1 Cadian Veteran Guardsman is equipped with: lasgun; close combat weapon; regimental standard.
+    attachable_to: [CADIAN SHOCK TROOPS]
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - IMPERIUM
+          - CADIAN
+          - COMMAND SQUAD
+      - models: KARSK
+        keywords:
+          - INFANTRY
+          - IMPERIUM
+          - CADIAN
+          - COMMAND SQUAD
+          - CHARACTER
+          - OFFICER
+          - KARSK
+    ranged_weapons:
+      - name: Bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Lasgun
+        keywords: [RAPID FIRE 1]
+        range: 24
+        attacks: 1
+        bs: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+      - name: Plasma pistol - standard
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 7
+        ap: 2
+        damage: 1
+      - name: Plasma pistol - supercharge
+        keywords:
+          - HAZARDOUS
+          - PISTOL
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 8
+        ap: 3
+        damage: 2
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 2
+        ws: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+      - name: Power fist
+        attacks: 3
+        ws: 4+
+        strength: 6
+        ap: 2
+        damage: 2
+      - name: Power weapon
+        attacks: 3
+        ws: 4+
+        strength: 4
+        ap: 2
+        damage: 1
+    wargear_abilities:
+      - name: Medi-pack
+        effect: The bearer's unit has the Feel No Pain 6+ ability.
+        phases:
+          - shooting
+          - fight
+        player_turn: opponent
+      - name: Regimental Standard
+        effect: Add 1 to the Objective Control characteristic of models in the bearer's unit.
+        phases: [command]
+        player_turn: your
+    faction_abilities: [Voice of Command]
+    voice_of_command_orders: 1
+    stats:
+      - models: KARSK
+        movement: 6
+        toughness: 3
+        save: 5+
+        wounds: 3
+        leadership: 7+
+        objective_control: 1
+      - models: VETERAN GUARDSMAN
+        movement: 6
+        toughness: 3
+        save: 5+
+        wounds: 1
+        leadership: 7+
+        objective_control: 1
+    faction_keywords:
+      - ASTRA MILITARUM
+    core_abilities:
+      - Leader
+    abilities:
+      - name: Orders
+        effect: This unit's OFFICER can issue 1 Order to a REGIMENT unit.
+        phases: [command]
+        player_turn: your
+    enhancements:
+      - name: Command Laurels
+        effect: >-
+          In your Command phase, if the bearer is on the battlefield, you gain 1CP. In addition,
+          each time the bearer issues an Order, it is issued to all friendly
+          **ASTRA MILITARUM** units on the battlefield.
+        phases: [command]
+        player_turn: your
+      - name: Gunnery Officer (Aura)
+        effect: >-
+          In your Command phase, if the bearer is on the battlefield, you gain 1CP. In addition,
+          while a friendly ARTILLERY unit is within 6" of the bearer's unit:
+
+            - Each time you roll to determine the number of attacks a model in that ARTILLERY unit
+            makes with a weapon, you can re-roll the result.
+            - Models in that ARTILLERY unit have the Lone Operative ability if they have not made any
+            attacks yet this battle.
+        phases: [command]
+        player_turn: your
+
+  - name: Cadian Shock Troops
+    id: c6d7e8f9-a0b1-4c5d-8e7f-6a9b0c1d2e3f
+    model_count: 10
+    unit_count: 2
+    loadout_description: >-
+      * 1 Shock Trooper Sergeant is equipped with: laspistol; chainsword.
+
+      * 7 Shock Troopers are equipped with: lasgun; close combat weapon.
+
+      * 1 Shock Trooper is equipped with: flamer; close combat weapon.
+
+      * 1 Shock Trooper is equipped with: meltagun; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - IMPERIUM
+          - REGIMENT
+          - PLATOON
+          - CADIAN
+          - CADIAN SHOCK TROOPS
+    ranged_weapons:
+      - name: Flamer
+        keywords:
+          - IGNORES COVER
+          - TORRENT
+        range: 12
+        attacks: D6
+        bs: N/A
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Lasgun
+        keywords: [RAPID FIRE 1]
+        range: 24
+        attacks: 1
+        bs: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+      - name: Laspistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+      - name: Meltagun
+        keywords: [MELTA 2]
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 9
+        ap: 4
+        damage: D6
+    melee_weapons:
+      - name: Chainsword
+        attacks: 3
+        ws: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+      - name: Close combat weapon
+        attacks: 1
+        ws: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+    stats:
+      - movement: 6
+        toughness: 3
+        save: 5+
+        wounds: 1
+        leadership: 7+
+        objective_control: 2
+    faction_keywords:
+      - ASTRA MILITARUM
+
+  - name: Field Ordnance Battery
+    id: d5e6f7a8-b9c0-4d1e-8f2a-3b4c5d6e7f8a
+    model_count: 2
+    patrol_squads_model_count: 1
+    loadout_description: >-
+      * 1 model is equipped with: bombast field gun; lasgun; laspistol; battery
+      close combat weapons.
+
+      * 1 model is equipped with: malleus rocket launcher; lasgun; laspistol;
+      battery close combat weapons.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - ARTILLERY
+          - IMPERIUM
+          - REGIMENT
+          - FIELD ORDNANCE BATTERY
+    ranged_weapons:
+      - name: Bombast field gun
+        keywords:
+          - BLAST
+          - HEAVY
+          - INDIRECT FIRE
+        range: 48
+        attacks: D6
+        bs: 5+
+        strength: 7
+        ap: 1
+        damage: 2
+      - name: Lasgun
+        keywords: [RAPID FIRE 1]
+        range: 24
+        attacks: 1
+        bs: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+      - name: Laspistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+      - name: Malleus rocket launcher
+        keywords:
+          - BLAST
+          - HEAVY
+        range: 48
+        attacks: D6+6
+        bs: 5+
+        strength: 6
+        ap: 1
+        damage: 1
+    melee_weapons:
+      - name: Battery close combat weapons
+        attacks: 3
+        ws: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+    abilities:
+      - name: Rearm, Reload, Fire
+        effect: >-
+          While this unit is being affected by an Order, provided it Remained Stationary this turn,
+          Heavy weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+        phases: [shooting]
+        player_turn: your
+    stats:
+      - movement: 4
+        toughness: 5
+        save: 4+
+        wounds: 6
+        leadership: 7+
+        objective_control: 2
+    faction_keywords:
+      - ASTRA MILITARUM
+
+  - name: Armoured Sentinel
+    id: e4f5a6b7-c8d9-4e1f-8a2b-3c4d5e6f7a8b
+    model_count: 1
+    loadout_description: >-
+      This model is equipped with: hunter-killer missile; plasma cannon; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - VEHICLE
+          - WALKER
+          - IMPERIUM
+          - REGIMENT
+          - SQUADRON
+          - SMOKE
+          - ARMOURED SENTINEL
+    ranged_weapons:
+      - name: Hunter-killer missile
+        keywords: [ONE SHOT]
+        range: 48
+        attacks: 1
+        bs: 4+
+        strength: 14
+        ap: 3
+        damage: D6
+      - name: Plasma cannon - standard
+        keywords: [BLAST]
+        range: 36
+        attacks: D3
+        bs: 4+
+        strength: 7
+        ap: 2
+        damage: 1
+      - name: Plasma cannon - supercharge
+        keywords:
+          - BLAST
+          - HAZARDOUS
+        range: 36
+        attacks: D3
+        bs: 4+
+        strength: 8
+        ap: 3
+        damage: 2
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 2
+        ws: 4+
+        strength: 6
+        ap: 0
+        damage: 1
+    abilities:
+      - name: Mobile Hunter-killers
+        effect: >-
+          Each time a model in this unit makes an attack that targets a MONSTER or VEHICLE unit, you can
+          re-roll the Wound roll.
+        phases:
+          - shooting
+          - fight
+        player_turn: your
+    wargear_abilities:
+      - name: Hunter-killer missile
+        effect: The bearer can only shoot with this weapon once per battle.
+        phases: [shooting]
+        player_turn: your
+    stats:
+      - movement: 8
+        toughness: 8
+        save: 2+
+        wounds: 7
+        leadership: 7+
+        objective_control: 2
+    faction_keywords:
+      - ASTRA MILITARUM
+    core_abilities:
+      - Deadly Demise 1

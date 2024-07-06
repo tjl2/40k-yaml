@@ -1,0 +1,291 @@
+name: "Thousand Sons: The Coven Temporus"
+id: 42c11f6d-0ac9-4542-82ce-9b9db6c68931
+abilities:
+  - name: Cabal of Sorcerers
+    effect: >-
+      At the end of your Command phase, each model from your army with this ability that is on the
+      battlefield (excluding Battle-shocked models) generates you a number of Cabal points equal
+      to the number shown in its ability. The combined total of these is your Cabal points pool.
+
+      During the battle round, you can use Rituals from the list below, deducting the Cabal points
+      cost of each one from your Cabal points pool. If you do not have enough Cabal points for a
+      Ritual, you cannot use it. Each Ritual can only be used once per phase. At the start of your
+      next Command phase, your Cabal points pool resets to zero. Each time you use a Ritual, select
+      one THOUSAND SONS PSYKER model from your army, then apply that Ritual's effect using that PSYKER.
+
+      Weaver of Fates (Psychic)
+      2 Cabal points. Use this Ritual at the start of any phase. Once during that phase, when a
+      saving throw is failed for a friendly THOUSAND SONS model whose unit is within 18" of this
+      PSYKER, you can re-roll that saving throw.
+
+      Echoes from the Warp (Psychic)
+      6 Cabal points. Use this Ritual at the start of any phase. Once this phase, you can select
+      this PSYKER's unit as the target of a Stratagem for 0CP, even if you have already used that
+      Stratagem this phase.
+    phases: [command]
+    player_turn: your
+stratagems:
+  - name: Wreathed in Warpflame
+    category: Battle Tactic
+    cp: 1
+    when: Fight phase.
+    target: One THOUSAND SONS unit from your army (excluding TZAANGORS units) that has not been selected to fight this phase.
+    effect: >-
+      Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS]
+      ability and each time a model in your unit makes an attack that targets a MONSTER or VEHICLE unit,
+      an unmodified Hit roll of 5+ scores a Critical Hit.
+    phases: [fight]
+    player_turn: your
+  - name: Mutant Cunning
+    category: Strategic Ploy
+    cp: 1
+    when: Your opponent's Shooting phase, just after an enemy unit has selected its targets.
+    target: One TZAANGORS unit from your army that was selected as the target of one or more of the attacking unit's attacks.
+    effect: >-
+      Your unit can make a Normal move of up to D6" and, until the end of the phase, each time a ranged
+      attack targets your unit, models in your unit have the Benefit of Cover against that attack.
+    phases: [shooting]
+    player_turn: opponent
+  - name: Malign Entanglement
+    category: Strategic Ploy
+    cp: 1
+    when: Your opponent's Charge phase, just after an enemy unit has declared a charge.
+    target: One THOUSAND SONS unit from your army that was selected as a target of that charge.
+    effect: Until the end of the phase, subtract 2 from Charge rolls made for that enemy unit.
+    phases: [charge]
+    player_turn: opponent
+units:
+  - name: Ahrak the Time Weaver
+    id: 922ba37b-7299-420c-a7f8-09749c6bbeff
+    loadout_description: "This model is equipped with: inferno bolt pistol; Screamer Invocation; force weapon."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - PSYKER
+          - CHAOS
+          - TZEENTCH
+          - INFERNAL MASTER
+          - AHRAK THE TIME WEAVER
+    ranged_weapons:
+      - name: Inferno bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 2+
+        strength: 4
+        ap: 1
+        damage: 1
+      - name: Screamer Invocation - witchfire
+        keywords:
+          - PSYCHIC
+          - TORRENT
+        range: 18
+        attacks: 2D3
+        bs: N/A
+        strength: 6
+        ap: 2
+        damage: 1
+      - name: Screamer Invocation - focused witchfire
+        keywords:
+          - HAZARDOUS
+          - PSYCHIC
+          - TORRENT
+        range: 18
+        attacks: 2D6
+        bs: N/A
+        strength: 6
+        ap: 2
+        damage: 1
+    melee_weapons:
+      - name: Force weapon
+        keywords: [PSYCHIC]
+        attacks: 4
+        ws: 3+
+        strength: 6
+        ap: 1
+        damage: D3
+    abilities:
+      - name: Glimpse of Eternity (Psychic)
+        effect: >-
+          Once per turn, you can change the result of one Hit roll, one Wound roll, one Damage roll
+          or one saving throw made for this model to an unmodified 6.
+        phases:
+          - movement
+          - shooting
+          - fight
+        player_turn: either
+    faction_abilities: [Cabal of Sorcerers 2]
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 4
+        leadership: 6+
+        objective_control: 1
+        invulnerable_save: 5+
+    faction_keywords:
+      - THOUSAND SONS
+    warlord: true
+    enhancements:
+      - name: Temporal Sorceries
+        effect: >-
+          The bearer has the Deep Strike and Lone Operative abilities. In addition, at the end of
+          your Command phase, if the bearer is on the battlefield, you gain D3 Cabal points.
+        phases: [command]
+        player_turn: your
+      - name: Arch-Diabolist
+        effect: >-
+          The bearer has the Deep Strike and Lone Operative abilities. In addition, both of the
+          bearer's Screamer Invocation weapon profiles have the [PISTOL] ability.
+        phases:
+          - movement
+          - shooting
+        player_turn: your
+  - name: Scarab Occult Terminators
+    id: 8d299991-8f84-46d2-a70e-928a17836a01
+    model_count: 5
+    loadout_description: >-
+      * 1 Scarab Occult Sorcerer is equipped with: Warpsmite; force weapon; Prosperine khopesh.
+      * 2 Scarab Occult Terminators are equipped with: inferno combi-bolter; Prosperine khopesh.
+      * 1 Scarab Occult Terminator is equipped with: soulreaper cannon; Prosperine khopesh.
+      * 1 Scarab Occult Terminator is equipped with: hellfyre missile rack; inferno combi-bolter; Prosperine khopesh.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - TERMINATOR
+          - CHAOS
+          - TZEENTCH
+          - SCARAB OCCULT TERMINATORS
+      - models: SCARAB OCCULT SORCERER
+        keywords:
+          - INFANTRY
+          - TERMINATOR
+          - CHAOS
+          - TZEENTCH
+          - SCARAB OCCULT TERMINATORS
+          - PSYKER
+    ranged_weapons:
+      - name: Hellfyre missile rack
+        range: 36
+        attacks: 2
+        bs: 3+
+        strength: 10
+        ap: 2
+        damage: 3
+      - name: Inferno combi-bolter
+        keywords: [RAPID FIRE 2]
+        range: 24
+        attacks: 2
+        bs: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+      - name: Soulreaper cannon
+        keywords: [DEVASTATING WOUNDS]
+        range: 24
+        attacks: 6
+        bs: 3+
+        strength: 6
+        ap: 1
+        damage: 1
+      - name: Warpsmite
+        keywords:
+          - ANTI-INFANTRY 4+
+          - DEVASTATING WOUNDS
+          - PISTOL
+          - PSYCHIC
+        range: 18
+        attacks: 3
+        bs: 3+
+        strength: 4
+        ap: 3
+        damage: 1
+    melee_weapons:
+      - name: Force weapon
+        keywords: [PSYCHIC]
+        attacks: 4
+        ws: 3+
+        strength: 6
+        ap: 1
+        damage: D3
+      - name: Prosperine khopesh
+        attacks: 3
+        ws: 3+
+        strength: 5
+        ap: 2
+        damage: 2
+    abilities:
+      - name: Implacable Guardians
+        effect: >-
+          While this unit contains one or more PSYKER models, each time an attack is made against
+          this unit, if the Strength characteristic of that attack is greater than this unit's
+          Toughness characteristic, subtract 1 from the Wound roll.
+        phases:
+          - shooting
+          - fight
+        player_turn: opponent
+    faction_abilities:
+      - Cabal of Sorcerers 1*
+    stats:
+      - movement: 5
+        toughness: 5
+        save: 2+
+        wounds: 3
+        leadership: 6+
+        objective_control: 1
+        invulnerable_save: 4+
+    faction_keywords:
+      - THOUSAND SONS
+    core_abilities:
+      - Deep Strike
+
+  - name: Tzaangors
+    id: 2f04a58d-b1f1-409a-afda-e1edd9a4858b
+    model_count: 10
+    unit_count: 2
+    loadout_description: "Every model is equipped with: autopistol; chainsword."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - CHAOS
+          - TZEENTCH
+          - TZAANGORS
+    ranged_weapons:
+      - name: Autopistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Chainsword
+        attacks: 3
+        ws: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+    abilities:
+      - name: Relic Hunters
+        effect: >-
+          At the end of your Command phase, roll one D6 for each objective marker you control that
+          has one or more units from your army with this ability within range of it: for each 4+,
+          you gain 1 Cabal point.
+        phases: [command]
+        player_turn: your
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 6+
+        wounds: 1
+        leadership: 7+
+        objective_control: 2
+        invulnerable_save: 6+
+    faction_keywords:
+      - THOUSAND SONS

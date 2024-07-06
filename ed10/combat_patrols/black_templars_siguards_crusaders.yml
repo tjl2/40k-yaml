@@ -1,0 +1,354 @@
+name: "Black Templars: Siguard's Crusaders"
+id: 6ab799a6-9551-4586-bfe2-3c9909782466
+abilities:
+  - name: Oath of Moment
+    effect: >-
+      At the start of your Command phase, select one unit from your opponent's army. Until the
+      start of your next Command phase, that enemy unit is your Oath of Moment target. Each time
+      a model with this ability makes an attack that targets your Oath of Moment target, you can
+      re-roll the Hit roll.
+    phases: [command]
+    player_turn: your
+stratagems:
+  - name: Shield of Zeal
+    category: Battle Tactic
+    cp: 1
+    when: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
+    target: >-
+      One ADEPTUS ASTARTES INFANTRY unit from your army that was selected as the target of one or
+      more of the attacking unit's attacks.
+    effect: >-
+      Until the end of the phase, each time an attack targets your unit, if the attacking model is
+      within 6" of your unit, models in your unit have a 4+ invulnerable save against that attack.
+      Primaris Neophyte models have a 5+ invulnerable save against that attack instead.
+    phases:
+      - shooting
+      - fight
+    player_turn: opponent
+  - name: Hate-Fuelled Strength
+    category: Battle Tactic
+    cp: 1
+    when: Your Shooting phase or the Fight phase.
+    target: One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to shoot or fight this phase.
+    effect: >-
+      Until the end of the phase, each time a model in your unit makes an attack that targets the
+      closest eligible target, you can re-roll the Hit roll.
+    phases:
+      - shooting
+      - fight
+    player_turn: your
+  - name: Goaded to Fury
+    category: Strategic Ploy
+    cp: 1
+    when: Your opponent's Shooting phase, just after an enemy unit has shot.
+    target: >-
+      One ADEPTUS ASTARTES INFANTRY unit from your army that was selected as the target of one or
+      more of the attacking unit's attacks.
+    effect: Your unit can make a Normal move, but must end that move as close as possible to that enemy unit.
+    phases: [shooting]
+    player_turn: opponent
+
+units:
+  - name: Marshal Siguard
+    id: c2077769-4ca0-431c-a0ab-c1fb5131a74e
+    warlord: true
+    loadout_description: "This model is equipped with: plasma pistol; master-crafted power weapon."
+    attachable_to:
+      - INTERCESSOR SQUAD
+      - PRIMARIS CRUSADER SQUAD
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - IMPERIUM
+          - TACTICUS
+          - MARSHAL
+          - SIGUARD
+    ranged_weapons:
+      - name: Plasma pistol - standard
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 2+
+        strength: 7
+        ap: 2
+        damage: 1
+      - name: Plasma pistol - supercharge
+        keywords:
+          - HAZARDOUS
+          - PISTOL
+        range: 12
+        attacks: 1
+        bs: 2+
+        strength: 8
+        ap: 3
+        damage: 2
+    melee_weapons:
+      - name: Master-crafted power weapon
+        attacks: 6
+        ws: 2+
+        strength: 5
+        ap: 2
+        damage: 2
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 5
+        leadership: 6+
+        objective_control: 1
+        invulnerable_save: 4+
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - BLACK TEMPLARS
+    core_abilities:
+      - Leader
+    faction_abilities: [Oath of Moment]
+    enhancements:
+      - name: Crusaders' Fervour
+        effect: Add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer's unit.
+        phases: [fight]
+        player_turn: either
+      - name: Righteous Defiance
+        effect: >-
+          The bearer has the Feel No Pain 5+ ability. In addition, once per battle, when the bearer's
+          unit is selected as the target of an attack, it can use this ability. If it does, until the
+          end of the phase, models in the bearer's unit have the Feel No Pain 4+ ability.
+        phases:
+          - shooting
+          - fight
+        player_turn: opponent
+
+  - name: Primaris Crusader Squad
+    id: 976b33d7-eaf2-45d1-b0b1-0beae765b62a
+    model_count: 10
+    patrol_squads_model_count: 5
+    loadout_description: >-
+      * 1 Primaris Sword Brother is equipped with: heavy bolt pistol; power weapon.
+      * 2 Primaris Initiates are equipped with: heavy bolt pistol; Astartes chainsword.
+      * 2 Primaris Initiates are equipped with: bolt pistol; bolt rifle; close combat weapon.
+      * 1 Primaris Initiate is equipped with: pyreblaster; bolt pistol; close combat weapon.
+      * 2 Primaris Neophytes are equipped with: bolt pistol; Astartes chainsword.
+      * 2 Primaris Neophytes are equipped with: Neophyte firearm; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - IMPERIUM
+          - TACTICUS
+          - PRIMARIS CRUSADER SQUAD
+    ranged_weapons:
+      - name: Bolt pistol
+        keywords: [PISTOL]
+        range: 18
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Bolt rifle
+        keywords:
+          - ASSAULT
+          - HEAVY
+        range: 24
+        attacks: 2
+        bs: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+      - name: Heavy bolt pistol
+        keywords: [PISTOL]
+        range: 18
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+      - name: Neophyte firearm
+        keywords: [ASSAULT]
+        range: 18
+        attacks: 2
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Pyreblaster
+        keywords:
+          - IGNORES COVER
+          - TORRENT
+        range: 12
+        attacks: D6
+        bs: N/A
+        strength: 5
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Astartes chainsword
+        attacks: 5
+        ws: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+      - name: Close combat weapon
+        attacks: 3
+        ws: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Power weapon
+        attacks: 3
+        ws: 3+
+        strength: 5
+        ap: 2
+        damage: 1
+    abilities:
+      - name: Righteous Zeal
+        effect: You can re-roll Advance and Charge rolls made for this unit.
+        phases:
+          - movement
+          - charge
+        player_turn: your
+    stats:
+      - models: OTHER MODELS
+        movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 2
+        leadership: 6+
+        objective_control: 2
+      - models: PRIMARIS NEOPHYTE
+        movement: 6
+        toughness: 4
+        save: 4+
+        wounds: 2
+        leadership: 6+
+        objective_control: 2
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - BLACK TEMPLARS
+    core_abilities:
+      - Scouts 6"
+    faction_abilities: [Oath of Moment]
+
+  - name: Intercessor Squad
+    id: 4788e901-d80a-4ad1-a667-bc8617068f26
+    model_count: 5
+    loadout_description: "Every model is equipped with: bolt pistol; bolt rifle; close combat weapon."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - IMPERIUM
+          - TACTICUS
+          - INTERCESSOR SQUAD
+    ranged_weapons:
+      - name: Bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Bolt rifle
+        keywords:
+          - ASSAULT
+          - HEAVY
+        range: 24
+        attacks: 2
+        bs: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 3
+        ws: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    faction_abilities: [Oath of Moment]
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 2
+        leadership: 6+
+        objective_control: 2
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - BLACK TEMPLARS
+
+  - name: Black Templars Impulsor
+    id: d07074b0-f79b-40a0-8193-81c0a5e67a2a
+    model_count: 1
+    loadout_description: >-
+      This model is equipped with: multi-melta; 2 storm bolters; armoured hull; orbital comms array.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - VEHICLE
+          - TRANSPORT
+          - DEDICATED TRANSPORT
+          - IMPERIUM
+          - IMPULSOR
+    ranged_weapons:
+      - name: Multi-melta
+        keywords: [MELTA 2]
+        range: 18
+        attacks: 2
+        bs: 3+
+        strength: 9
+        ap: 4
+        damage: D6
+      - name: Storm bolter
+        keywords: [RAPID FIRE 2]
+        range: 24
+        attacks: 2
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Armoured hull
+        attacks: 3
+        ws: 4+
+        strength: 6
+        ap: 0
+        damage: 1
+    abilities:
+      - name: Assault Vehicle
+        effect: >-
+          Units can disembark from this TRANSPORT after it has Advanced. Units that do so count
+          as having made a Normal move, and cannot declare a charge that turn.
+        phases: [movement]
+        player_turn: your
+    wargear_abilities:
+      - name: Orbital comms array
+        effect: This model has the Lone Operative ability.
+        phases:
+          - shooting
+          - fight
+        player_turn: opponent
+    stats:
+      - movement: 12
+        toughness: 9
+        save: 3+
+        wounds: 11
+        leadership: 6+
+        objective_control: 2
+    transport_rules:
+      - keyword: TACTICUS
+        capacity: 6
+      - keyword: PHOBOS INFANTRY
+        capacity: 6
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - BLACK TEMPLARS
+    core_abilities:
+      - Deadly Demise D3
+      - Firing Deck 6
+    faction_abilities: [Oath of Moment]

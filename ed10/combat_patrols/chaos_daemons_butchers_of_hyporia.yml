@@ -1,0 +1,259 @@
+name: "Chaos Daemons: Butchers of Hyporia"
+id: e47a9145-b0b8-49c7-a79d-832db1611430
+abilities:
+  - name: The Shadow of Chaos
+    effect: >-
+      Certain areas of the battlefield are considered to be within your army's Shadow of Chaos, as follows:
+
+      * Your deployment zone is always within your army's Shadow of Chaos.
+
+      * At the start of any phase, if you control at least half of the objective markers within No Man's
+        Land, until the end of that phase, No Man's Land is within your army's Shadow of Chaos.
+
+      * At the start of any phase, if you control at least half of the objective markers within your
+        opponent's deployment zone, until the end of that phase, your opponent's deployment zone is
+        within your army's Shadow of Chaos.
+
+      ### Daemonic Manifestation
+
+      While a unit from your army is within your army's Shadow of Chaos, each
+      time that unit takes a Battle-shock test, add 1 to that test and, if that test is passed, one
+      model in that unit regains up to D3 lost wounds (if that unit is a BATTLELINE unit and that test
+      is passed, up to D3 destroyed models can be returned to that unit instead).
+
+      ### Daemonic Terror
+
+      While an enemy unit is within your army's Shadow of Chaos, each time that unit
+      takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit
+      suffers D3 mortal wounds.
+    phases:
+      - command
+      - movement
+      - shooting
+      - charge
+      - fight
+    player_turn: either
+stratagems:
+  - name: Blood-Maddened Banishment
+    category: Battle Tactic
+    cp: 1
+    when: Fight phase, just after an enemy unit has selected its targets.
+    target: One BLOODLETTERS unit from your army that was selected as the target of one or more of the attacking unit's attacks.
+    effect: >-
+      Until the end of the phase, each time a model in your unit is destroyed, if that model has not
+      fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can
+      fight after the attacking model's unit has finished making its attacks, and is then removed
+      from play.
+    phases: [fight]
+    player_turn: opponent
+  - name: Empyric Predators
+    category: Strategic Ploy
+    cp: 1
+    when: Your opponent's Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.
+    target: >-
+      One FLESH HOUNDS unit from your army that is within 6" of that enemy unit and has not been
+      targeted with the Fire Overwatch Stratagem this phase.
+    effect: Your unit can make a Normal move of up to 6".
+    restrictions: Until the end of the phase, your unit cannot be targeted with the Fire Overwatch Stratagem.
+    phases: [movement]
+    player_turn: opponent
+  - name: Manifest Hate
+    category: Battle Tactic
+    cp: 1
+    when: Your opponent's Shooting phase, just after an enemy unit has selected its targets.
+    target: >-
+      One LEGIONES DAEMONICA unit from your army that was selected as the target of one or more of
+      the attacking unit's attacks.
+    effect: Until the end of the phase, models in your unit have a 4+ invulnerable save.
+    phases: [shooting]
+    player_turn: opponent
+
+units:
+  - name: Kh'har'ret the Butcher
+    id: d3b3c509-b2bf-446e-95d5-b7ee97b2299d
+    loadout_description: "This model is equipped with: blade of blood."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - CHAOS
+          - DAEMON
+          - BLOODMASTER
+          - KHORNE
+          - KH'HAR'RET THE BUTCHER
+    melee_weapons:
+      - name: Blade of blood
+        attacks: 5
+        ws: 2+
+        strength: 6
+        ap: 2
+        damage: 3
+    abilities:
+      - name: A Gory Path
+        effect: Each time this model's unit Consolidates, it can move up to 6" instead of up to 3".
+        phases: [fight]
+        player_turn: either
+    faction_abilities: [The Shadow of Chaos]
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 5+
+        wounds: 4
+        leadership: 7+
+        objective_control: 1
+        invulnerable_save: 4+
+    faction_keywords:
+      - LEGIONES DAEMONICA
+    core_abilities:
+      - Deep Strike
+      - Leader
+    warlord: true
+    attachable_to: [BLOODLETTERS]
+    enhancements:
+      - name: Incarnated Rage
+        effect: While the bearer is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability.
+        phases: [fight]
+        player_turn: your
+      - name: Warp Locus (Aura)
+        effect: The area of the battlefield within 3" of the bearer is considered to be within your army's Shadow of Chaos.
+        phases:
+          - command
+          - movement
+          - shooting
+          - charge
+          - fight
+        player_turn: either
+
+  - name: Bloodletters
+    id: a6488c0f-1d1f-41e8-8bcc-bc50fcff6fd6
+    model_count: 10
+    unit_count: 2
+    loadout_description: >-
+      * 8 models are equipped with: hellblade.
+      * 1 model is equipped with: hellblade; daemonic icon.
+      * 1 model is equipped with: hellblade; instrument of Chaos.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - CHAOS
+          - DAEMON
+          - KHORNE
+          - BLOODLETTERS
+    melee_weapons:
+      - name: Hellblade
+        attacks: 2
+        ws: 3+
+        strength: 5
+        ap: 2
+        damage: 2
+    faction_abilities: [The Shadow of Chaos]
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 7+
+        wounds: 1
+        leadership: 7+
+        objective_control: 2
+        invulnerable_save: 5+
+    faction_keywords:
+      - LEGIONES DAEMONICA
+    core_abilities:
+      - Deep Strike
+
+  - name: Flesh Hounds
+    id: a1ff98f6-a273-44db-87dd-5ef568d11c8f
+    model_count: 5
+    unit_count: 2
+    loadout_description: >-
+      * 1 Gore Hound is equipped with: burning roar; gore-drenched fangs; collar of Khorne.
+      * 4 Flesh Hounds are equipped with: gore-drenched fangs; collar of Khorne.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - BEAST
+          - CHAOS
+          - DAEMON
+          - KHORNE
+          - FLESH HOUNDS
+    ranged_weapons:
+      - name: Burning roar
+        keywords:
+          - IGNORES COVER
+          - TORRENT
+        range: 12
+        attacks: D6
+        bs: N/A
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Gore-drenched fangs
+        attacks: 3
+        ws: 3+
+        strength: 5
+        ap: 1
+        damage: 1
+    wargear_abilities:
+      - name: Collar of Khorne
+        effect: The bearer has the Feel No Pain 3+ ability against Psychic Attacks.
+        phases:
+          - shooting
+          - fight
+        player_turn: opponent
+    faction_abilities: [The Shadow of Chaos]
+    stats:
+      - movement: 12
+        toughness: 4
+        save: 7+
+        wounds: 2
+        leadership: 7+
+        objective_control: 1
+        invulnerable_save: 4+
+    faction_keywords:
+      - LEGIONES DAEMONICA
+
+  - name: Bloodcrushers
+    id: 01923117-8863-4137-9556-4afc11440c09
+    model_count: 3
+    loadout_description: >-
+      * 1 model is equipped with: hellblade; Juggernaut's bladed horn.
+      * 1 model is equipped with: hellblade; Juggernaut's bladed horn; daemonic icon.
+      * 1 model is equipped with: hellblade; Juggernaut's bladed horn; instrument of Chaos.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - MOUNTED
+          - CHAOS
+          - DAEMON
+          - KHORNE
+          - BLOODCRUSHERS
+    melee_weapons:
+      - name: Hellblade
+        attacks: 2
+        ws: 3+
+        strength: 5
+        ap: 2
+        damage: 2
+      - name: Juggernaut's bladed horn
+        keywords:
+          - EXTRA ATTACKS
+          - LANCE
+        attacks: 4
+        ws: 4+
+        strength: 6
+        ap: 1
+        damage: 1
+    faction_abilities: [The Shadow of Chaos]
+    stats:
+      - movement: 10
+        toughness: 7
+        save: 4+
+        wounds: 4
+        leadership: 7+
+        objective_control: 2
+        invulnerable_save: 5+
+    faction_keywords:
+      - LEGIONES DAEMONICA

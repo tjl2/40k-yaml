@@ -1,0 +1,290 @@
+name: "Necrons: Amonhotekh's Guard"
+id: b138ae36-c53b-4297-998d-4870f54358c3
+abilities:
+  - name: Reanimation Protocols
+    effect: >-
+      At the end of your Command phase, each unit from your army activates its Reanimation
+      Protocols and reanimates D3 wounds. Each time such a unit reanimates a wound:
+
+      * If that unit contains one or more models with fewer than their starting number of wounds
+        remaining, select one of those models; that model regains one lost wound.
+      * If all models in that unit have their starting number of wounds, but that unit is not at
+        its Starting Strength, one destroyed model is returned to that unit with one wound remaining.
+
+      Once such a unit is at its Starting Strength and all of its models have their starting
+      number of wounds, nothing further happens.
+    phases: [command]
+    player_turn: your
+stratagems:
+  - name: Mercurial Resilience
+    category: Wargear
+    cp: 1
+    when: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
+    target: One NECRONS unit from your army that was selected as the target of one or more of the attacking unit's attacks.
+    effect: Until the end of the phase, models in your unit have a 5+ invulnerable save.
+    phases:
+      - shooting
+      - fight
+    player_turn: opponent
+  - name: Disruption Fields
+    category: Battle Tactic
+    cp: 1
+    when: Fight phase.
+    target: One NECRONS unit from your army that has not been selected to fight this phase.
+    effect: Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit.
+    phases: [fight]
+    player_turn: your
+  - name: Will of the Overlord
+    category: Strategic Ploy
+    cp: 1
+    when: Your Command phase.
+    target: One NECRONS unit from your army.
+    effect: Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit.
+    restrictions: You can only use this Stratagem if an OVERLORD model from your army is on the battlefield.
+    phases: [command]
+    player_turn: your
+
+units:
+  - name: Overlord Amonhotekh
+    id: 05e3fa7b-4789-4b2d-bfb8-222006049d38
+    warlord: true
+    loadout_description: "This model is equipped with: tachyon arrow; Overlord's blade."
+    attachable_to: [NECRON WARRIORS]
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - NOBLE
+          - OVERLORD
+          - AMONHOTEKH
+    ranged_weapons:
+      - name: Tachyon arrow
+        keywords: [ONE SHOT]
+        range: 72
+        attacks: 1
+        bs: 2+
+        strength: 16
+        ap: 5
+        damage: D6+2
+        wargear_abilities:
+          - name: One Shot
+            effect: The bearer can only shoot with this weapon once per battle.
+            phases: [shooting]
+            player_turn: your
+    melee_weapons:
+      - name: Overlord's blade
+        keywords: [DEVASTATING WOUNDS]
+        attacks: 4
+        ws: 2+
+        strength: 8
+        ap: 3
+        damage: 2
+    abilities:
+      - name: Implacable Resilience
+        effect: Each time an attack is allocated to this model, subtract 1 from that attack's Damage characteristic.
+        phases:
+          - shooting
+          - fight
+        player_turn: opponent
+    stats:
+      - movement: 5
+        toughness: 5
+        save: 2+
+        wounds: 6
+        leadership: 4+
+        objective_control: 1
+        invulnerable_save: 4+
+    faction_keywords: [NECRONS]
+    core_abilities: [Leader]
+    faction_abilities: [Reanimation Protocols]
+    enhancements:
+      - name: Overriding Control
+        effect: The bearer's unit is eligible to shoot in a turn in which it Fell Back.
+        phases: [shooting]
+        player_turn: your
+      - name: Protocol of Resonant Focus
+        effect: >-
+          In your Command phase, select one enemy unit within 12" of and visible to the bearer. Until
+          the end of the turn, each time a friendly NECRONS model makes an attack that targets that
+          enemy unit, re-roll a Hit roll of 1.
+        phases:
+          - shooting
+          - fight
+        player_turn: your
+
+  - name: Necron Warriors
+    id: 1ffeac17-6215-41cf-ae48-c9a4679585d3
+    model_count: 10
+    loadout_description: >-
+      * 5 models are equipped with: gauss flayer; close combat weapon.
+      * 5 models are equipped with: gauss reaper; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - NECRON WARRIORS
+    ranged_weapons:
+      - name: Gauss flayer
+        keywords:
+          - LETHAL HITS
+          - RAPID FIRE 1
+        range: 24
+        attacks: 1
+        bs: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Gauss reaper
+        keywords: [LETHAL HITS]
+        range: 12
+        attacks: 2
+        bs: 4+
+        strength: 5
+        ap: 1
+        damage: 1
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 1
+        ws: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+    stats:
+      - movement: 5
+        toughness: 4
+        save: 4+
+        wounds: 1
+        leadership: 7+
+        objective_control: 2
+    faction_abilities: [Reanimation Protocols]
+    faction_keywords: [NECRONS]
+
+  - name: Skorpekh Destroyers
+    id: 28ca8110-9168-4db0-9971-396afee345d1
+    model_count: 3
+    loadout_description: >-
+      * Every model is equipped with: Skorpekh hyperphase weapons.
+      * This unit is equipped with: 1 plasmacyte.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - SKORPEKH DESTROYERS
+    melee_weapons:
+      - name: Skorpekh hyperphase weapons
+        attacks: 4
+        ws: 3+
+        strength: 7
+        ap: 2
+        damage: 2
+    wargear_abilities:
+      - name: Plasmacyte
+        effect: >-
+          Once per battle for each Plasmacyte this unit has, when this unit is selected to fight,
+          you can use this ability. If you do, until the end of the phase, melee weapons equipped by
+          models in this unit have the [DEVASTATING WOUNDS] ability.
+        phases: [fight]
+        player_turn: your
+        restrictions: Once per battle
+    stats:
+      - movement: 7
+        toughness: 6
+        save: 3+
+        wounds: 3
+        leadership: 7+
+        objective_control: 2
+    faction_keywords: [NECRONS]
+    faction_abilities: [Reanimation Protocols]
+
+  - name: Canoptek Scarab Swarms
+    id: 396db69c-927c-45f2-8e4f-0b9fa871352c
+    model_count: 3
+    loadout_description: "Every model is equipped with: feeder mandibles."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - SWARM
+          - FLY
+          - CANOPTEK
+          - SCARAB SWARMS
+    melee_weapons:
+      - name: Feeder mandibles
+        keywords: [LETHAL HITS]
+        attacks: 6
+        ws: 5+
+        strength: 2
+        ap: 0
+        damage: 1
+    stats:
+      - movement: 9
+        toughness: 2
+        save: 6+
+        wounds: 4
+        leadership: 8+
+        objective_control: 0
+    faction_keywords: [NECRONS]
+    core_abilities: [Deadly Demise 1]
+    faction_abilities: [Reanimation Protocols]
+
+  - name: Canoptek Doomstalker
+    id: 4a18a301-bc07-4266-8f4f-05437c9b927c
+    model_count: 1
+    loadout_description: "This model is equipped with: doomsday blaster; twin gauss flayer; Doomstalker limbs."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - VEHICLE
+          - WALKER
+          - CANOPTEK
+          - DOOMSTALKER
+    ranged_weapons:
+      - name: Doomsday blaster
+        keywords:
+          - BLAST
+          - HEAVY
+        range: 48
+        attacks: D6+1
+        bs: 4+
+        strength: 14
+        ap: 3
+        damage: 3
+      - name: Twin gauss flayer
+        keywords:
+          - LETHAL HITS
+          - RAPID FIRE 1
+          - TWIN-LINKED
+        range: 24
+        attacks: 1
+        bs: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Doomstalker limbs
+        attacks: 3
+        ws: 4+
+        strength: 6
+        ap: 0
+        damage: 1
+    wargear_abilities:
+      - name: Damaged
+        effect: >-
+          While this model has 1-4 wounds remaining, each time this model makes an attack, subtract
+          1 from the Hit roll.
+        phases:
+          - shooting
+          - fight
+        player_turn: your
+    stats:
+      - movement: 7
+        toughness: 8
+        save: 3+
+        wounds: 12
+        leadership: 8+
+        objective_control: 4
+        invulnerable_save: 4+
+    faction_keywords: [NECRONS]
+    core_abilities: [Deadly Demise D3]
+    faction_abilities: [Reanimation Protocols]

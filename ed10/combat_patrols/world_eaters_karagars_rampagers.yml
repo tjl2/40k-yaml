@@ -1,0 +1,263 @@
+name: "World Eaters: Karagar's Rampagers"
+id: 5590babe-4faf-4fc5-a471-d2903720a529
+abilities:
+  - name: Blessings of Khorne
+    description: >-
+      Khorne is the god of warfare and slaughter, and provides for those who
+      consecrate the battlefield in his name.
+    usage: >-
+      At the start of the battle round, you can make a Blessings of Khorne roll.
+      To do so, roll eight D6. You can then use those dice to activate up to two
+      Blessings of Khorne from the Blessings of Khorne list (see below). Each
+      Blessing of Khorne specifies the dice results it requires (where a number
+      is specified, a double or triple of that value or higher is required). You
+      can only activate each Blessing of Khorne once per battle round. Any
+      unused dice from the Blessings of Khorne roll are then discarded.
+
+      Once activated, each Blessing of Khorne applies to all units from your
+      army until the end of the battle round.
+    effect: >-
+      ### WRATHFUL DEVOTION
+      **Any double.** Models in this unit have the Feel No Pain 6+ ability. If
+      models in this unit already have the Feel No Pain ability, add 1 to their
+      Feel No Pain rolls.
+
+      ### TOTAL CARNAGE
+      **Double 4+ or any triple.** Each time a model in this unit is destroyed by a
+      melee attack, if that model has not fought this phase, roll one D6: on a
+      4+, do not remove it from play. The destroyed model can fight after the
+      attacking model's unit has finished making its attacks, and is then
+      removed from play.
+
+      ### WARP BLADES
+      **Double 5+ or any triple.** Melee weapons equipped by models in this unit
+      have the **[LETHAL HITS]** ability.
+    phases: [command]
+    player_turn: your
+stratagems:
+  - name: Rage Unchecked
+    category: Battle Tactic
+    cp: 1
+    when: Fight phase
+    target: One WORLD EATERS unit from your army.
+    effect: >-
+      Until the end of the phase, each time a model in this unit makes a melee attack,
+      add 1 to the Wound roll.
+    phases: [fight]
+    player_turn: your
+  - name: Unstoppable Fury
+    category: Strategic Ploy
+    cp: 1
+    when: Charge phase
+    target: One WORLD EATERS unit from your army that made a Charge move this phase.
+    effect: >-
+      Until the end of the turn:
+      * That unit is eligible to declare a charge in the Charge phase even if it Advanced or Fell Back this turn.
+      * Each time a model in that unit makes a melee attack, you can re-roll the Hit roll.
+    phases: [charge]
+    player_turn: your
+  - name: Overwhelming Onslaught
+    category: Epic Deed
+    cp: 1
+    when: Fight phase, after an enemy unit has fought
+    target: One WORLD EATERS unit from your army that is within Engagement Range of that enemy unit.
+    effect: >-
+      That WORLD EATERS unit is eligible to fight, even if it has already fought this phase.
+    phases: [fight]
+    player_turn: your
+
+units:
+  - name: Karagar the Blooded
+    id: 8737f7f1-b0e4-4638-9294-8faf64c3dc6c
+    warlord: true
+    loadout_description: "This model is equipped with: plasma pistol; exalted chainblade; Juggernaut's bladed horn."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - MOUNTED
+          - CHARACTER
+          - CHAOS
+          - KHORNE
+          - LORD ON JUGGERNAUT
+          - KARAGAR THE BLOODED
+    ranged_weapons:
+      - name: Plasma pistol - standard
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 2+
+        strength: 7
+        ap: 2
+        damage: 1
+      - name: Plasma pistol - supercharge
+        keywords:
+          - HAZARDOUS
+          - PISTOL
+        range: 12
+        attacks: 1
+        bs: 2+
+        strength: 8
+        ap: 3
+        damage: 2
+    melee_weapons:
+      - name: Exalted chainblade
+        attacks: 7
+        ws: 2+
+        strength: 6
+        ap: 1
+        damage: 2
+      - name: Juggernaut's bladed horn
+        keywords:
+          - EXTRA ATTACKS
+          - LANCE
+        attacks: 4
+        ws: 3+
+        strength: 6
+        ap: 1
+        damage: 2
+    stats:
+      - movement: 10
+        toughness: 6
+        save: 2+
+        wounds: 7
+        leadership: 6+
+        objective_control: 2
+        invulnerable_save: 4+
+    faction_keywords: [WORLD EATERS]
+    faction_abilities: [Blessings of Khorne]
+    enhancements:
+      - name: Skulls for Khorne
+        effect: >-
+          Each time the bearer destroys an enemy unit with a melee attack, roll
+          one D6: on a 2+, you gain 1CP.
+        phases: [fight]
+        player_turn: your
+      - name: Arch Slaughterer
+        effect: Melee weapons equipped by the bearer have the **[PRECISION]** ability.
+        phases: [fight]
+        player_turn: your
+
+  - name: Khorne Berzerkers
+    id: 01bfb4e9-0d8b-4c6c-ae96-4dc9fce0d8d0
+    model_count: 10
+    unit_count: 2
+    loadout_description: >-
+      * 1 Khorne Berzerker Champion is equipped with: plasma pistol; Berzerker chainblade.
+      * 1 Khorne Berzerker is equipped with: plasma pistol; Berzerker chainblade.
+      * 1 Khorne Berzerker is equipped with: plasma pistol; Berzerker chainblade; icon of Khorne.
+      * 2 Khorne Berzerkers are equipped with: bolt pistol; Khornate eviscerator.
+      * 5 Khorne Berzerkers are equipped with: bolt pistol; Berzerker chainblade.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHAOS
+          - KHORNE
+          - BERZERKERS
+    ranged_weapons:
+      - name: Bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Plasma pistol - standard
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 7
+        ap: 2
+        damage: 1
+      - name: Plasma pistol - supercharge
+        keywords:
+          - HAZARDOUS
+          - PISTOL
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 8
+        ap: 3
+        damage: 2
+    melee_weapons:
+      - name: Berzerker chainblade
+        attacks: 4
+        ws: 3+
+        strength: 5
+        ap: 1
+        damage: 1
+      - name: Khornate eviscerator
+        attacks: 3
+        ws: 3+
+        strength: 8
+        ap: 2
+        damage: 2
+    faction_abilities: [Blessings of Khorne]
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 2
+        leadership: 6+
+        objective_control: 2
+    faction_keywords: [WORLD EATERS]
+
+  - name: Jakhals
+    id: a61f24ab-2a74-4fc1-a8bc-97e47babd1cb
+    model_count: 10
+    loadout_description: >-
+      * 1 Jakhal Pack Leader is equipped with: autopistol; Jakhal chainblades.
+      * 1 Dishonoured is equipped with: skullsmasher.
+      * 1 Jakhal is equipped with: autopistol; mauler chainblade.
+      * 1 Jakhal is equipped with: autopistol; Jakhal chainblades; icon of Khorne.
+      * 6 Jakhals are equipped with: autopistol; Jakhal chainblades.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - CHAOS
+          - KHORNE
+          - JAKHALS
+    ranged_weapons:
+      - name: Autopistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Jakhal chainblades
+        keywords: [SUSTAINED HITS 1]
+        attacks: 2
+        ws: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+      - name: Mauler chainblade
+        keywords: [SUSTAINED HITS 1]
+        attacks: 2
+        ws: 5+
+        strength: 5
+        ap: 1
+        damage: 2
+      - name: Skullsmasher
+        attacks: 4
+        ws: 4+
+        strength: 4
+        ap: 1
+        damage: 2
+    stats:
+      - movement: 6
+        toughness: 3
+        save: 6+
+        wounds: 1
+        leadership: 7+
+        objective_control: 1
+    faction_keywords: [WORLD EATERS]
+    core_abilities: [Feel No Pain 6+]
+    faction_abilities: [Blessings of Khorne]
