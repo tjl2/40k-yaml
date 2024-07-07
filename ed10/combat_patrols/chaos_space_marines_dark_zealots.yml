@@ -130,12 +130,9 @@ units:
         id: 59bd551a-d9df-4fb7-96b6-77d1cf15e561
         effect: The bearer has the Feel No Pain 5+ ability.
         phases:
-          - command
-          - movement
           - shooting
-          - charge
           - fight
-        player_turn: either
+        player_turn: opponent
 
   - name: Legionaries
     id: a36c0ae1-5c07-4437-84f5-23a95498fa3e
