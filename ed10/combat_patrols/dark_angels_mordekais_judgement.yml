@@ -1,0 +1,293 @@
+name: "Dark Angels: Mordekai's Judgement"
+id: 6b0cc11c-87b7-4314-90be-e7e1bc3ecda6
+abilities:
+  - name: Oath of Moment
+    effect: >-
+      At the start of your Command phase, select one unit from your opponent's army. Until the
+      start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a
+      model with this ability makes an attack that targets your Oath of Moment target, you can
+      re-roll the Hit roll.
+    phases: [command]
+    player_turn: your
+stratagems:
+  - name: Resolute in Duty
+    category: Strategic Ploy
+    cp: 1
+    when: Your Command phase.
+    target: One ADEPTUS ASTARTES INFANTRY unit from your army.
+    effect: Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit.
+    phases: [command]
+    player_turn: your
+  - name: Teachings of the Lion
+    category: Strategic Ploy
+    cp: 1
+    when: Your Movement phase, just after an ADEPTUS ASTARTES INFANTRY unit from your army Falls Back.
+    target: That ADEPTUS ASTARTES INFANTRY unit.
+    effect: Until the end of the turn, your unit is eligible to either shoot or declare a charge (but not both) in a turn in which it Fell Back.
+    phases: [movement]
+    player_turn: your
+  - name: Fortitude of the First
+    category: Battle Tactic
+    cp: 1
+    when: Your opponent's Shooting phase, just after an enemy unit has selected its targets.
+    target: >-
+      One ADEPTUS ASTARTES INFANTRY unit from your army that was selected as the target of one or
+      more of the attacking unit's attacks and is within range of an objective marker you control.
+    effect: Until the end of the phase, each time an attack targets your unit, your unit has the Benefit of Cover against that attack.
+    phases: [shooting]
+    player_turn: opponent
+
+units:
+  - name: Chaplain Mordekai
+    id: b1f03fea-7011-461e-a6d8-e70d9c19b73b
+    loadout_description: "This model is equipped with: absolvor bolt pistol; crozius arcanum."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - CHARACTER
+          - IMPERIUM
+          - TACTICUS
+          - CHAPLAIN
+          - MORDEKAI
+    ranged_weapons:
+      - name: Absolvor bolt pistol
+        keywords: [PISTOL]
+        range: 18
+        attacks: 1
+        bs: 3+
+        strength: 5
+        ap: 1
+        damage: 2
+    melee_weapons:
+      - name: Crozius arcanum
+        attacks: 5
+        ws: 2+
+        strength: 6
+        ap: 1
+        damage: 2
+    abilities:
+      - name: Litany of Hate
+        effect: While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll.
+        phases: [fight]
+        player_turn: your
+    faction_abilities: [Oath of Moment]
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 4
+        leadership: 5+
+        objective_control: 1
+        invulnerable_save: 4+
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - DARK ANGELS
+    core_abilities:
+      - Leader
+    attachable_to: [INTERCESSOR SQUAD]
+    warlord: true
+    enhancements:
+      - name: Stoic Exemplar
+        id: 35045abc-e931-44a7-9226-55db2c2c42bc
+        effect: >-
+          Each time a melee attack targets the bearer's unit, if one or more enemy units ended a
+          Charge move within Engagement Range of the bearer's unit this turn, subtract 1 from the
+          Wound roll.
+        phases: [fight]
+        player_turn: opponent
+      - name: Zealous Wrath
+        id: b25b6986-a27e-4281-9895-5a29ae9189dc
+        effect: You can re-roll Advance and Charge rolls made for the bearer's unit.
+        phases:
+          - movement
+          - charge
+        player_turn: your
+
+  - name: Intercessor Squad
+    id: 9ada1f99-d5fa-46f5-91a4-a79c5db12672
+    model_count: 5
+    loadout_description: >-
+      * 1 Intercessor Sergeant is equipped with: bolt pistol; power weapon.
+      * 4 Intercessors are equipped with: bolt pistol; bolt rifle; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - IMPERIUM
+          - TACTICUS
+          - INTERCESSOR SQUAD
+    ranged_weapons:
+      - name: Bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Bolt rifle
+        keywords:
+          - ASSAULT
+          - HEAVY
+        range: 24
+        attacks: 2
+        bs: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 3
+        ws: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Power weapon
+        attacks: 4
+        ws: 3+
+        strength: 5
+        ap: 2
+        damage: 1
+    faction_abilities: [Oath of Moment]
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 2
+        leadership: 6+
+        objective_control: 2
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - DARK ANGELS
+
+  - name: Inceptor Squad
+    id: d1551ca8-a206-4479-89ca-8fc26a08ed46
+    model_count: 3
+    loadout_description: "Every model is equipped with: assault bolters; close combat weapon."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - JUMP PACK
+          - FLY
+          - IMPERIUM
+          - GRAVIS
+          - INCEPTOR SQUAD
+    ranged_weapons:
+      - name: Assault bolters
+        keywords:
+          - ASSAULT
+          - PISTOL
+          - SUSTAINED HITS 2
+          - TWIN-LINKED
+        range: 18
+        attacks: 3
+        bs: 3+
+        strength: 5
+        ap: 1
+        damage: 2
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 3
+        ws: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    faction_abilities: [Oath of Moment]
+    stats:
+      - movement: 10
+        toughness: 6
+        save: 3+
+        wounds: 3
+        leadership: 6+
+        objective_control: 1
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - DARK ANGELS
+    core_abilities:
+      - Deep Strike
+
+  - name: Redemptor Dreadnought
+    id: 30bf4b6e-2ec2-4757-826b-a315733bdc8b
+    model_count: 1
+    loadout_description: >-
+      This model is equipped with: icarus rocket pod; macro plasma incinerator; onslaught gatling
+      cannon; twin fragstorm grenade launcher; Redemptor fist.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - VEHICLE
+          - WALKER
+          - IMPERIUM
+          - REDEMPTOR DREADNOUGHT
+    ranged_weapons:
+      - name: Icarus rocket pod
+        keywords: [ANTI-FLY 2+]
+        range: 24
+        attacks: D3
+        bs: 3+
+        strength: 8
+        ap: 1
+        damage: 2
+      - name: Macro plasma incinerator - standard
+        keywords: [BLAST]
+        range: 36
+        attacks: D6+1
+        bs: 3+
+        strength: 8
+        ap: 3
+        damage: 2
+      - name: Macro plasma incinerator - supercharge
+        keywords:
+          - BLAST
+          - HAZARDOUS
+        range: 36
+        attacks: D6+1
+        bs: 3+
+        strength: 9
+        ap: 4
+        damage: 3
+      - name: Onslaught gatling cannon
+        keywords: [DEVASTATING WOUNDS]
+        range: 24
+        attacks: 8
+        bs: 3+
+        strength: 5
+        ap: 0
+        damage: 1
+      - name: Twin fragstorm grenade launcher
+        keywords:
+          - BLAST
+          - TWIN-LINKED
+        range: 18
+        attacks: D6
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Redemptor fist
+        attacks: 5
+        ws: 3+
+        strength: 12
+        ap: 2
+        damage: 3
+    faction_abilities: [Oath of Moment]
+    abilities:
+      - name: Damaged
+        effect: While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+        phases: [fight]
+        player_turn: your
+    stats:
+      - movement: 8
+        toughness: 10
+        save: 2+
+        wounds: 12
+        leadership: 6+
+        objective_control: 4
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - DARK ANGELS
+    core_abilities:
+      - Deadly Demise D3
