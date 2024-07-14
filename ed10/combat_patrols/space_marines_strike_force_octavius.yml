@@ -34,7 +34,7 @@ stratagems:
     phases: [shooting, fight]
     player_turn: opponent
   - name: Veteran Instincts
-    category: Battle Tactec
+    category: Battle Tactic
     cp: 1
     when: Fight phase.
     target: >-
