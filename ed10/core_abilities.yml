@@ -45,6 +45,7 @@
   effect: >-
     * Unit can be set up in Reserves instead of on
     the battlefield.
+    
     * Unit can be set up in your Reinforcements step, more than 9"
     horizontally away from all enemy models.
   phases: [movement]
@@ -55,8 +56,10 @@
   effect: >-
     * **Scouts x"**: Unit can make a Normal move of up to _x"_ before the first
     turn begins.
+    
     * If embarked in a **Dedicated Transport**, that **Dedicated Transport** can
     make this move instead.
+    
     * Must end this move more than 9" horizontally away from all enemy models.
   phases: []
   player_turn: your
@@ -75,9 +78,11 @@
   effect: >-
     * Before the battle, Character units with the Leader ability can be attached
     to one of their Bodyguard units to form an Attached unit.
+    
     * Attached units can only contain one Leader.
+    
     * Attacks cannot be allocated to Character models in Attached units.
-  phases: [shooting, fight]
+  phases: []
   player_turn: opponent
   mission_steps: [pre_battle]
 
