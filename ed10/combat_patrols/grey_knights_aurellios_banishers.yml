@@ -1,0 +1,308 @@
+name: "Grey Knights: Aurellios' Banishers"
+id: e6603ba1-305e-4009-8679-6a2d3ac91692
+abilities:
+  - name: Teleport Assault
+    effect: >-
+      At the end of your opponent's turn, you can select one GREY KNIGHTS unit from your army with
+      this ability (excluding units that are within Engagement Range of one or more enemy units).
+      Remove that unit from the battlefield.
+
+      In the Reinforcements step of your next Movement phase, set that unit up anywhere on the
+      battlefield that is more than 9" horizontally away from all enemy models. Any units that are
+      not on the battlefield at the end of the battle count as destroyed.
+    phases:
+      - movement
+    player_turn: your
+stratagems:
+  - name: Warded Plate
+    category: Battle Tactic
+    cp: 1
+    when: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
+    target: One GREY KNIGHTS INFANTRY unit from your army that was selected as the target of one or more of the attacking unit's attacks.
+    effect: >-
+      Until the end of the phase, each time an attack targets your unit, if the Strength
+      characteristic of that attack is greater than your unit's Toughness characteristic, subtract 1
+      from the Wound roll.
+    phases:
+      - shooting
+      - fight
+    player_turn: opponent
+  - name: Unyielding to the Last
+    category: Battle Tactic
+    cp: 1
+    when: Fight phase, just after an enemy unit has selected its targets.
+    target: One GREY KNIGHTS INFANTRY unit from your army that was selected as the target of one or more of the attacking unit's attacks.
+    effect: >-
+      Until the end of the phase, each time a model in your unit is destroyed, if that model has not
+      fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can
+      fight after the attacking model's unit has finished making its attacks, and is then removed
+      from play.
+    phases: [fight]
+    player_turn: opponent
+  - name: Emergency Teleport
+    category: Strategic Ploy
+    cp: 2
+    when: Your opponent's Fight phase.
+    target: One GREY KNIGHTS INFANTRY unit from your army that is within Engagement Range of one or more enemy units.
+    effect: Until the end of the turn, your unit is eligible to be selected for the Teleport Assault ability, even though it is within Engagement Range of enemy units.
+    phases: [fight]
+    player_turn: opponent
+units:
+  - name: Librarian Aurellios
+    id: b6cc3b58-5173-4288-be98-6e748789d2a5
+    loadout_description: "This model is equipped with: Purge Soul; Nemesis force weapon."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - TERMINATOR
+          - PSYKER
+          - IMPERIUM
+          - LIBRARIAN
+          - AURELLIOS
+    ranged_weapons:
+      - name: Purge Soul - witchfire
+        keywords: [PSYCHIC]
+        range: 24
+        attacks: 1
+        bs: 3+
+        strength: 6
+        ap: 2
+        damage: 3
+      - name: Purge Soul - focused witchfire
+        keywords:
+          - PRECISION
+          - PSYCHIC
+          - HAZARDOUS
+        range: 24
+        attacks: 1
+        bs: 3+
+        strength: 6
+        ap: 2
+        damage: 3
+    melee_weapons:
+      - name: Nemesis force weapon
+        keywords: [PSYCHIC]
+        attacks: 4
+        ws: 2+
+        strength: 6
+        ap: 1
+        damage: 2
+    abilities:
+      - name: Sanctic Hood
+        effect: While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.
+        phases:
+          - shooting
+          - fight
+        player_turn: either
+    faction_abilities: [Teleport Assault]
+    stats:
+      - movement: 5
+        toughness: 5
+        save: 2+
+        wounds: 5
+        leadership: 6+
+        objective_control: 1
+        invulnerable_save: 4+
+    faction_keywords:
+      - GREY KNIGHTS
+    core_abilities:
+      - Deep Strike
+      - Leader
+    attachable_to: [BROTHERHOOD TERMINATOR SQUAD]
+    warlord: true
+    enhancements:
+      - name: Banishment Stone (Psychic)
+        id: 081c67e2-04bf-4747-9eb0-64250bb7f278
+        effect: "Each time the bearer destroys an enemy CHARACTER model, roll one D6: on a 2+, you gain 1CP."
+        phases:
+          - shooting
+          - fight
+        player_turn: your
+      - name: Dominating Aura (Psychic)
+        id: 1e264317-319f-46a0-8dc2-ae90521870f8
+        effect: The bearer has an Objective Control characteristic of 3.
+        phases:
+          - command
+          - movement
+          - shooting
+          - fight
+        player_turn: either
+  - name: Strike Squad
+    id: 853b97b1-3d5b-4b26-87c6-4cab60ad5bbb
+    model_count: 5
+    loadout_description: >-
+      * 1 Justicar is equipped with: storm bolter; Nemesis force weapon.
+      * 3 Grey Knights are equipped with: storm bolter; Nemesis force weapon.
+      * 1 Grey Knight is equipped with: psilencer; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - PSYKER
+          - IMPERIUM
+          - STRIKE SQUAD
+    ranged_weapons:
+      - name: Psilencer
+        keywords:
+          - PSYCHIC
+          - SUSTAINED HITS 1
+        range: 24
+        attacks: 6
+        bs: 3+
+        strength: 5
+        ap: 0
+        damage: 1
+      - name: Storm bolter
+        keywords: [RAPID FIRE 2]
+        range: 24
+        attacks: 2
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 3
+        ws: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Nemesis force weapon
+        keywords: [PSYCHIC]
+        attacks: 3
+        ws: 3+
+        strength: 6
+        ap: 2
+        damage: 2
+    faction_abilities: [Teleport Assault]
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 2+
+        wounds: 2
+        leadership: 6+
+        objective_control: 2
+    faction_keywords:
+      - GREY KNIGHTS
+    core_abilities:
+      - Deep Strike
+  - name: Brotherhood Terminator Squad
+    id: f68700ac-86a6-4324-8fb8-0ec42f547992
+    model_count: 5
+    loadout_description: >-
+      * 1 Terminator Justicar is equipped with: storm bolter; Nemesis force weapon.
+      * 3 Brotherhood Terminators are equipped with: storm bolter; Nemesis force weapon.
+      * 1 Brotherhood Terminator is equipped with: psycannon; Nemesis force weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - PSYKER
+          - TERMINATOR
+          - IMPERIUM
+          - BROTHERHOOD TERMINATOR SQUAD
+    ranged_weapons:
+      - name: Psycannon
+        keywords: [PSYCHIC]
+        range: 24
+        attacks: 3
+        bs: 3+
+        strength: 8
+        ap: 1
+        damage: 2
+      - name: Storm bolter
+        keywords: [RAPID FIRE 2]
+        range: 24
+        attacks: 2
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Nemesis force weapon
+        keywords: [PSYCHIC]
+        attacks: 4
+        ws: 3+
+        strength: 6
+        ap: 2
+        damage: 2
+    abilities:
+      - name: Hammerhand (Psychic)
+        effect: >-
+          Each time a model in this unit makes a Charge move, until the end of the turn, melee
+          weapons equipped by models in this unit have the [LETHAL HITS] ability.
+        phases: [charge]
+        player_turn: your
+    faction_abilities: [Teleport Assault]
+    stats:
+      - movement: 5
+        toughness: 5
+        save: 2+
+        wounds: 3
+        leadership: 6+
+        objective_control: 2
+        invulnerable_save: 4+
+    faction_keywords:
+      - GREY KNIGHTS
+    core_abilities:
+      - Deep Strike
+  - name: Nemesis Dreadknight
+    id: 1931beb6-248b-42f0-ab61-1684d648ebb3
+    model_count: 1
+    loadout_description: "This model is equipped with: heavy psycannon; Nemesis greatsword."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - VEHICLE
+          - WALKER
+          - PSYKER
+          - IMPERIUM
+          - NEMESIS DREADKNIGHT
+    ranged_weapons:
+      - name: Heavy psycannon
+        keywords: [PSYCHIC]
+        range: 24
+        attacks: 6
+        bs: 3+
+        strength: 10
+        ap: 1
+        damage: 3
+    melee_weapons:
+      - name: Nemesis greatsword - strike
+        keywords: [PSYCHIC]
+        attacks: 5
+        ws: 3+
+        strength: 10
+        ap: 2
+        damage: D6
+      - name: Nemesis greatsword - sweep
+        keywords: [PSYCHIC]
+        attacks: 10
+        ws: 3+
+        strength: 5
+        ap: 1
+        damage: 1
+    abilities:
+      - name: Damaged
+        effect: While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+        player_turn: your
+        phases:
+          - shooting
+          - fight
+    faction_abilities: [Teleport Assault]
+    stats:
+      - movement: 8
+        toughness: 8
+        save: 2+
+        wounds: 13
+        leadership: 6+
+        objective_control: 4
+        invulnerable_save: 4+
+    faction_keywords:
+      - GREY KNIGHTS
+    core_abilities:
+      - Deadly Demise D3
