@@ -1,0 +1,318 @@
+name: "Adepta Sororitas: Sanctuary Guardians"
+id: ddbcf8ec-3bee-43a9-985e-ef5f9b31d86c
+abilities:
+  - name: Acts of Faith
+    effect: >-
+      Each unit from your army can perform one Act of Faith per phase. This is done using Miracle
+      dice. You gain 1 Miracle dice at the start of each turn and each time an ADEPTA SORORITAS unit
+      from your army is destroyed. Before making a dice roll for a model or unit from your army with
+      the Acts of Faith ability, if you have one or more dice in your Miracle dice pool, that unit
+      can perform an Act of Faith. If it does, select one of the dice from your Miracle dice pool to
+      substitute that dice roll. You can use Miracle dice for Advance rolls, Battle-shock tests,
+      Charge rolls, Damage rolls, Hit rolls, Saving throws, and Wound rolls.
+    phases:
+      - command
+      - movement
+      - shooting
+      - charge
+      - fight
+    player_turn: either
+stratagems:
+  - name: Ascetic Discipline
+    category: Battle Tactic
+    cp: 1
+    when: Your Shooting phase or the Fight phase.
+    target: One ADEPTA SORORITAS unit from your army that has not been selected to shoot or fight this phase.
+    effect: Until the end of the phase, each time a model in your unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 2.
+    phases:
+      - shooting
+      - fight
+    player_turn: your
+  - name: A Martyr's Death
+    category: Battle Tactic
+    cp: 1
+    when: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
+    target: One ADEPTA SORORITAS unit from your army that was selected as the target of one or more of the attacking unit's attacks.
+    effect: >-
+      Each time you use this Stratagem, you can discard 1 Miracle dice. Until the end of the phase,
+      each time a model in your unit is destroyed, if that model has not shot or fought this phase,
+      roll one D6, adding 1 to the result if you discarded a Miracle dice when using this Stratagem.
+      On a 4+, do not remove the destroyed model from play; it can shoot or fight after the
+      attacking unit has finished making its attacks, and is then removed from play.
+    phases:
+      - shooting
+      - fight
+    player_turn: opponent
+  - name: Holy Radiance
+    category: Epic Deed
+    cp: 1
+    when: Your opponent's Shooting phase, just after an enemy unit has selected its targets.
+    target: One ADEPTA SORORITAS unit from your army that was selected as the target of one or more of the attacking unit's attacks.
+    effect: Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll and models in your unit have the Feel No Pain 5+ ability against that attack.
+    phases: [shooting]
+    player_turn: opponent
+units:
+  - name: Canoness Adalya
+    id: c6a949ae-3ec6-467a-b0f4-5ed52062d664
+    loadout_description: "This model is equipped with: condemnor boltgun; hallowed chainsword; null rod."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - IMPERIUM
+          - CANONESS
+          - CANONESS ADALYA
+    ranged_weapons:
+      - name: Condemnor boltgun
+        keywords:
+          - ANTI-PSYKER 2+
+          - DEVASTATING WOUNDS
+          - PRECISION
+          - RAPID FIRE 1
+        range: 24
+        attacks: 1
+        bs: 2+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Hallowed chainsword
+        attacks: 5
+        ws: 2+
+        strength: 3
+        ap: 1
+        damage: 1
+    abilities:
+      - name: Lead the Righteous
+        effect: While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll.
+        phases:
+          - shooting
+          - fight
+        player_turn: your
+    wargear_abilities:
+      - name: Null Rod
+        effect: Models in the bearer's unit have the Feel No Pain 4+ ability against mortal wounds and Psychic Attacks.
+        player_turn: opponent
+        phases:
+          - shooting
+          - fight
+    faction_abilities: [Acts of Faith]
+    stats:
+      - movement: 6
+        toughness: 3
+        save: 3+
+        wounds: 4
+        leadership: 7+
+        objective_control: 1
+        invulnerable_save: 4+
+    faction_keywords:
+      - ADEPTA SORORITAS
+    core_abilities:
+      - Leader
+    attachable_to:
+      - BATTLE SISTERS SQUAD
+      - CELESTIAN SACRESANTS
+    warlord: true
+    enhancements:
+      - name: Defender of the Faith
+        id: f9b31cf3-6c23-4953-a858-ce406b2f4716
+        effect: >-
+          Improve the Save characteristic of models in the bearer's unit by 1. In your Command
+          phase, you can discard 1 Miracle dice. If you do, until the start of your next Command
+          phase, add 1 to the Objective Control characteristic of models in the bearer's unit.
+        phases:
+          - command
+        player_turn: your
+      - name: Righteous Fury
+        id: 0e20d6dd-8aca-4918-a58d-1b1f6a92ad89
+        effect: >-
+          The bearer's unit is eligible to shoot and declare a charge in a turn in which it Advanced
+          or Fell Back. In your Command phase, you can discard 1 Miracle dice. If you do, until the
+          end of the turn, you can re-roll Charge rolls made for the bearer's unit.
+        phases:
+          - command
+          - movement
+          - shooting
+          - charge
+        player_turn: your
+  - name: Battle Sisters Squad
+    id: c39b606a-b20d-4f0c-8fda-c03b08594990
+    model_count: 10
+    patrol_squads_model_count: 5
+    loadout_description: >-
+      * The Sister Superior is equipped with: bolt pistol; combi-weapon; power weapon.
+      * 1 Battle Sister is equipped with: bolt pistol; Ministorum flamer; close combat weapon.
+      * 1 Battle Sister is equipped with: bolt pistol; Ministorum heavy flamer; close combat weapon.
+      * 1 Battle Sister is equipped with: bolt pistol; boltgun; close combat weapon; simulacrum imperialis.
+      * 6 Battle Sisters are equipped with: bolt pistol; boltgun; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - IMPERIUM
+          - BATTLE SISTERS SQUAD
+    ranged_weapons:
+      - name: Bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Boltgun
+        keywords: [RAPID FIRE 1]
+        range: 24
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Combi-weapon
+        keywords:
+          - ANTI-INFANTRY 4+
+          - DEVASTATING WOUNDS
+          - RAPID FIRE 1
+        range: 24
+        attacks: 1
+        bs: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Ministorum flamer
+        keywords:
+          - IGNORES COVER
+          - TORRENT
+        range: 12
+        attacks: D6
+        bs: N/A
+        strength: 5
+        ap: 0
+        damage: 1
+      - name: Ministorum heavy flamer
+        keywords:
+          - IGNORES COVER
+          - TORRENT
+        range: 12
+        attacks: D6
+        bs: N/A
+        strength: 6
+        ap: 1
+        damage: 1
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 1
+        ws: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+      - name: Power weapon
+        attacks: 2
+        ws: 4+
+        strength: 4
+        ap: 2
+        damage: 1
+    wargear_abilities:
+      - name: Simulacrum Imperialis
+        effect: >-
+          At the end of your Command phase, for each objective marker you control that has one or
+          more units from your army with this ability within range of it, roll one D6: on a 4+, you
+          gain 1 Miracle dice with a value equal to that result.
+        phases: [command]
+        player_turn: your
+    faction_abilities: [Acts of Faith]
+    stats:
+      - movement: 6
+        toughness: 3
+        save: 3+
+        wounds: 1
+        leadership: 7+
+        objective_control: 2
+        invulnerable_save: 6+
+    faction_keywords:
+      - ADEPTA SORORITAS
+  - name: Celestian Sacresants
+    id: 1801ad42-35a6-4caa-a13b-9c0ae5eeecb1
+    model_count: 5
+    loadout_description: "Every model is equipped with: bolt pistol; hallowed mace."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - IMPERIUM
+          - CELESTIAN SACRESANTS
+    ranged_weapons:
+      - name: Bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Hallowed mace
+        keywords: [LETHAL HITS]
+        attacks: 3
+        ws: 3+
+        strength: 4
+        ap: 1
+        damage: 2
+    abilities:
+      - name: Sworn Protectors
+        effect: While an ADEPTA SORORITAS CHARACTER is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll.
+        phases:
+          - shooting
+          - fight
+        player_turn: opponent
+    faction_abilities: [Acts of Faith]
+    stats:
+      - movement: 6
+        toughness: 3
+        save: 3+
+        wounds: 1
+        leadership: 7+
+        objective_control: 1
+        invulnerable_save: 4+
+    faction_keywords:
+      - ADEPTA SORORITAS
+  - name: Arco-flagellants
+    id: ca5898ff-e940-40d4-a029-332d5108cb88
+    model_count: 10
+    loadout_description: "Every model is equipped with: arco-flails."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - IMPERIUM
+          - ARCO-FLAGELLANTS
+    melee_weapons:
+      - name: Arco-flails
+        keywords: [SUSTAINED HITS 1]
+        attacks: 4
+        ws: 4+
+        strength: 5
+        ap: 0
+        damage: 1
+    abilities:
+      - name: Extremis Trigger Word
+        effect: >-
+          Each time this unit is selected to fight, you can choose to invoke its extremis trigger
+          word. If you do, then until the end of the phase, arco-flails equipped by models in this
+          unit have an Attacks characteristic of 6 and the [HAZARDOUS] ability.
+        phases: [fight]
+        player_turn: either
+    faction_abilities: [Acts of Faith]
+    stats:
+      - movement: 7
+        toughness: 3
+        save: 7+
+        wounds: 2
+        leadership: 8+
+        objective_control: 1
+    faction_keywords:
+      - ADEPTA SORORITAS
+    core_abilities:
+      - Feel No Pain 5+
