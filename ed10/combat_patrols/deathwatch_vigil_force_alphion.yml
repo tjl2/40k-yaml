@@ -1,0 +1,294 @@
+name: "Deathwatch: Vigil Force Alphion"
+id: 8240b875-52c7-41a5-8a73-7bf96bd619e0
+abilities:
+  - name: Oath of Moment
+    effect: >-
+      At the start of your Command phase, select one unit from your opponent's army. Until the
+      start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a
+      model with this ability makes an attack that targets your Oath of Moment target, you can
+      re-roll the Hit roll.
+    phases: [command]
+    player_turn: your
+stratagems:
+  - name: Veteran Instincts
+    category: Battle Tactic
+    cp: 1
+    when: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
+    target: One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.
+    effect: >-
+      Until the end of the phase, models in your unit have the Feel No Pain 5+ ability. If your unit
+      has the GRAVIS keyword, models in your unit have the Feel No Pain 4+ ability instead.
+    phases:
+      - shooting
+      - fight
+    player_turn: opponent
+  - name: Special-Issue Ammunition
+    category: Battle Tactic
+    cp: 1
+    when: Your Shooting phase.
+    target: One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.
+    effect: >-
+      Select one of the following set of abilities. Until the end of the phase, ranged weapons
+      equipped by models in your unit have that set of abilities:
+      * [ANTI-MONSTER 5+, ANTI-VEHICLE 5+, MELTA 2]
+      * [ASSAULT, IGNORES COVER, SUSTAINED HITS 2]
+    phases: [shooting]
+    player_turn: your
+  - name: Deathwatch Teleportarium
+    category: Strategic Ploy
+    cp: 1
+    when: End of your opponent's Fight phase.
+    target: One ADEPTUS ASTARTES unit from your army that is not within Engagement Range of any enemy units.
+    effect: >-
+      Remove your unit from the battlefield. In the Reinforcements step of your next Movement phase
+      set your unit up anywhere on the battlefield that is more than 3" horizontally from all enemy models.
+    restrictions: >-
+      You can only use this Stratagem once and after being set up on the battlefield, until the end
+      of the turn, your unit is not eligible to declare a charge.
+    phases: [fight]
+    player_turn: opponent
+units:
+  - name: Lieutenant Alphion
+    id: 75d6a462-33e3-4568-a089-3afd1d5eaae3
+    loadout_description: "This model is equipped with: bolt pistol; master-crafted power weapon."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - IMPERIUM
+          - TACTICUS
+          - LIEUTENANT
+          - ALPHION
+    ranged_weapons:
+      - name: Bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 2+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Master-crafted power weapon
+        attacks: 5
+        ws: 2+
+        strength: 5
+        ap: 2
+        damage: 2
+    abilities:
+      - name: Target Priority
+        effect: This model's unit is eligible to shoot and declare a charge in a turn in which it Fell Back.
+        phases:
+          - movement
+          - shooting
+          - charge
+        player_turn: your
+    faction_abilities: [Oath of Moment]
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 4
+        leadership: 6+
+        objective_control: 1
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - DEATHWATCH
+    core_abilities:
+      - Leader
+    attachable_to: [INTERCESSOR SQUAD]
+    warlord: true
+    enhancements:
+      - name: Aegis Vigilate
+        id: cee13bc1-badc-4851-902a-ec847fa3ded4
+        effect: >-
+          Add 1 to the Toughness characteristic of models in the bearer's unit, and those models
+          have a 4+ invulnerable save.
+        phases:
+          - command
+          - movement
+          - shooting
+          - fight
+        player_turn: either
+      - name: Aliens' Bane
+        id: 82a09657-9211-44c4-a97c-1475889c0484
+        effect: >-
+          The bearer's melee weapons have the [PRECISION] ability and each time the bearer makes a
+          melee attack, add 1 to the Wound roll.
+        phases: [fight]
+        player_turn: your
+  - name: Apothecary Krenn
+    id: 497996cc-01e4-4eef-bb84-5ed2738b42c2
+    loadout_description: "This model is equipped with: absolvor bolt pistol; reductor pistol; close combat weapon."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - IMPERIUM
+          - TACTICUS
+          - APOTHECARY
+          - KRENN
+    ranged_weapons:
+      - name: Absolvor bolt pistol
+        keywords: [PISTOL]
+        range: 18
+        attacks: 1
+        bs: 3+
+        strength: 5
+        ap: 1
+        damage: 2
+      - name: Reductor pistol
+        keywords: [PISTOL]
+        range: 3
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 4
+        damage: 2
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 4
+        ws: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    abilities:
+      - name: Narthecium
+        effect: >-
+          While this model is leading a unit, in your Command phase, you can return 1 destroyed
+          model (excluding CHARACTER models) to that unit.
+        phases: [command]
+        player_turn: your
+    faction_abilities: [Oath of Moment]
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 4
+        leadership: 6+
+        objective_control: 1
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - DEATHWATCH
+    core_abilities:
+      - Leader
+    attachable_to: [INTERCESSOR SQUAD]
+  - name: Intercessor Squad
+    id: ba243c89-5936-4a73-a193-81adec2b41ef
+    model_count: 10
+    patrol_squads_model_count: 5
+    loadout_description: >-
+      * 1 Intercessor Sergeant is equipped with: bolt rifle; bolt pistol; close combat weapon.
+      * 7 Intercessors are equipped with: bolt rifle; bolt pistol; close combat weapon.
+      * 2 Intercessors are equipped with: Astartes grenade launcher; bolt rifle; bolt pistol; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - IMPERIUM
+          - TACTICUS
+          - INTERCESSOR SQUAD
+    ranged_weapons:
+      - name: Astartes grenade launcher - frag
+        keywords: [BLAST]
+        range: 24
+        attacks: D3
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Astartes grenade launcher - krak
+        range: 24
+        attacks: 1
+        bs: 3+
+        strength: 9
+        ap: 2
+        damage: D3
+      - name: Bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Bolt rifle
+        keywords:
+          - ASSAULT
+          - HEAVY
+        range: 24
+        attacks: 2
+        bs: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 3
+        ws: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    faction_abilities: [Oath of Moment]
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 2
+        leadership: 6+
+        objective_control: 2
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - DEATHWATCH
+  - name: Aggressor Squad
+    id: 35c9d48a-32ba-4814-a8fe-a5e24f4822f3
+    model_count: 3
+    loadout_description: "Every model is equipped with: flamestorm gauntlets; twin power fists."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - IMPERIUM
+          - GRAVIS
+          - AGGRESSOR SQUAD
+    ranged_weapons:
+      - name: Flamestorm gauntlets
+        keywords:
+          - IGNORES COVER
+          - TORRENT
+          - TWIN-LINKED
+        range: 12
+        attacks: D6+1
+        bs: N/A
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Twin power fists
+        keywords: [TWIN-LINKED]
+        attacks: 3
+        ws: 4+
+        strength: 8
+        ap: 2
+        damage: 2
+    abilities:
+      - name: Close-quarters Firepower
+        effect: >-
+          Each time a model in this unit makes a ranged attack that targets the closest eligible
+          target, improve the Armour Penetration characteristic of that attack by 1.
+        phases: [shooting]
+        player_turn: your
+    faction_abilities: [Oath of Moment]
+    stats:
+      - movement: 5
+        toughness: 6
+        save: 3+
+        wounds: 3
+        leadership: 6+
+        objective_control: 1
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - DEATHWATCH
