@@ -1,0 +1,370 @@
+name: "Drukhari: The Blades of Torment"
+id: 5ff1be86-60c9-4c4c-a993-c9fc91d7a488
+abilities:
+  - name: Power from Pain
+    effect: >-
+      Units from your army can become Empowered Through Pain. This is done using Pain tokens. You gain 1 Pain token:
+      * At the start of the battle.
+      * Each time an enemy unit is destroyed.
+      * Each time an enemy unit fails a Battle-shock test.
+
+      Each time you gain a Pain token, keep it to one side – this is your Pain token pool.
+      At the start of any phase, you can expend one or more Pain tokens from your Pain token pool. Each time you do, select one unit from your army with the Power from Pain ability. Until the end of the phase, that unit is Empowered, and gains the abilities listed below, depending on the phase.
+
+      Empowered in the Movement or Charge phase: You can re-roll Advance or Charge rolls made for that unit.
+
+      Empowered in the Shooting or Fight phase: Each time a model in that unit makes an attack, you can re-roll the Hit roll.
+    phases:
+      - command
+      - movement
+      - shooting
+      - charge
+      - fight
+    player_turn: either
+stratagems:
+  - name: Quicksilver Reactions
+    category: Battle Tactic
+    cp: 1
+    when: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
+    target: One DRUKHARI INFANTRY unit from your army that was selected as the target of one or more of the attacking unit's attacks.
+    effect: Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.
+    phases:
+      - shooting
+      - fight
+    player_turn: opponent
+  - name: Many Cuts
+    category: Battle Tactic
+    cp: 1
+    when: Your Shooting phase or the Fight phase.
+    target: One DRUKHARI INFANTRY unit from your army that has not been selected to shoot or fight this phase.
+    effect: Until the end of the phase, weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability while targeting a unit that is below its Starting Strength.
+    phases:
+      - shooting
+      - fight
+    player_turn: your
+  - name: There and Gone
+    category: Strategic Ploy
+    cp: 1
+    when: End of your opponent's Fight phase.
+    target: One DRUKHARI INFANTRY unit from your army that is not within Engagement Range of any enemy units, and one friendly TRANSPORT model.
+    effect: Your INFANTRY unit can embark within that TRANSPORT model.
+    restrictions: Every model in your INFANTRY unit must be within 3" of that TRANSPORT model and there must be sufficient transport capacity to embark the entire unit.
+    phases: [fight]
+    player_turn: opponent
+units:
+  - name: Archon Malivex
+    id: b462a216-0ba1-44f0-82b7-a0db7f28066f
+    loadout_description: "This model is equipped with: splinter pistol; huskblade."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - KABAL
+          - CHARACTER
+          - AELDARI
+          - ARCHON
+          - MALIVEX
+    ranged_weapons:
+      - name: Splinter pistol
+        keywords:
+          - ANTI-INFANTRY 3+
+          - ASSAULT
+          - PISTOL
+        range: 12
+        attacks: 1
+        bs: 2+
+        strength: 2
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Huskblade
+        keywords: [ANTI-INFANTRY 3+]
+        attacks: 5
+        ws: 2+
+        strength: 3
+        ap: 2
+        damage: 2
+    abilities:
+      - name: Invulnerable Save
+        effect: >-
+          You cannot re-roll invulnerable saving throws made for this model. The first time an
+          invulnerable saving throw made for this model is failed, until the end of the battle,
+          this model has no invulnerable saving throw.
+        phases:
+          - shooting
+          - fight
+        player_turn: opponent
+    faction_abilities: [Power from Pain]
+    stats:
+      - movement: 8
+        toughness: 3
+        save: 4+
+        wounds: 4
+        leadership: 6+
+        objective_control: 1
+        invulnerable_save: 2+
+    faction_keywords:
+      - DRUKHARI
+    core_abilities:
+      - Leader
+    attachable_to: [KABALITE WARRIORS]
+    warlord: true
+    enhancements:
+      - name: Shudderworm Bottle
+        id: fe49ec2c-6b0c-45a9-9d8c-2b4ed2db31a9
+        effect: While the bearer is leading a unit, models in that unit have the Feel No Pain 5+ ability.
+        phases:
+          - shooting
+          - fight
+        player_turn: either
+      - name: Spiteful Predator
+        id: d9890f59-7b97-4e55-807d-7c22202dd3f3
+        effect: The bearer's unit is eligible to shoot and declare a charge in a turn in which it Fell Back.
+        phases:
+          - movement
+          - shooting
+          - charge
+        player_turn: your
+  - name: Kabalite Warriors
+    id: da3d7e29-7395-4014-85ca-c58375691aa8
+    model_count: 10
+    loadout_description: >-
+      * 1 Sybarite is equipped with: splinter pistol; Sybarite weapon.
+      * 7 Kabalite Warriors are equipped with: splinter rifle; close combat weapon.
+      * 1 Kabalite Warrior is equipped with: shredder; close combat weapon.
+      * 1 Kabalite Warrior is equipped with: splinter cannon; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - KABAL
+          - BATTLELINE
+          - AELDARI
+          - KABALITE WARRIORS
+    ranged_weapons:
+      - name: Shredder
+        keywords:
+          - ASSAULT
+          - TORRENT
+        range: 18
+        attacks: D6
+        bs: N/A
+        strength: 6
+        ap: 0
+        damage: 1
+      - name: Splinter cannon
+        keywords:
+          - ANTI-INFANTRY 3+
+          - HEAVY
+          - SUSTAINED HITS 1
+        range: 36
+        attacks: 3
+        bs: 4+
+        strength: 3
+        ap: 1
+        damage: 2
+      - name: Splinter pistol
+        keywords:
+          - ANTI-INFANTRY 3+
+          - ASSAULT
+          - PISTOL
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 2
+        ap: 0
+        damage: 1
+      - name: Splinter rifle
+        keywords:
+          - ANTI-INFANTRY 3+
+          - ASSAULT
+        range: 24
+        attacks: 2
+        bs: 3+
+        strength: 2
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Sybarite weapon
+        keywords: [ANTI-INFANTRY 3+]
+        attacks: 3
+        ws: 3+
+        strength: 3
+        ap: 1
+        damage: 1
+      - name: Close combat weapon
+        attacks: 2
+        ws: 3+
+        strength: 3
+        ap: 0
+        damage: 1
+    faction_abilities: [Power from Pain]
+    stats:
+      - movement: 8
+        toughness: 3
+        save: 4+
+        wounds: 1
+        leadership: 6+
+        objective_control: 2
+        invulnerable_save: 6+
+    faction_keywords:
+      - DRUKHARI
+  - name: Incubi
+    id: 9c9c4bad-2cd8-408c-9935-3da7e12b4ba1
+    model_count: 5
+    loadout_description: >-
+      * 1 Klaivex is equipped with: demiklaives.
+      * 4 Incubi are equipped with: klaive.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - AELDARI
+          - INCUBI
+    melee_weapons:
+      - name: Demiklaives - single blade
+        attacks: 3
+        ws: 3+
+        strength: 4
+        ap: 2
+        damage: 2
+      - name: Demiklaives - dual blades
+        keywords: [TWIN-LINKED]
+        attacks: 6
+        ws: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+      - name: Klaive
+        attacks: 3
+        ws: 3+
+        strength: 4
+        ap: 2
+        damage: 2
+    abilities:
+      - name: Tormentors
+        effect: At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test.
+        phases: [fight]
+        player_turn: either
+    faction_abilities: [Power from Pain]
+    stats:
+      - models: KLAIVEX
+        movement: 7
+        toughness: 3
+        save: 3+
+        wounds: 2
+        leadership: 6+
+        objective_control: 1
+        invulnerable_save: 5+
+      - models: INCUBI
+        movement: 7
+        toughness: 3
+        save: 3+
+        wounds: 1
+        leadership: 6+
+        objective_control: 1
+        invulnerable_save: 5+
+    faction_keywords:
+      - DRUKHARI
+  - name: Raider
+    id: 3ce87a5c-4980-40ee-864c-a54df360a1c9
+    model_count: 1
+    loadout_description: "This model is equipped with: disintegrator cannon; bladevanes."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - VEHICLE
+          - TRANSPORT
+          - DEDICATED TRANSPORT
+          - FLY
+          - AELDARI
+          - RAIDER
+    ranged_weapons:
+      - name: Disintegrator cannon
+        range: 36
+        attacks: 3
+        bs: 3+
+        strength: 5
+        ap: 2
+        damage: 2
+    melee_weapons:
+      - name: Bladevanes
+        attacks: 3
+        ws: 4+
+        strength: 6
+        ap: 0
+        damage: 1
+    transport_rules:
+      - keyword: DRUKHARI INFANTRY
+        capacity: 11
+    faction_abilities: [Power from Pain]
+    stats:
+      - movement: 14
+        toughness: 8
+        save: 4+
+        wounds: 10
+        leadership: 6+
+        objective_control: 2
+        invulnerable_save: 6+
+    faction_keywords:
+      - DRUKHARI
+    core_abilities:
+      - Deadly Demise D3
+      - Deep Strike
+      - Firing Deck 11
+  - name: Ravager
+    id: 78ac411c-ba07-4c79-9570-86461b4c0490
+    model_count: 1
+    loadout_description: "This model is equipped with: 2 dark lances; disintegrator cannon; bladevanes."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - VEHICLE
+          - KABAL
+          - FLY
+          - AELDARI
+          - RAVAGER
+    ranged_weapons:
+      - name: Dark lance
+        range: 36
+        attacks: 1
+        bs: 3+
+        strength: 12
+        ap: 3
+        damage: D6+2
+      - name: Disintegrator cannon
+        range: 36
+        attacks: 3
+        bs: 3+
+        strength: 5
+        ap: 2
+        damage: 2
+    melee_weapons:
+      - name: Bladevanes
+        attacks: 3
+        ws: 4+
+        strength: 6
+        ap: 0
+        damage: 1
+    abilities:
+      - name: Damaged
+        effect: While this model has 1-4 wounds remaining, each time it makes an attack, subtract 1 from the Hit roll.
+        range: 1-4 WOUNDS REMAINING
+        phases:
+          - shooting
+          - fight
+        player_turn: your
+    faction_abilities: [Power from Pain]
+    stats:
+      - movement: 14
+        toughness: 9
+        save: 4+
+        wounds: 11
+        leadership: 6+
+        objective_control: 3
+        invulnerable_save: 6+
+    faction_keywords:
+      - DRUKHARI
+    core_abilities:
+      - Deadly Demise D3
+      - Deep Strike
