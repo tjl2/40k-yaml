@@ -1,0 +1,386 @@
+name: "T'au Empire: Protectors of Aun'shar"
+id: 6e6167e1-c7e1-44ed-86da-93b001ce7959
+abilities:
+  - name: For the Greater Good
+    effect: >-
+      In your Shooting phase, units from your army can work in pairs to help each other target
+      specific enemy units. When they do this, one unit is the Observer unit and the other is their
+      Guided unit. The enemy they are targeting is called their Spotted unit. Each time you select
+      this unit to shoot, if it is not an Observer unit, it can use this ability. If it does,
+      select one other friendly unit with this ability (note that AUN'SHAR does not have this
+      ability) that is also eligible to shoot (excluding Battle-shocked and Observer units). Until
+      the end of the phase, this unit is considered a Guided unit, and that friendly unit is
+      considered an Observer unit. Then select one enemy unit that is visible to both your units to
+      be their Spotted unit. Until the end of the phase:
+      * Each time a model in a Guided unit makes an attack that targets their Spotted unit, improve
+        the Ballistic Skill characteristic of the attack by 1 and, if their Observer unit has the
+        MARKERLIGHT keyword, the attack has the [IGNORES COVER] ability.
+      * Each time a model in a Guided unit makes an attack that does not target their Spotted unit,
+        worsen the Ballistic Skill characteristic of the attack by 1.
+    phases: [shooting]
+    player_turn: your
+stratagems:
+  - name: Defensive Fusillade
+    category: Battle Tactic
+    cp: 1
+    when: Your Shooting phase.
+    target: One T'AU EMPIRE unit from your army that has not been selected to shoot this phase.
+    effect: Until the end of the phase, ranged weapons equipped by models in your unit have the [PISTOL] ability.
+    phases: [shooting]
+    player_turn: your
+  - name: Rapid Repositioning
+    category: Strategic Ploy
+    cp: 1
+    when: End of your Shooting phase.
+    target: One T'AU EMPIRE unit from your army that is not within Engagement Range of one or more enemy units.
+    effect: >-
+      Your unit can make a Normal move up to D6". If your unit has the BATTLESUIT keyword, it can
+      make a Normal move of up to 6" instead.
+    restrictions: Until the end of the turn, your unit is not eligible to declare a charge.
+    phases: [shooting]
+    player_turn: your
+  - name: Laser-Marked Targets
+    category: Strategic Ploy
+    cp: 1
+    when: Your opponent's Charge phase, just after an enemy unit has declared a charge.
+    target: >-
+      One T'AU EMPIRE unit from your army that was selected as a target of that charge and is not
+      within Engagement Range of one or more enemy units.
+    effect: >-
+      Your unit can shoot that enemy unit as if it were your Shooting phase. When doing so, each
+      time a model in your unit makes a ranged attack, an unmodified Hit roll of 6 is required to
+      score a hit, irrespective of the attacking weapon's Ballistic Skill or any modifiers. Until
+      the end of the phase, subtract 2 from Charge rolls made for that enemy unit.
+    restrictions: Your unit cannot shoot more than once this turn.
+    phases: [charge]
+    player_turn: opponent
+units:
+  - name: Aun'Shar
+    id: 9378f11a-bbb7-4caa-90bb-0cd93f6d38b7
+    loadout_description: "This model is equipped with: honour stave; hover drone."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - FLY
+          - ETHEREAL
+          - AUN'SHAR
+    melee_weapons:
+      - name: Honour stave
+        attacks: 2
+        ws: 4+
+        strength: 5
+        ap: 0
+        damage: 1
+    wargear_abilities:
+      - name: Hover Drone
+        effect: The bearer can FLY and has a Move characteristic of 10".
+        player_turn: your
+        phases: [movement]
+    abilities:
+      - name: Coordinated Leadership
+        effect: "In your Command phase, roll one D6: on a 4+, you gain 1CP."
+        phases: [command]
+        player_turn: your
+    stats:
+      - movement: 6
+        toughness: 3
+        save: 5+
+        wounds: 3
+        leadership: 6+
+        objective_control: 1
+        invulnerable_save: 5+
+    faction_keywords:
+      - T'AU EMPIRE
+    warlord: true
+    enhancements:
+      - name: DS13 Experimental Drone (Aura)
+        id: 77a51bbc-46ff-4ec1-ad6d-3b710b214839
+        effect: >-
+          The bearer has the Lone Operative and Stealth abilities. While a friendly T'AU EMPIRE
+          INFANTRY unit is within 6" of the bearer, improve the Save characteristic of models in
+          that unit by 1 and those models have the Feel No Pain 5+ ability.
+        phases:
+          - command
+          - movement
+          - shooting
+          - fight
+        player_turn: either
+      - name: DS15 Experimental Drone (Aura)
+        id: 140ef990-0836-4782-a1f8-14d02522f16e
+        effect: >-
+          The bearer has the Lone Operative and Stealth abilities. While a friendly T'AU EMPIRE unit
+          is within 6" of the bearer, ranged weapons equipped by models in that unit have the
+          [LETHAL HITS] ability.
+        phases:
+          - command
+          - movement
+          - shooting
+          - fight
+        player_turn: either
+  - name: Shas'nel D'tano
+    id: 829fa1c9-32cc-479f-87ec-8518add97cf1
+    loadout_description: "This model is equipped with: Fireblade pulse rifle; close combat weapon."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - CADRE FIREBLADE
+          - SHAS'NEL D'TANO
+    ranged_weapons:
+      - name: Fireblade pulse rifle
+        keywords: [RAPID FIRE 1]
+        range: 30
+        attacks: 1
+        bs: 3+
+        strength: 5
+        ap: 0
+        damage: 2
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 3
+        ws: 4+
+        strength: 3
+        ap: 0
+        damage: 1
+    abilities:
+      - name: Volley Fire
+        effect: While this model is leading a unit, add 1 to the Attacks characteristic of ranged weapons equipped by models in that unit.
+        phases:
+          - shooting
+        player_turn: your
+    faction_abilities: [For the Greater Good]
+    stats:
+      - movement: 6
+        toughness: 3
+        save: 4+
+        wounds: 3
+        leadership: 7+
+        objective_control: 1
+    faction_keywords:
+      - T'AU EMPIRE
+    core_abilities:
+      - Leader
+    attachable_to: [STRIKE TEAM]
+  - name: Strike Team
+    id: fa317562-37b3-4c24-97fa-66e4747efba9
+    model_count: 10
+    loadout_description: >-
+      * 1 Fire Warrior Shas'ui is equipped with: pulse carbine; pulse pistol; close combat weapon;
+        support turret missile system; marker drone.
+      * 5 Fire Warriors are equipped with: pulse pistol; pulse rifle; close combat weapon.
+      * 4 Fire Warriors are equipped with: pulse carbine; pulse pistol; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - MARKERLIGHT
+          - FIRE WARRIOR
+          - STRIKE TEAM
+    ranged_weapons:
+      - name: Pulse carbine
+        range: 20
+        attacks: 2
+        bs: 4+
+        strength: 5
+        ap: 0
+        damage: 1
+      - name: Pulse pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 5
+        ap: 0
+        damage: 1
+      - name: Pulse rifle
+        keywords: [RAPID FIRE 1]
+        range: 30
+        attacks: 1
+        bs: 4+
+        strength: 5
+        ap: 0
+        damage: 1
+      - name: Support turret missile system
+        keywords:
+          - INDIRECT FIRE
+          - TWIN-LINKED
+        range: 30
+        attacks: 2
+        bs: 5+
+        strength: 5
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 1
+        ws: 5+
+        strength: 3
+        ap: 0
+        damage: 1
+    abilities:
+      - name: Cover Fire
+        effect: >-
+          While this unit is within range of an objective marker you control, each time you select
+          it as the target of the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls
+          of 4+ when resolving that Stratagem.
+        phases: [shooting]
+        player_turn: opponent
+      - name: DS8 Support Turret
+        effect: >-
+          In your Movement phase, if this unit Remains Stationary, until the start of your next
+          Movement phase, its Fire Warrior Shas'ui model is equipped with the support turret missile
+          system weapon.
+        phases: [movement]
+        player_turn: your
+    faction_abilities: [For the Greater Good]
+    stats:
+      - movement: 6
+        toughness: 3
+        save: 4+
+        wounds: 1
+        leadership: 7+
+        objective_control: 2
+    faction_keywords:
+      - T'AU EMPIRE
+  - name: Stealth Battlesuits
+    id: c7ca1024-49fc-4581-9be6-dc732cba4d51
+    model_count: 3
+    loadout_description: >-
+      * 1 Stealth Shas'vre is equipped with: fusion blaster; battlesuit fists; battlesuit support
+        system; marker drone.
+      * 2 Stealth Shas'ui are equipped with: burst cannon; battlesuit fists.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - FLY
+          - BATTLESUIT
+          - STEALTH
+    ranged_weapons:
+      - name: Burst cannon
+        range: 18
+        attacks: 4
+        bs: 4+
+        strength: 5
+        ap: 0
+        damage: 1
+      - name: Fusion blaster
+        keywords: [MELTA 2]
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 9
+        ap: 4
+        damage: D6
+    melee_weapons:
+      - name: Battlesuit fists
+        attacks: 2
+        ws: 5+
+        strength: 4
+        ap: 0
+        damage: 1
+    wargear_abilities:
+      - name: Marker Drone
+        effect: >-
+          The bearer's unit has the MARKERLIGHT keyword and can act as an Observer unit for another
+          unit even if it Advanced this turn.
+        player_turn: your
+        phases: [shooting]
+    abilities:
+      - name: Forward Observers
+        effect: >-
+          Each time this unit is an Observer unit, until the end of the phase, each time a ranged
+          attack is made by a model in their Guided unit that targets their Spotted unit, re-roll a
+          Wound roll of 1.
+        phases: [shooting]
+        player_turn: your
+    faction_abilities: [For the Greater Good]
+    stats:
+      - movement: 8
+        toughness: 4
+        save: 3+
+        wounds: 2
+        leadership: 7+
+        objective_control: 1
+    faction_keywords:
+      - T'AU EMPIRE
+    core_abilities:
+      - Infiltrators
+      - Stealth
+  - name: Ghostkeel Battlesuit
+    id: 10d73a08-8aba-4c7d-b37e-7613a73e9454
+    model_count: 1
+    loadout_description: "This model is equipped with: cyclic ion raker; twin fusion blaster; Ghostkeel fists; battlesuit support system."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - VEHICLE
+          - WALKER
+          - FLY
+          - BATTLESUIT
+          - GHOSTKEEL
+    ranged_weapons:
+      - name: Cyclic ion raker - standard
+        range: 36
+        attacks: 6
+        bs: 4+
+        strength: 7
+        ap: 1
+        damage: 2
+      - name: Cyclic ion raker - overcharge
+        keywords: [HAZARDOUS]
+        range: 36
+        attacks: 6
+        bs: 4+
+        strength: 8
+        ap: 2
+        damage: 3
+      - name: Twin fusion blaster
+        keywords:
+          - MELTA 2
+          - TWIN-LINKED
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 9
+        ap: 4
+        damage: D6
+    melee_weapons:
+      - name: Ghostkeel fists
+        attacks: 3
+        ws: 5+
+        strength: 6
+        ap: 0
+        damage: 2
+    wargear_abilities:
+      - name: Battlesuit Support System
+        effect: The bearer is eligible to shoot in a turn in which it Fell Back.
+        player_turn: your
+        phases: [shooting]
+    abilities:
+      - name: Damaged
+        effect: While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+        range: 1-4 WOUNDS REMAINING
+        player_turn: your
+        phases:
+          - shooting
+          - fight
+    faction_abilities: [For the Greater Good]
+    stats:
+      - movement: 10
+        toughness: 8
+        save: 2+
+        wounds: 12
+        leadership: 7+
+        objective_control: 3
+    faction_keywords:
+      - T'AU EMPIRE
+    core_abilities:
+      - Deadly Demise D3
+      - Infiltrators
+      - Lone Operative
+      - Stealth
