@@ -1,0 +1,310 @@
+name: "Space Wolves: Thoryk's Void Hunters"
+id: ef336d72-a07f-4928-a466-c59a5fb1ce4d
+abilities:
+  - name: Oath of Moment
+    effect: >-
+      At the start of your Command phase, select one unit from your opponent's army. Until the
+      start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a
+      model with this ability makes an attack that targets your Oath of Moment target, you can
+      re-roll the Hit roll.
+    phases: [command]
+    player_turn: your
+stratagems:
+  - name: A Warrior's Death
+    category: Epic Deed
+    cp: 1
+    when: Fight phase, just after an enemy unit has selected its targets.
+    target: One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.
+    effect: >-
+      Until the end of the phase, each time a model in your unit is destroyed, if that model has not
+      fought this phase, roll one D6. On a 4+, do not remove the destroyed model from play; it can
+      fight after the attacking model's unit has finished making its attacks, and is then removed
+      from play.
+    phases: [fight]
+    player_turn: opponent
+  - name: Keen Senses
+    category: Battle Tactic
+    cp: 1
+    when: Your Shooting phase.
+    target: One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.
+    effect: >-
+      Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES
+      COVER] ability and each time a model in your unit makes an attack that targets a CHARACTER
+      unit, re-roll a Hit roll of 1.
+    phases: [shooting]
+    player_turn: your
+  - name: Pack Ambush
+    category: Strategic Ploy
+    cp: 1
+    when: Your Shooting phase, just after a REIVER SQUAD unit from your army has finished making its attacks.
+    target: One enemy unit that was hit by one or more of those attacks and is not within Engagement Range of that REIVER SQUAD unit.
+    effect: That enemy unit must take a Battle-shock test. When doing so, subtract 2 from the result.
+    phases: [shooting]
+    player_turn: your
+units:
+  - name: Battle Leader Thoryk
+    id: e16a7743-dcf7-47ec-9f08-2ed45fbd9d28
+    loadout_description: "This model is equipped with: bolt pistol; master-crafted bolt rifle; master-crafted power weapon."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - IMPERIUM
+          - TACTICUS
+          - BATTLE LEADER
+          - THORYK
+    ranged_weapons:
+      - name: Bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 2+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Master-crafted bolt rifle
+        range: 24
+        attacks: 2
+        bs: 2+
+        strength: 4
+        ap: 1
+        damage: 2
+    melee_weapons:
+      - name: Master-crafted power weapon
+        attacks: 5
+        ws: 2+
+        strength: 5
+        ap: 2
+        damage: 2
+    abilities:
+      - name: Target Priority
+        effect: This model's unit is eligible to shoot and declare a charge in a turn in which it Fell Back.
+        phases:
+          - movement
+          - shooting
+          - charge
+        player_turn: your
+    faction_abilities: [Oath of Moment]
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 4
+        leadership: 6+
+        objective_control: 1
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - SPACE WOLVES
+    core_abilities:
+      - Leader
+    attachable_to: [INTERCESSOR SQUAD]
+    warlord: true
+    enhancements:
+      - name: Tireless Hunter
+        id: becfe50a-b9ec-4cdd-9b9b-0ce97665d7eb
+        effect: >-
+          At the start of the first battle round, select one enemy unit. Each time the bearer makes
+          an attack that targets that unit, add 1 to the Wound roll.
+        phases:
+          - command
+          - shooting
+          - fight
+        player_turn: your
+      - name: Ferocious
+        id: 2720fab9-e7dc-4263-96a0-cd52cacaf1ab
+        effect: >-
+          You can target the bearer's unit with the Heroic Intervention Stratagem for 0CP, and can
+          do so even if you have already used that Stratagem on a different unit this phase.
+        phases: [fight]
+        player_turn: either
+  - name: Intercessor Squad
+    id: e728226f-18a8-4411-a825-c0b52893edcd
+    model_count: 10
+    patrol_squads_model_count: 5
+    loadout_description: >-
+      * 1 Intercessor Sergeant is equipped with: bolt pistol; Astartes chainsword.
+      * 9 Intercessors are equipped with: bolt rifle; bolt pistol; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - IMPERIUM
+          - TACTICUS
+          - INTERCESSOR SQUAD
+    ranged_weapons:
+      - name: Bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Bolt rifle
+        keywords:
+          - ASSAULT
+          - HEAVY
+        range: 24
+        attacks: 2
+        bs: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+    melee_weapons:
+      - name: Astartes chainsword
+        attacks: 5
+        ws: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+      - name: Close combat weapon
+        attacks: 3
+        ws: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    faction_abilities: [Oath of Moment]
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 2
+        leadership: 6+
+        objective_control: 2
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - SPACE WOLVES
+  - name: Reiver Squad
+    id: d46bd97f-8302-47f0-b54f-bfe06e6b5945
+    model_count: 5
+    loadout_description: "Every model is equipped with: special issue bolt pistol; combat knife; Reiver grav-chute."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - SMOKE
+          - IMPERIUM
+          - PHOBOS
+          - REIVER SQUAD
+    ranged_weapons:
+      - name: Special issue bolt pistol
+        keywords:
+          - PISTOL
+          - PRECISION
+        range: 12
+        attacks: 1
+        bs: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+    melee_weapons:
+      - name: Combat knife
+        keywords: [PRECISION]
+        attacks: 4
+        ws: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    wargear_abilities:
+      - name: Reiver Grav-chute
+        effect: The bearer has the Deep Strike ability.
+        player_turn: your
+        phases: [movement]
+    abilities:
+      - name: Fearsome Assault
+        effect: At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test.
+        phases: [fight]
+        player_turn: either
+    faction_abilities: [Oath of Moment]
+    stats:
+      - movement: 6
+        toughness: 4
+        save: 3+
+        wounds: 2
+        leadership: 6+
+        objective_control: 1
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - SPACE WOLVES
+    core_abilities:
+      - Scouts 6"
+  - name: Invictor Tactical Warsuit
+    id: c6132eda-ce90-413b-862a-42f7ce7dce5e
+    model_count: 1
+    loadout_description: >-
+      This model is equipped with: fragstorm grenade launcher; heavy bolter; twin ironhail
+      autocannon; twin ironhail heavy stubber; Invictor fist.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - VEHICLE
+          - WALKER
+          - IMPERIUM
+          - PHOBOS
+          - INVICTOR TACTICAL WARSUIT
+    ranged_weapons:
+      - name: Fragstorm grenade launcher
+        keywords: [BLAST]
+        range: 18
+        attacks: D6
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Heavy bolter
+        keywords: [SUSTAINED HITS 1]
+        range: 36
+        attacks: 3
+        bs: 3+
+        strength: 5
+        ap: 1
+        damage: 2
+      - name: Twin ironhail autocannon
+        keywords: [TWIN-LINKED]
+        range: 48
+        attacks: 3
+        bs: 3+
+        strength: 9
+        ap: 1
+        damage: 3
+      - name: Twin ironhail heavy stubber
+        keywords:
+          - RAPID FIRE 3
+          - TWIN-LINKED
+        range: 36
+        attacks: 3
+        bs: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Invictor fist
+        attacks: 5
+        ws: 3+
+        strength: 14
+        ap: 2
+        damage: 3
+    abilities:
+      - name: Damaged
+        effect: While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+        range: 1-4 WOUNDS REMAINING
+        player_turn: your
+        phases:
+          - shooting
+          - fight
+    faction_abilities: [Oath of Moment]
+    stats:
+      - movement: 8
+        toughness: 8
+        save: 3+
+        wounds: 12
+        leadership: 6+
+        objective_control: 4
+    faction_keywords:
+      - ADEPTUS ASTARTES
+      - SPACE WOLVES
+    core_abilities:
+      - Deadly Demise D3
+      - Scouts 8"
