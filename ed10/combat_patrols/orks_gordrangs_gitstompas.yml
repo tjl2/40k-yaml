@@ -1,0 +1,304 @@
+name: "Orks: Gordrang's Gitstompas"
+id: 9df92686-f1ed-4f9f-8737-0cdacfb1da34
+abilities:
+  - name: Waaagh!
+    effect: >-
+      Once per battle, at the start of the battle round, you can call a Waaagh!. If you do, until the
+      start of the next battle round:
+      * ORKS units from your army are eligible to declare a charge in a turn in which they Advanced.
+      * Add 1 to the Strength and Attacks characteristics of melee weapons equipped by ORKS models from your army.
+      * ORKS models from your army have a 5+ invulnerable save.
+    phases: [command]
+    player_turn: your
+stratagems:
+  - name: Get Stuck In
+    category: Battle Tactic
+    cp: 1
+    when: Fight phase.
+    target: One ORKS unit from your army that has not been selected to fight this phase.
+    effect: Until the end of the phase, each time a model in your unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+    phases: [fight]
+    player_turn: your
+  - name: Brutal but Kunnin'
+    category: Strategic Ploy
+    cp: 1
+    when: Your Charge phase.
+    target: One ORKS INFANTRY unit from your army.
+    effect: Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Fell Back.
+    phases: [charge]
+    player_turn: your
+  - name: Krump da Gitz!
+    category: Strategic Ploy
+    cp: 1
+    when: Your opponent's Shooting phase, just after an enemy unit has finished making its attacks.
+    target: One ORKS unit from your army that was selected as the target of one or more of the attacking unit's attacks.
+    effect: Your unit can make a Normal move of up to D6", but must end that move as close as possible to that enemy unit.
+    phases: [shooting]
+    player_turn: opponent
+units:
+  - name: Warboss Gordrang
+    id: c87b8d93-f28c-40ec-94b4-a811c0284f81
+    loadout_description: "This model is equipped with: big shoota; 'uge choppa."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - WARBOSS
+          - GORDRANG
+    ranged_weapons:
+      - name: Big shoota
+        keywords: [RAPID FIRE 2]
+        range: 36
+        attacks: 3
+        bs: 4+
+        strength: 5
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: "'Uge choppa"
+        attacks: 4
+        ws: 2+
+        strength: 12
+        ap: 2
+        damage: 2
+    abilities:
+      - name: Dead 'ard
+        effect: When you call a Waaagh!, until the start of the next battle round, this model has the Feel No Pain 4+ ability.
+        phases:
+          - command
+          - movement
+          - shooting
+          - fight
+        player_turn: your
+    faction_abilities: [Waaagh!]
+    stats:
+      - movement: 5
+        toughness: 6
+        save: 2+
+        wounds: 7
+        leadership: 6+
+        objective_control: 1
+        invulnerable_save: 5+
+    faction_keywords:
+      - ORKS
+    warlord: true
+    enhancements:
+      - name: Grizzled Skarboy
+        id: 0ff82824-55d7-4f8a-ae07-aa13a55d83f8
+        effect: Each time a ranged attack is allocated to the bearer, halve the Damage characteristic of that attack.
+        phases:
+          - shooting
+        player_turn: opponent
+      - name: Tellyporta
+        id: 484cf8aa-e218-4997-96e9-3acf5be91ffe
+        effect: >-
+          In the Declare Battle Formations step, select one BOYZ unit from your army. Until the end
+          of the battle, the bearer and every model in that BOYZ unit have the Deep Strike ability.
+          When setting these units up on the battlefield using the Deep Strike ability, they must be
+          set up in the same turn and within 3" of each other.
+        phases:
+          - command
+          - movement
+        player_turn: your
+  - name: Boyz
+    id: 1c7f1d1d-273d-4f26-856d-7e6ac8f9f840
+    model_count: 10
+    unit_count: 2
+    loadout_description: >-
+      * 1 Boss Nob is equipped with: slugga; big choppa.
+      * 5 Boyz are equipped with: slugga; choppa.
+      * 3 Boyz are equipped with: shoota; close combat weapon.
+      * 1 Boy is equipped with: big shoota; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - MOB
+          - BOYZ
+    ranged_weapons:
+      - name: Big shoota
+        keywords: [RAPID FIRE 2]
+        range: 36
+        attacks: 3
+        bs: 5+
+        strength: 5
+        ap: 0
+        damage: 1
+      - name: Rokkit launcha
+        keywords: [BLAST]
+        range: 24
+        attacks: D3
+        bs: 5+
+        strength: 9
+        ap: 2
+        damage: 3
+      - name: Shoota
+        keywords: [RAPID FIRE 1]
+        range: 18
+        attacks: 2
+        bs: 5+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Slugga
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 5+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Big choppa
+        attacks: 3
+        ws: 3+
+        strength: 7
+        ap: 1
+        damage: 2
+      - name: Choppa
+        attacks: 3
+        ws: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+      - name: Close combat weapon
+        attacks: 2
+        ws: 3+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Power klaw
+        attacks: 3
+        ws: 4+
+        strength: 9
+        ap: 2
+        damage: 2
+    faction_abilities: [Waaagh!]
+    stats:
+      - models: BOSS NOB
+        movement: 6
+        toughness: 5
+        save: 5+
+        wounds: 2
+        leadership: 7+
+        objective_control: 2
+      - models: BOY
+        movement: 6
+        toughness: 5
+        save: 5+
+        wounds: 1
+        leadership: 7+
+        objective_control: 2
+    faction_keywords:
+      - ORKS
+  - name: Deffkoptas
+    id: ab5071ee-6e7a-470f-bb89-a579866ceb90
+    model_count: 3
+    loadout_description: >-
+      * 1 model is equipped with: kustom mega-blasta; slugga; spinnin' blades.
+      * 2 models are equipped with: kopta rokkits; slugga; spinnin' blades.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - VEHICLE
+          - FLY
+          - DEFFKOPTAS
+    ranged_weapons:
+      - name: Kopta rokkits
+        keywords:
+          - BLAST
+          - TWIN-LINKED
+        range: 24
+        attacks: D3
+        bs: 5+
+        strength: 9
+        ap: 2
+        damage: 3
+      - name: Kustom mega-blasta
+        keywords: [HAZARDOUS]
+        range: 24
+        attacks: 3
+        bs: 5+
+        strength: 9
+        ap: 2
+        damage: D6
+      - name: Slugga
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 5+
+        strength: 4
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Spinnin' blades
+        attacks: 6
+        ws: 3+
+        strength: 5
+        ap: 0
+        damage: 1
+    faction_abilities: [Waaagh!]
+    stats:
+      - movement: 12
+        toughness: 6
+        save: 4+
+        wounds: 4
+        leadership: 7+
+        objective_control: 2
+        invulnerable_save: 6+
+    faction_keywords:
+      - ORKS
+    core_abilities:
+      - Deep Strike
+  - name: Deff Dread
+    id: 9f0417f5-db0b-4d13-b2a8-283afff88b7e
+    model_count: 1
+    loadout_description: "This model is equipped with: rokkit launcha; 3 dread klaws."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - VEHICLE
+          - WALKER
+          - DEFF DREAD
+    ranged_weapons:
+      - name: Rokkit launcha
+        keywords: [BLAST]
+        range: 24
+        attacks: D3
+        bs: 5+
+        strength: 9
+        ap: 2
+        damage: 3
+    melee_weapons:
+      - name: Dread klaw
+        keywords: [DEAD CHOPPY]
+        attacks: 4
+        ws: 3+
+        strength: 10
+        ap: 2
+        damage: 3
+    abilities:
+      - name: Piston-driven Brutality
+        effect: At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test.
+        phases: [fight]
+        player_turn: either
+    wargear_abilities:
+      - name: Dead Choppy
+        effect: The Attacks characteristic of this weapon is increased by 1 for each additional dread klaw this model is equipped with.
+        player_turn: your
+        phases: [fight]
+    faction_abilities: [Waaagh!]
+    stats:
+      - movement: 8
+        toughness: 9
+        save: 2+
+        wounds: 8
+        leadership: 7+
+        objective_control: 3
+        invulnerable_save: 6+
+    faction_keywords:
+      - ORKS
+    core_abilities:
+      - Deadly Demise 1
