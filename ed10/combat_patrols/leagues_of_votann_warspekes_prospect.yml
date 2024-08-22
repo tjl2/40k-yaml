@@ -1,0 +1,359 @@
+name: "Leagues of Votann: Warspeke's Prospect"
+id: 20970439-4349-4f7d-8fd2-de124a7e6277
+abilities:
+  - name: Eye of the Ancestors
+    effect: >-
+      Each time an enemy unit destroys a LEAGUES OF VOTANN unit from your army, that enemy unit
+      gains 1 Judgement token. An enemy unit can never have more than 2 Judgement tokens (any
+      further Judgement tokens a unit would gain beyond this are ignored).
+
+      Each time a model from your army makes an attack that targets a unit that has one or more
+      Judgement tokens, until that model's attacks have been resolved, apply the relevant bonus
+      from the table below to that attack.
+
+      1 Judgement Token - Eminent Threat: Add 1 to the Hit roll.
+      2 Judgement Tokens - Now We've Got a Grudge to Settle: Add 1 to the Hit roll and add 1 to
+      the Wound roll.
+    phases:
+      - shooting
+      - fight
+    player_turn: your
+stratagems:
+  - name: Payment in Kind
+    category: Epic Deed
+    cp: 1
+    when: Any phase.
+    target: One LEAGUES OF VOTANN unit from your army that was just destroyed by an attack made by an enemy model. You can use this Stratagem on that LEAGUES OF VOTANN unit even though it was just destroyed.
+    effect: Until the end of the battle, each time a LEAGUES OF VOTANN model from your army makes an attack that targets that enemy model's unit, re-roll a Hit roll of 1.
+    phases:
+      - shooting
+      - fight
+    player_turn: either
+  - name: Pan-Spectral Sweep
+    category: Battle Tactic
+    cp: 1
+    when: Your Shooting phase.
+    target: One LEAGUES OF VOTANN unit from your army that has not been selected to shoot this phase.
+    effect: Until the end of the phase, ranged weapons equipped by models in your unit have the [LETHAL HITS] ability.
+    phases: [shooting]
+    player_turn: your
+  - name: Skeinwrought Physiology
+    category: Battle Tactic
+    cp: 1
+    when: Your opponent's Shooting phase, just after an enemy unit has selected its targets.
+    target: One LEAGUES OF VOTANN unit from your army that was selected as the target of one or more of the attacking unit's attacks.
+    effect: Until the end of the phase, improve the Save characteristic of models in your unit by 1.
+    phases: [shooting]
+    player_turn: opponent
+units:
+  - name: Kâhl Warspeke
+    id: 5eb15f12-26f0-43b7-acf0-e93e630585fe
+    loadout_description: "This model is equipped with: volkanite disintegrator; mass gauntlet; teleport crest."
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CHARACTER
+          - KÂHL
+          - WARSPEKE
+    ranged_weapons:
+      - name: Volkanite disintegrator
+        keywords: [DEVASTATING WOUNDS]
+        range: 18
+        attacks: 3
+        bs: 2+
+        strength: 5
+        ap: 0
+        damage: 1
+    melee_weapons:
+      - name: Mass gauntlet
+        attacks: 3
+        ws: 3+
+        strength: 8
+        ap: 2
+        damage: 3
+    abilities:
+      - name: Grim Efficiency
+        effect: Once per battle round, in your Command phase, you can select one enemy unit that is visible to this model. That enemy unit gains 1 Judgement token.
+        phases: [command]
+        player_turn: your
+    faction_abilities: [Eye of the Ancestors]
+    stats:
+      - movement: 5
+        toughness: 5
+        save: 3+
+        wounds: 4
+        leadership: 7+
+        objective_control: 1
+        invulnerable_save: 4+
+    faction_keywords:
+      - LEAGUES OF VOTANN
+    core_abilities:
+      - Leader
+    attachable_to: [HEARTHKYN WARRIORS]
+    warlord: true
+    enhancements:
+      - name: Waste Feeds the Void
+        id: 0736cfb0-79aa-48bc-b26b-fa6a750484a2
+        effect: >-
+          Each time a model in the bearer's unit makes a ranged attack, re-roll a Hit roll of 1. In
+          addition, the bearer's unit is eligible to shoot in a turn in which it Fell Back.
+        phases:
+          - movement
+          - shooting
+        player_turn: your
+      - name: Prâgmaat Comms Uplink
+        id: d853d155-4eaa-42ad-bfce-54a2b62e14ea
+        effect: >-
+          Add 1 to the Objective Control characteristic of models in the bearer's unit. In addition,
+          you can re-roll Battle-shock tests taken for the bearer's unit.
+        phases:
+          - command
+        player_turn: your
+  - name: Hearthkyn Warriors
+    id: d5ce6c16-a5bf-46c7-800f-b91b4f724841
+    model_count: 10
+    patrol_squads_model_count: 5
+    loadout_description: >-
+      * 1 Theyn is equipped with: EtaCarn plasma pistol; Kin melee weapon; weavefield crest.
+      * 4 Hearthkyn Warriors are equipped with: Autoch-pattern bolt pistol; ion blaster; close combat weapon.
+      * 1 Hearthkyn Warrior is equipped with: Autoch-pattern bolt pistol; ion blaster; close combat weapon; comms array.
+      * 1 Hearthkyn Warrior is equipped with: Autoch-pattern bolt pistol; ion blaster; close combat weapon; medipack.
+      * 1 Hearthkyn Warrior is equipped with: Autoch-pattern bolt pistol; ion blaster; close combat weapon; pan-spectral scanner.
+      * 1 Hearthkyn Warrior is equipped with: Autoch-pattern bolt pistol; HYLas auto rifle; close combat weapon.
+      * 1 Hearthkyn Warrior is equipped with: Autoch-pattern bolt pistol; magna-rail rifle; close combat weapon.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - BATTLELINE
+          - HEARTHKYN WARRIORS
+    ranged_weapons:
+      - name: Autoch-pattern bolt pistol
+        keywords: [PISTOL]
+        range: 12
+        attacks: 1
+        bs: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Autoch-pattern bolter
+        range: 24
+        attacks: 2
+        bs: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: EtaCarn plasma pistol
+        keywords: [PISTOL]
+        range: 6
+        attacks: 1
+        bs: 4+
+        strength: 8
+        ap: 3
+        damage: 2
+      - name: HYLas auto rifle
+        keywords:
+          - ASSAULT
+          - RAPID FIRE 3
+        range: 24
+        attacks: 3
+        bs: 4+
+        strength: 6
+        ap: 1
+        damage: 1
+      - name: Ion blaster
+        range: 18
+        attacks: 1
+        bs: 4+
+        strength: 5
+        ap: 2
+        damage: 1
+      - name: Magna-rail rifle
+        keywords:
+          - DEVASTATING WOUNDS
+          - HEAVY
+        range: 18
+        attacks: 1
+        bs: 5+
+        strength: 12
+        ap: 3
+        damage: D3+3
+    melee_weapons:
+      - name: Close combat weapon
+        attacks: 1
+        ws: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+      - name: Kin melee weapon
+        attacks: 2
+        ws: 4+
+        strength: 5
+        ap: 2
+        damage: 2
+    wargear_abilities:
+      - name: Pan-spectral Scanner
+        effect: Ranged weapons equipped by models in the bearer's unit have the [IGNORES COVER] ability.
+        player_turn: your
+        phases: [shooting]
+      - name: Medipack
+        effect: Models in the bearer's unit have the Feel No Pain 6+ ability.
+        player_turn: opponent
+        phases:
+          - shooting
+          - fight
+    faction_abilities: [Eye of the Ancestors]
+    stats:
+      - movement: 5
+        toughness: 5
+        save: 4+
+        wounds: 1
+        leadership: 7+
+        objective_control: 2
+    faction_keywords:
+      - LEAGUES OF VOTANN
+  - name: Hernkyn Pioneers
+    id: 3abc3ec1-7625-44d1-a47f-f8f74c7e021e
+    model_count: 3
+    loadout_description: >-
+      * 1 model is equipped with: bolt revolver; bolt shotgun; magna-coil autocannon; plasma knife; comms array.
+      * 1 model is equipped with: bolt revolver; bolt shotgun; magna-coil autocannon; plasma knife; rollbar searchlight.
+      * 1 model is equipped with: bolt revolver; bolt shotgun; HYLas rotary cannon; magna-coil autocannon; plasma knife.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - MOUNTED
+          - FLY
+          - HERNKYN PIONEERS
+    ranged_weapons:
+      - name: Bolt revolver
+        keywords: [PISTOL]
+        range: 9
+        attacks: 1
+        bs: 4+
+        strength: 5
+        ap: 0
+        damage: 1
+      - name: Bolt shotgun
+        keywords: [ASSAULT]
+        range: 12
+        attacks: 2
+        bs: 4+
+        strength: 5
+        ap: 0
+        damage: 1
+      - name: HYLas rotary cannon
+        keywords: [SUSTAINED HITS 1]
+        range: 24
+        attacks: 6
+        bs: 4+
+        strength: 6
+        ap: 1
+        damage: 1
+      - name: Magna-coil autocannon
+        range: 24
+        attacks: 3
+        bs: 4+
+        strength: 7
+        ap: 1
+        damage: 2
+    melee_weapons:
+      - name: Plasma knife
+        attacks: 2
+        ws: 4+
+        strength: 4
+        ap: 0
+        damage: 1
+    abilities:
+      - name: Outflanking Mag-Riders
+        effect: >-
+          At the end of your opponent's turn (excluding the first), if this unit is within 6" of any
+          battlefield edge and is not within Engagement Range of any enemy units, you can remove
+          this unit from the battlefield and place it in Reserves. In the Reinforcements step of
+          your next Movement phase, set up this unit wholly within 6" of any battlefield edge
+          excluding your opponent's, and more than 9" horizontally away from all enemy models.
+        phases:
+          - movement
+        player_turn: your
+    faction_abilities: [Eye of the Ancestors]
+    stats:
+      - movement: 12
+        toughness: 6
+        save: 4+
+        wounds: 3
+        leadership: 7+
+        objective_control: 2
+    faction_keywords:
+      - LEAGUES OF VOTANN
+    core_abilities:
+      - Scouts 9"
+  - name: Cthonian Beserks
+    id: 21fea325-ebef-4894-b33e-43b4ed1a3e56
+    model_count: 5
+    loadout_description: >-
+      * 3 models are equipped with: heavy plasma axe.
+      * 1 model is equipped with: mole grenade launcher; heavy plasma axe.
+      * 1 model is equipped with: twin concussion gauntlet.
+    keywords:
+      - models: ALL MODELS
+        keywords:
+          - INFANTRY
+          - CTHONIAN BESERKS
+    ranged_weapons:
+      - name: Mole grenade launcher
+        keywords:
+          - BLAST
+          - INDIRECT FIRE
+        range: 24
+        attacks: D6
+        bs: 4+
+        strength: 5
+        ap: 1
+        damage: 1
+    melee_weapons:
+      - name: Heavy plasma axe - strike
+        attacks: 3
+        ws: 3+
+        strength: 6
+        ap: 2
+        damage: 2
+      - name: Heavy plasma axe - sweep
+        attacks: 6
+        ws: 3+
+        strength: 4
+        ap: 1
+        damage: 1
+      - name: Twin concussion gauntlet
+        keywords: [TWIN-LINKED]
+        attacks: 4
+        ws: 4+
+        strength: 9
+        ap: 1
+        damage: 2
+    wargear_abilities:
+      - name: Mole Grenade Launcher
+        effect: Add 1 to the Wounds and Attacks characteristics of the model equipped with this weapon.
+        player_turn: your
+        phases: [shooting]
+    abilities:
+      - name: Cyberstimms
+        effect: >-
+          Each time a model in this unit is destroyed by a melee attack, if that model has not
+          fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model
+          can fight after the attacking model's unit has finished making its attacks, and is then
+          removed from play.
+        phases: [fight]
+        player_turn: either
+    faction_abilities: [Eye of the Ancestors]
+    stats:
+      - movement: 5
+        toughness: 5
+        save: 6+
+        wounds: 2
+        leadership: 7+
+        objective_control: 1
+    faction_keywords:
+      - LEAGUES OF VOTANN
+    core_abilities:
+      - Feel No Pain 5+
