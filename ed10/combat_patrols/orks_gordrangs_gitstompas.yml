@@ -66,11 +66,9 @@ units:
       - name: Dead 'ard
         effect: When you call a Waaagh!, until the start of the next battle round, this model has the Feel No Pain 4+ ability.
         phases:
-          - command
-          - movement
           - shooting
           - fight
-        player_turn: your
+        player_turn: opponent
     faction_abilities: [Waaagh!]
     stats:
       - movement: 5
