@@ -156,7 +156,7 @@ units:
         phases:
           - movement
           - charge
-        player_turn: your
+        player_turn: opponent
       - id: 2a3bdf1a-7d4d-4de5-a23e-1aa3f0684ea2
         name: Eldritch Might (Psychic)
         effect: >-
