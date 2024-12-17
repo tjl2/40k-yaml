@@ -57,6 +57,7 @@ stratagems:
       Until the end of the turn:
       
       * That unit is eligible to declare a charge in the Charge phase even if it Advanced or Fell Back this turn.
+      
       * Each time a model in that unit makes a melee attack, you can re-roll the Hit roll.
     phases: [charge]
     player_turn: your
@@ -150,9 +151,13 @@ units:
     loadout_description: >-
       
       * 1 Khorne Berzerker Champion is equipped with: plasma pistol; Berzerker chainblade.
+      
       * 1 Khorne Berzerker is equipped with: plasma pistol; Berzerker chainblade.
+      
       * 1 Khorne Berzerker is equipped with: plasma pistol; Berzerker chainblade; icon of Khorne.
+      
       * 2 Khorne Berzerkers are equipped with: bolt pistol; Khornate eviscerator.
+      
       * 5 Khorne Berzerkers are equipped with: bolt pistol; Berzerker chainblade.
     keywords:
       - models: ALL MODELS
@@ -217,9 +222,13 @@ units:
     loadout_description: >-
     
       * 1 Jakhal Pack Leader is equipped with: autopistol; Jakhal chainblades.
+      
       * 1 Dishonoured is equipped with: skullsmasher.
+      
       * 1 Jakhal is equipped with: autopistol; mauler chainblade.
+      
       * 1 Jakhal is equipped with: autopistol; Jakhal chainblades; icon of Khorne.
+      
       * 6 Jakhals are equipped with: autopistol; Jakhal chainblades.
     keywords:
       - models: ALL MODELS
