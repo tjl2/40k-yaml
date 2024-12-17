@@ -18,11 +18,13 @@ abilities:
       army until the end of the battle round.
     effect: >-
       ### WRATHFUL DEVOTION
+      
       **Any double.** Models in this unit have the Feel No Pain 6+ ability. If
       models in this unit already have the Feel No Pain ability, add 1 to their
       Feel No Pain rolls.
 
       ### TOTAL CARNAGE
+      
       **Double 4+ or any triple.** Each time a model in this unit is destroyed by a
       melee attack, if that model has not fought this phase, roll one D6: on a
       4+, do not remove it from play. The destroyed model can fight after the
@@ -30,6 +32,7 @@ abilities:
       removed from play.
 
       ### WARP BLADES
+      
       **Double 5+ or any triple.** Melee weapons equipped by models in this unit
       have the **[LETHAL HITS]** ability.
     phases: [command]
@@ -52,6 +55,7 @@ stratagems:
     target: One WORLD EATERS unit from your army that made a Charge move this phase.
     effect: >-
       Until the end of the turn:
+      
       * That unit is eligible to declare a charge in the Charge phase even if it Advanced or Fell Back this turn.
       * Each time a model in that unit makes a melee attack, you can re-roll the Hit roll.
     phases: [charge]
@@ -144,6 +148,7 @@ units:
     model_count: 10
     unit_count: 2
     loadout_description: >-
+      
       * 1 Khorne Berzerker Champion is equipped with: plasma pistol; Berzerker chainblade.
       * 1 Khorne Berzerker is equipped with: plasma pistol; Berzerker chainblade.
       * 1 Khorne Berzerker is equipped with: plasma pistol; Berzerker chainblade; icon of Khorne.
@@ -210,6 +215,7 @@ units:
     id: a61f24ab-2a74-4fc1-a8bc-97e47babd1cb
     model_count: 10
     loadout_description: >-
+    
       * 1 Jakhal Pack Leader is equipped with: autopistol; Jakhal chainblades.
       * 1 Dishonoured is equipped with: skullsmasher.
       * 1 Jakhal is equipped with: autopistol; mauler chainblade.
