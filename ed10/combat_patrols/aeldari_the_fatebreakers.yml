@@ -23,12 +23,19 @@ abilities:
       Each Fate dice can only be used in this way once. After using a Fate dice, remove it from
       your Fate dice pool and roll all remaining dice that are part of that dice roll (if any).
       You can use Fate dice for any of the following types of dice roll:
+
       * Advance roll
+      
       * Battle-shock test
+      
       * Charge roll
+      
       * Damage roll
+      
       * Hit roll
+      
       * Saving throw
+      
       * Wound roll
     phases: [command]
     mission_step: pre_battle
@@ -172,6 +179,7 @@ units:
     model_count: 11
     loadout_description: >-
       * 10 Guardian Defenders are equipped with: shuriken catapult; close combat weapon.
+
       * 1 Heavy Weapon Platform is equipped with: starcannon; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -244,6 +252,7 @@ units:
     patrol_squads_model_count: 3
     loadout_description: >-
       * 4 Windriders are equipped with: twin shuriken catapult; close combat weapon.
+
       * 2 Windriders are equipped with: scatter laser; close combat weapon.
     keywords:
       - models: ALL MODELS

@@ -133,7 +133,9 @@ units:
     unit_count: 2
     loadout_description: >-
       * 8 models are equipped with: hellblade.
+
       * 1 model is equipped with: hellblade; daemonic icon.
+      
       * 1 model is equipped with: hellblade; instrument of Chaos.
     keywords:
       - models: ALL MODELS
@@ -171,6 +173,7 @@ units:
     unit_count: 2
     loadout_description: >-
       * 1 Gore Hound is equipped with: burning roar; gore-drenched fangs; collar of Khorne.
+
       * 4 Flesh Hounds are equipped with: gore-drenched fangs; collar of Khorne.
     keywords:
       - models: ALL MODELS
@@ -222,7 +225,9 @@ units:
     model_count: 3
     loadout_description: >-
       * 1 model is equipped with: hellblade; Juggernaut's bladed horn.
+      
       * 1 model is equipped with: hellblade; Juggernaut's bladed horn; daemonic icon.
+
       * 1 model is equipped with: hellblade; Juggernaut's bladed horn; instrument of Chaos.
     keywords:
       - models: ALL MODELS

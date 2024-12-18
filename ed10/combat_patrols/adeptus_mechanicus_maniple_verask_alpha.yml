@@ -156,9 +156,13 @@ units:
     model_count: 10
     loadout_description: >-
       * 1 Skitarii Ranger Alpha is equipped with: Mechanicus pistol; Alpha combat weapon.
+
       * 6 Skitarii Rangers are equipped with: galvanic rifle; close combat weapon.
+      
       * 1 Skitarii Ranger is equipped with: galvanic rifle; close combat weapon; enhanced data-tether.
+      
       * 1 Skitarii Ranger is equipped with: arc rifle; close combat weapon.
+      
       * 1 Skitarii Ranger is equipped with: transuranic arquebus; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -239,6 +243,7 @@ units:
     model_count: 3
     loadout_description: >-
       * 1 Kataphron Destroyer is equipped with: heavy grav-cannon; phosphor blaster; close combat weapon.
+
       * 2 Kataphron Destroyers are equipped with: Kataphron plasma culverin; cognis flamer; close combat weapon.
     keywords:
       - models: ALL MODELS

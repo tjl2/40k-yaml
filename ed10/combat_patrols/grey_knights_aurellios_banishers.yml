@@ -134,7 +134,9 @@ units:
     model_count: 5
     loadout_description: >-
       * 1 Justicar is equipped with: storm bolter; Nemesis force weapon.
+
       * 3 Grey Knights are equipped with: storm bolter; Nemesis force weapon.
+      
       * 1 Grey Knight is equipped with: psilencer; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -194,7 +196,9 @@ units:
     model_count: 5
     loadout_description: >-
       * 1 Terminator Justicar is equipped with: storm bolter; Nemesis force weapon.
+
       * 3 Brotherhood Terminators are equipped with: storm bolter; Nemesis force weapon.
+      
       * 1 Brotherhood Terminator is equipped with: psycannon; Nemesis force weapon.
     keywords:
       - models: ALL MODELS

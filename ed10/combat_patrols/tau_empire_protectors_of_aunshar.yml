@@ -12,9 +12,11 @@ abilities:
       the end of the phase, this unit is considered a Guided unit, and that friendly unit is
       considered an Observer unit. Then select one enemy unit that is visible to both your units to
       be their Spotted unit. Until the end of the phase:
+
       * Each time a model in a Guided unit makes an attack that targets their Spotted unit, improve
         the Ballistic Skill characteristic of the attack by 1 and, if their Observer unit has the
         MARKERLIGHT keyword, the attack has the [IGNORES COVER] ability.
+      
       * Each time a model in a Guided unit makes an attack that does not target their Spotted unit,
         worsen the Ballistic Skill characteristic of the attack by 1.
     phases: [shooting]
@@ -170,7 +172,9 @@ units:
     loadout_description: >-
       * 1 Fire Warrior Shas'ui is equipped with: pulse carbine; pulse pistol; close combat weapon;
         support turret missile system; marker drone.
+
       * 5 Fire Warriors are equipped with: pulse pistol; pulse rifle; close combat weapon.
+      
       * 4 Fire Warriors are equipped with: pulse carbine; pulse pistol; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -252,6 +256,7 @@ units:
     loadout_description: >-
       * 1 Stealth Shas'vre is equipped with: fusion blaster; battlesuit fists; battlesuit support
         system; marker drone.
+
       * 2 Stealth Shas'ui are equipped with: burst cannon; battlesuit fists.
     keywords:
       - models: ALL MODELS

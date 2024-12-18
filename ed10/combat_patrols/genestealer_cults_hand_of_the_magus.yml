@@ -129,10 +129,15 @@ units:
     unit_count: 2
     loadout_description: >-
       * 1 Neophyte Leader is equipped with: autopistol; leader pistol; power weapon.
+
       * 5 Neophyte Hybrids are equipped with: autopistol; hybrid firearm; close combat weapon.
+      
       * 1 Neophyte Hybrid is equipped with: autopistol; hybrid firearm; close combat weapon; cult icon.
+      
       * 1 Neophyte Hybrid is equipped with: autopistol; heavy stubber; close combat weapon.
+      
       * 1 Neophyte Hybrid is equipped with: autopistol; seismic cannon; close combat weapon.
+      
       * 1 Neophyte Hybrid is equipped with: autopistol; webber; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -224,8 +229,12 @@ units:
     model_count: 5
     loadout_description: >-
       * 1 Acolyte Leader is equipped with: leader's cult weapons; autopistol.
+
       * 2 Acolyte Hybrids are equipped with: autopistol; cult claws and knife.
+
+      
       * 1 Acolyte Hybrid is equipped with: demolition charges; cult claws and knife.
+      
       * 1 Acolyte Hybrid is equipped with: heavy mining tool.
     keywords:
       - models: ALL MODELS
@@ -300,6 +309,7 @@ units:
     model_count: 5
     loadout_description: >-
       * 1 Aberrant Hypermorph is equipped with: heavy improvised weapon; hypermorph tail.
+
       * 4 Aberrants are equipped with: heavy power weapon.
     keywords:
       - models: ALL MODELS

@@ -8,6 +8,7 @@ abilities:
 
       * If that unit contains one or more models with fewer than their starting number of wounds
         remaining, select one of those models; that model regains one lost wound.
+
       * If all models in that unit have their starting number of wounds, but that unit is not at
         its Starting Strength, one destroyed model is returned to that unit with one wound remaining.
 
@@ -120,6 +121,7 @@ units:
     model_count: 10
     loadout_description: >-
       * 5 models are equipped with: gauss flayer; close combat weapon.
+
       * 5 models are equipped with: gauss reaper; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -168,6 +170,7 @@ units:
     model_count: 3
     loadout_description: >-
       * Every model is equipped with: Skorpekh hyperphase weapons.
+
       * This unit is equipped with: 1 plasmacyte.
     keywords:
       - models: ALL MODELS
