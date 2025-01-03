@@ -110,7 +110,7 @@
 
 - name: "Heroic Intervention"
   category: "Strategic Ploy"
-  cp: 2
+  cp: 1
   phases: [charge]
   when: "Your opponent's Charge phase, just after an enemy unit ends a Charge move."
   target:
