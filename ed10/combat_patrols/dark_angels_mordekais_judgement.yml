@@ -278,7 +278,9 @@ units:
     abilities:
       - name: Damaged
         effect: While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
-        phases: [fight]
+        phases: 
+          - shooting
+          - fight
         player_turn: your
     stats:
       - movement: 8
