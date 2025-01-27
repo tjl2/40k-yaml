@@ -15,7 +15,6 @@ Firefight ploys have a `when` attribute, which summarises when the ploy can be u
 - `conteracting` - when a friendly operative is counteracting.
 - more to come…
 
-
 ## Abilities
 
 Operatives' abilities have a `when` attribute, which summarises when the ability can be used.
@@ -100,7 +99,7 @@ In the YAML, the `operative_groups` object is modelled in a way that shows which
 
 Operatives are listed for these groups, under an attribute that indicates what rule exists for their inclusion:
 
-* `one_out_of`: you can only take one of the operatives from this list
+* `exclusive_one_of`: you can only take one of the operatives from this list
 * `limit_one_of`: you can take more than one operative from this list, but only one of each
 * `any_number_of`: you can have zero or more of any of the operatives in this list, limited only by the group's `total_operatives`
 
@@ -110,13 +109,13 @@ So as an example in the **Angels of Death** Kill Team:
 operative_groups:
   - name: leader
     total_operatives: 1
-    one_out_of:
+    exclusive_one_of:
     - Space Marine Captain
     - Assault Intercessor Sergeant
     - Intercessor Sergeant
   - name: team
     total_operatives: 5
-    one_out_of:
+    exclusive_one_of:
     - Heavy Intercessor Gunner
     - Eliminator Sniper
     limit_one_of:

@@ -582,13 +582,13 @@ operatives:
 operative_groups:
   - name: leader
     total_operatives: 1
-    one_of:
+    exclusive_one_of:
       - Space Marine Captain
       - Assault Intercessor Sergeant
       - Intercessor Sergeant
   - name: team
     total_operatives: 5
-    one_out_of:
+    exclusive_one_of:
       - Heavy Intercessor Gunner
       - Eliminator Sniper
     limit_one_of:
