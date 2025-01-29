@@ -100,7 +100,7 @@ firefight_ploys:
       DEATH operative, in the Roll Defence Dice step. You can retain one of
       your normal successes as a critical success instead
     when:
-      - roll defence dice
+      - roll_defence_dice
   - name: Shock Assault
     description: >-
       Use this firefight ploy when a friendly ANGEL OF DEATH operative is
@@ -129,7 +129,8 @@ operatives:
           Whenever you would use the Combat Doctrine strategic ploy and then
           select Assault or Tactical, if this operative is in the killzone, it
           costs you 0CP.
-        when: strategy phase
+        when: 
+          - strategy_phase
       - name: Chapter Veteran
         effect: >-
           At the end of the Select Operatives step, if this operative is
@@ -137,7 +138,8 @@ operatives:
           to have for the battle. Unlike primary and secondary CHAPTER TACTICS,
           you don’t have to select the same one for each battle in a campaign
           or tournament.
-        when: select operatives
+        when: 
+          - select_operatives
     ranged_weapons:
       - name: hand flamer
         atk: 4
@@ -219,7 +221,8 @@ operatives:
           Whenever you would use the Combat Doctrine strategic ploy and then
           select Devastator or Tactical, if this operative is in the killzone,
           it costs you 0CP.
-        when: strategy phase
+        when: 
+          - strategy_phase
       - name: Chapter Veteran
         effect: >-
           At the end of the Select Operatives step, if this operative is
@@ -227,7 +230,8 @@ operatives:
           to have for the battle. Unlike primary and secondary CHAPTER TACTICS,
           you don’t have to select the same one for each battle in a campaign
           or tournament.
-        when: select operatives
+        when: 
+          - select_operatives
     ranged_weapons:
       - name: auto bolt rifle
         atk: 4
@@ -307,12 +311,14 @@ operatives:
           Re-roll), or the Adjust Doctrine firefight ploy for 0CP if this
           operative is in the killzone and not within control range of enemy
           operatives.
-        when: firefight phase
+        when: 
+          - firefight_phase
       - name: Iron Halo
         effect: >-
           Once per battle, when an attack dice inflicts Normal Dmg on this
           operative, you can ignore that inflicted damage.
-        when: firefight phase
+        when: 
+          - firefight_phase
     ranged_weapons:
       - name: plasma pistol (standard)
         atk: 4
@@ -339,6 +345,7 @@ operatives:
           - brutal
   
   - name: Assault Intercessor Grenadier
+    id: 0c274a84-e18d-4dd0-8ceb-68262be166de
     abilities:
       - name: Grenadier
         effect: >-
@@ -347,7 +354,8 @@ operatives:
           (i.e. if you also select those grenades from equipment for other
           operatives). Whenever it’s doing so, improve the Hit stat of that
           weapon by 1.
-        when: firefight phase
+        when: 
+          - firefight_phase
     ranged_weapons:
       - name: heavy bolt pistol
         atk: 4
@@ -529,7 +537,8 @@ operatives:
           weapon rule. This operative has the Stealthy CHAPTER TACTIC. If you
           selected that CHAPTER TACTIC, you can do both of its options (i.e.
           retain two cover saves – one normal and one critical success).
-        when: firefight phase
+        when:
+          - firefight_phase
     actions:   
       - name: Optics
         ap: 1
