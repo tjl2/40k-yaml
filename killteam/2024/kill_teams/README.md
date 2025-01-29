@@ -93,27 +93,27 @@ operatives:
 
 You can see how this differs from the first example as we have a second `option_group` attribute within the `weapon_options`. This shows how you can opt for just the **Plasma Pistol** & **Chainsword** combination. Additionally, this shows that you could choose a **Hand Flamer** and a **Thunder Hammer**, but not a **Plasma Pistol** and **Power Fist**, as they are from 2 different option groups.
 
-## Operative Groups
+## Operative Selections
 
-In the YAML, the `operative_groups` object is modelled in a way that shows which operatives can be taken in the Kill Team. Your Kill Team will have a `total_operatives` value and each `operative_group` will have a `total_operatives` value too (the latter should always add up to match the former - unless there are some weird Kill Teams out there that I haven't encountered that break this rule).
+In the YAML, the `operative_selections` object is modelled in a way that shows which operatives can be taken in the Kill Team. Your Kill Team will have a `total_operatives` value and each operative selection will have a `total_operatives` value too (the latter should always add up to match the former - unless there are some weird Kill Teams out there that I haven't encountered that break this rule).
 
-Operatives are listed for these groups, under an attribute that indicates what rule exists for their inclusion:
+Operatives are listed for these selection groups, under an attribute that indicates what rule exists for their inclusion:
 
 * `exclusive_one_of`: you can only take one of the operatives from this list
-* `limit_one_of`: you can take more than one operative from this list, but only one of each
+* `limit_one_of`: you can take multiple operatives from this list, but only one of each
 * `any_number_of`: you can have zero or more of any of the operatives in this list, limited only by the group's `total_operatives`
 
 So as an example in the **Angels of Death** Kill Team:
 
 ```yaml
-operative_groups:
-  - name: leader
+operative_selection:
+  - group: leader
     total_operatives: 1
     exclusive_one_of:
     - Space Marine Captain
     - Assault Intercessor Sergeant
     - Intercessor Sergeant
-  - name: team
+  - group: team
     total_operatives: 5
     exclusive_one_of:
     - Heavy Intercessor Gunner
@@ -125,6 +125,8 @@ operative_groups:
     - Assault Intercessor Warrior
     - Intercessor Warrior
 ```
+
+Note that the `group` name that is given to each `operative_selection` list item is arbitrary and does not exist in the rules. However, you're normally going to end up with one list for leaders/special characters and another for the rest of the team.
 
 From this, we can see that
 

@@ -579,14 +579,14 @@ operatives:
         dmg: 3/4
         wr: []
 
-operative_groups:
-  - name: leader
+operative_selections:
+  - group: leader
     total_operatives: 1
     exclusive_one_of:
       - Space Marine Captain
       - Assault Intercessor Sergeant
       - Intercessor Sergeant
-  - name: team
+  - group: team
     total_operatives: 5
     exclusive_one_of:
       - Heavy Intercessor Gunner
