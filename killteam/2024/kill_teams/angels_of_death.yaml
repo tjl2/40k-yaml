@@ -111,6 +111,13 @@ faction_equipment:
 operatives:
   - name: Assault Intercessor Sergeant
     id: 8f14c42d-e268-41e8-9080-4cf319a23410
+    keywords:
+      - ANGEL OF DEATH
+      - IMPERIUM
+      - ADEPTUS ASTARTES
+      - LEADER
+      - ASSAULT INTERCESSOR
+      - SERGEANT
     abilities:
       - name: Doctrine Warfare
         effect: >-
@@ -196,6 +203,13 @@ operatives:
           - chainsword
 
   - name: Intercessor Sergeant
+    keywords:
+      - ANGEL OF DEATH
+      - IMPERIUM
+      - ADEPTUS ASTARTES
+      - LEADER
+      - INTERCESSOR
+      - SERGEANT
     id: df5f3774-35c8-452a-9599-2e150a925835
     abilities:
       - name: Doctrine Warfare
@@ -279,6 +293,12 @@ operatives:
 
   - name: Space Marine Captain
     id: 7f013c6d-fa71-4730-be07-19ee7ffa2eb6
+    keywords:
+      - ANGEL OF DEATH
+      - IMPERIUM
+      - ADEPTUS ASTARTES
+      - LEADER
+      - SPACE MARINE CAPTAIN
     abilities:
       - name: Heroic Leader
         effect: >-
@@ -340,6 +360,12 @@ operatives:
 
   - name: Assault Intercessor Warrior
     id: 799081f5-6833-4fd5-a020-9c7db90b136a
+    keywords:
+      - ANGEL OF DEATH
+      - IMPERIUM
+      - ADEPTUS ASTARTES
+      - ASSAULT INTERCESSOR
+      - WARRIOR
     ranged_weapons:
       - name: heavy bolt pistol
         atk: 4
@@ -357,6 +383,12 @@ operatives:
 
   - name: Intercessor Gunner
     id: 387a1f88-282b-4bdc-b92d-1977dc045fce
+    keywords:
+      - ANGEL OF DEATH
+      - IMPERIUM
+      - ADEPTUS ASTARTES
+      - INTERCESSOR
+      - GUNNER
     ranged_weapons:
       - name: auto bolt rifle
         atk: 4
@@ -423,6 +455,12 @@ operatives:
 
   - name: Intercessor Warrior
     id: 72d2a264-c1bb-4f79-87d2-e72368eeac63
+    keywords:
+      - ANGEL OF DEATH
+      - IMPERIUM
+      - ADEPTUS ASTARTES
+      - INTERCESSOR
+      - WARRIOR
     ranged_weapons:
       - name: auto bolt rifle
         atk: 4
@@ -474,6 +512,12 @@ operatives:
 
   - name: Heavy Intercessor Gunner
     id: d97517b6-1500-4a69-80fc-d4003bfba4a8
+    keywords:
+      - ANGEL OF DEATH
+      - IMPERIUM
+      - ADEPTUS ASTARTES
+      - HEAVY INTERCESSOR
+      - GUNNER
     ranged_weapons:
       - name: heavy bolter (focused)
         atk: 5
@@ -497,6 +541,12 @@ operatives:
 
   - name: Eliminator Sniper
     id: a57996a6-0c4c-4965-b2f0-037f86fec653
+    keywords:
+      - ANGEL OF DEATH
+      - IMPERIUM
+      - ADEPTUS ASTARTES
+      - ELIMINATOR
+      - SNIPER
     abilities:
       - name: Camo Cloak
         effect: >-
