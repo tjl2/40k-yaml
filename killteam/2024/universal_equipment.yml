@@ -1,4 +1,5 @@
 - name: Ammo Cache
+  id: 40e79136-b5cb-4928-b7bb-29794004a9d4
   quantity: 1
   description: >-
     Before the battle, you can set up one of your Ammo Cache markers wholly within your territory. Friendly operatives can perform the following mission action during the battle:
@@ -13,6 +14,7 @@
         An operative cannot perform this action while within control range of an enemy operative, if that marker isn't yours or if that marker has been used this turning point.
 
 - name: Razor Wire
+  id: 9f5d8815-c5a2-4ef7-884a-664822182ca1
   quantity: 1
   description: >-
     Razor wire is [Exposed] and [Obstructing] terrain. Before the battle, you can set it up wholly within your territory, on the killzone floor and more than 2" from other equipment terrain features.
@@ -20,26 +22,31 @@
     *Obstructing terrain:* Whenever an operative would cross this terrain feature within 1" of it, treat the distance as an additional 2".
 
 - name: Comms Device
+  id: 1fab6ed5-85c7-45e3-a9b7-7355eaf8d6b9
   quantity: 1
   description: >-
     Before the battle, you can set up one of your Comms Device markers wholly within your territory. While a friendly operative controls this marker, add 3" to the distance requirements of its *[SUPPORT]* rules that refer to friendly operatives (e.g. 'select one friendly operative within 6"' would be 9" instead). Note that you cannot benefit from your opponent's Comms Device markers.
 
 - name: Mines
+  id: 7a71d182-d4bf-4a30-9378-9e8b4e1894f4
   quantity: 1
   description:
     Before the battle, you can set up one of your Mines markers wholly within your territory and more than 2" from other markers, access points and [Accessible] terrain. The first time that marker is within an operative's control range, remove that marker and inflict D3+3 damage on that operative.
 
 - name: Light Barricades
+  id: b245abff-94bf-45fd-95ae-f9eafcc29e68
   quantity: 2
   description: >-
     Light barricades are [Light terrain], except the feet, which are [Insignificant] and [Exposed]. Before the battle, you can set up any of them wholly within your territory, on the killzone floor and more than 2" from other equipment terrain features, access points and [Accessible] terrain.
 
 - name: Heavy Barricade
+  id: af3f3113-ef4f-4bd7-966d-652765829204
   quantity: 1
   description: >-
     A heavy barricade is [Heavy terrain]. Before the battle, you can set it up wholly within 4" of your drop zone, on the killzone floor and more than 2" from other equipment terrain features, access points and [Accessible terrain].
 
 - name: Ladders
+  id: 09f43bfb-03f7-452d-b1f9-ca1aa0a93840
   quantity: 2
   description: >-
     Ladders are [Exposed terrain]. Before the battle, you can set up any of them as follows:
@@ -56,6 +63,7 @@
 
 
 - name: Portable Barricade
+  id: 2bfbb40c-1603-43e4-adbc-b6f91cd394c0
   quantity: 1
   description: >-
     A portable barricade is [Light], Protective and Portable terrain. Before the battle, you can set it up wholly within your territory, on the killzone floor and more than 2" from other equipment terrain features, access points and [Accessible terrain].
@@ -74,6 +82,7 @@
         This action is treated as a Reposition action. An operative cannot perform this action while within control range of an enemy operative, or during the same activation
 
 - name: Utility Grenades
+  id: 156c6894-926c-4519-b15b-eca1ad6caab9
   quantity: 2
   description: >-
     When you select this equipment, select two utility grenades (2 smoke, 2 stun, or 1 smoke and 1 stun). Each selection is a unique action your operatives can perform, but your kill team can only perform that action a total number of times during the battle equal to your selection.
@@ -96,6 +105,7 @@
         An operative cannot perform this action while within control range of an enemy operative, or if you have reached the total number of times your kill team can perform it.
 
 - name: Explosive Grenades
+  id: efe2820a-1e05-4ee3-88bb-a39ffb3b2191
   quantity: 2
   description: >-
     When you select this equipment, select two explosive grenades (2 frag, 2 krak, or 1 frag and 1 krak). Each selection is a ranged weapon your operatives can use, but your kill team can only use that weapon a total number of times during the battle equal to your selection.
