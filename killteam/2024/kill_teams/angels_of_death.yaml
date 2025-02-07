@@ -7,116 +7,87 @@ total_operatives: 6
 faction_rules:
   - name: Astartes
     description: >-
-      During each friendly ANGEL OF DEATH operative’s activation, it can
-      perform either two Shoot actions or two Fight actions. If it’s two Shoot
-      actions, a bolt weapon must be selected for at least one of them, and if
-      it’s a bolt sniper rifle or heavy bolter, 1 additional AP must be spent
-      for the second action if both actions are using that weapon. Each
-      friendly ANGEL OF DEATH operative can counteract regardless of its order.
+      During each friendly ANGEL OF DEATH operative’s activation, it can perform either two Shoot actions or two Fight actions. If it’s two Shoot actions, a bolt weapon must be selected for at least one of them, and if it’s a bolt sniper rifle or heavy bolter, 1 additional AP must be spent for the second action if both actions are using that weapon. Each friendly ANGEL OF DEATH operative can counteract regardless of its order.
   - name: Chapter Tactics
     description: >-
-      When selecting your kill team, select a primary and secondary CHAPTER
-      TACTIC for friendly ANGEL OF DEATH operatives to gain for the battle.
-      Multiple instances of the same CHAPTER TACTIC are not cumulative.
+      When selecting your kill team, select a primary and secondary CHAPTER TACTIC for friendly ANGEL OF DEATH operatives to gain for the battle. Multiple instances of the same CHAPTER TACTIC are not cumulative.
 
-      Designer’s Note: If you’re playing a series of games, i.e. a campaign or
-      tournament, you must select the same primary and secondary CHAPTER TACTIC
-      for every battle (you can still change the secondary with the Adaptive
-      Tactics strategy ploy).
+      Designer’s Note: If you’re playing a series of games, i.e. a campaign or tournament, you must select the same primary and secondary CHAPTER TACTIC for every battle (you can still change the secondary with the Adaptive Tactics strategy ploy).
 
       1. Aggressive
       This operative’s melee weapons have the Rending weapon rule.
 
       2. Dueller
       Once per sequence, whenever this operative is fighting or retaliating:
-      • One of your normal successes can block one unresolved critical success
-      (unless the enemy operative’s weapon has the Brutal weapon rule).
-      • One of your critical successes can block two unresolved normal
-      successes (instead of one critical success).
+
+      * One of your normal successes can block one unresolved critical success (unless the enemy operative’s weapon has the Brutal weapon rule).
+
+      * One of your critical successes can block two unresolved normal successes (instead of one critical success).
 
       3. Resolute
       You can ignore any changes to this operative’s APL stat.
 
       4. Stealthy
-      Whenever an operative is shooting this operative, if you can retain any
-      cover saves, you can retain one additional cover save, or you can retain
-      one cover save as a critical success instead. This isn’t cumulative with
-      improved cover saves from Vantage terrain.
+      Whenever an operative is shooting this operative, if you can retain any cover saves, you can retain one additional cover save, or you can retain one cover save as a critical success instead. This isn’t cumulative with improved cover saves from Vantage terrain.
 
       5. Mobile
-      • This operative can perform the Fall Back action for 1 less AP.
-      • This operative can perform the Charge action while within control range
-      of an enemy operative, and can leave that operative’s control range to do
-      so (but then normal requirements for that move apply).
+
+      * This operative can perform the Fall Back action for 1 less AP.
+
+      * This operative can perform the Charge action while within control range of an enemy operative, and can leave that operative’s control range to do so (but then normal requirements for that move apply).
 
       6. Hardy
-      Whenever an operative is shooting this operative, defence dice results of
-      5+ are critical successes.
+      Whenever an operative is shooting this operative, defence dice results of 5+ are critical successes.
 
       7. Sharpshooter
-      Whenever this operative is shooting during an activation in which it
-      hasn’t performed the Charge, Fall Back or Reposition action, its bolt
-      weapons have the Severe weapon rule.
+      Whenever this operative is shooting during an activation in which it hasn’t performed the Charge, Fall Back or Reposition action, its bolt weapons have the Severe weapon rule.
 
       8. Siege Specialist
-      This operative’s ranged weapons have the Saturate weapon rule.
+      This operative’s ranged weapons have the [Saturate] weapon rule.
 strategic_ploys:
   - name: Combat Doctrine
     description: >-
       Select one COMBAT DOCTRINE from those presented below.
 
-      Whenever a friendly ANGEL OF DEATH operative is x, its weapons have the
-      Balanced weapon rule. X is the COMBAT DOCTRINE you selected.
+      Whenever a friendly ANGEL OF DEATH operative is x, its weapons have the [Balanced] weapon rule. X is the COMBAT DOCTRINE you selected.
 
-      • Devastator Doctrine: Shooting an operative more than 6" from it.
-      • Tactical Doctrine: Shooting an operative within 6" of it.
-      • Assault Doctrine: Fighting or retaliating.
+      * Devastator Doctrine: Shooting an operative more than 6" from it.
+
+      * Tactical Doctrine: Shooting an operative within 6" of it.
+
+      * Assault Doctrine: Fighting or retaliating.
   - name: And They Shall Know No Fear
     description: >-
-      You can ignore any changes to the stats of friendly ANGEL OF DEATH
-      operatives from being injured (including their weapons’ stats).
+      You can ignore any changes to the stats of friendly ANGEL OF DEATH operatives from being injured (including their weapons’ stats).
   - name: Adaptive Tactics
     description: >-
-      Change your secondary CHAPTER TACTIC. Note this ploy only lasts until the
-      end of the turning point, at which point your original secondary CHAPTER
-      TACTIC returns.
+      Change your secondary CHAPTER TACTIC. Note this ploy only lasts until the end of the turning point, at which point your original secondary CHAPTER TACTIC returns.
   - name: Indomitus
     description: >-
-      Whenever an operative is shooting a friendly ANGEL OF DEATH operative, if
-      you roll two or more fails, you can discard one of them to retain another
-      as a normal success instead.
+      Whenever an operative is shooting a friendly ANGEL OF DEATH operative, if you roll two or more fails, you can discard one of them to retain another as a normal success instead.
 firefight_ploys:
   - name: Adjust Doctrine
     description: >-
-      Use this firefight ploy during a friendly ANGEL OF DEATH operative’s
-      activation, before or after it performs an action. If you’ve used the
-      Combat Doctrine strategy ploy during this turning point, change the
-      COMBAT DOCTRINE you selected.
+      Use this firefight ploy during a friendly ANGEL OF DEATH operative's activation, before or after it performs an action. If you’ve used the Combat Doctrine strategy ploy during this turning point, change the COMBAT DOCTRINE you selected.
     when:
       - activation
   - name: Transhuman Physiology
     description: >-
-      Use this firefight ploy when an operative is shooting a friendly ANGEL OF
-      DEATH operative, in the Roll Defence Dice step. You can retain one of
-      your normal successes as a critical success instead
+      Use this firefight ploy when an operative is shooting a friendly ANGEL OF DEATH operative, in the Roll Defence Dice step. You can retain one of your normal successes as a critical success instead
     when:
       - roll_defence_dice
   - name: Shock Assault
     description: >-
-      Use this firefight ploy when a friendly ANGEL OF DEATH operative is
-      performing the Fight action during an activation in which it performed
-      the Charge action, at the start of the Resolve Attack Dice step. Until
-      the end of that action:
-      • Its melee weapon has the Shock weapon rule.
-      • The first time you strike during that sequence, inflict 1 additional
-      damage (to a maximum of 7).
+      Use this firefight ploy when a friendly ANGEL OF DEATH operative is performing the Fight action during an activation in which it performed the Charge action, at the start of the Resolve Attack Dice step. Until the end of that action:
+
+      * Its melee weapon has the Shock weapon rule.
+      
+      * The first time you strike during that sequence, inflict 1 additional damage (to a maximum of 7).
     when:
       - fighting
   - name: Wrath Of Vengeance
     description: >-
-      Use this firefight ploy when a friendly ANGEL OF DEATH operative is
-      counteracting. It can perform an additional 1AP action for free during
-      that counteraction, but both actions must be different.
+      Use this firefight ploy when a friendly ANGEL OF DEATH operative is counteracting. It can perform an additional 1AP action for free during that counteraction, but both actions must be different.
     when:
       - counteracting
 
@@ -126,18 +97,12 @@ operatives:
     abilities:
       - name: Doctrine Warfare
         effect: >-
-          Whenever you would use the Combat Doctrine strategic ploy and then
-          select Assault or Tactical, if this operative is in the killzone, it
-          costs you 0CP.
+          Whenever you would use the Combat Doctrine strategic ploy and then select Assault or Tactical, if this operative is in the killzone, it costs you 0CP.
         when: 
           - strategy_phase
       - name: Chapter Veteran
         effect: >-
-          At the end of the Select Operatives step, if this operative is
-          selected for deployment, select one additional CHAPTER TACTIC for it
-          to have for the battle. Unlike primary and secondary CHAPTER TACTICS,
-          you don’t have to select the same one for each battle in a campaign
-          or tournament.
+          At the end of the Select Operatives step, if this operative is selected for deployment, select one additional CHAPTER TACTIC for it to have for the battle. Unlike primary and secondary CHAPTER TACTICS, you don’t have to select the same one for each battle in a campaign or tournament.
         when: 
           - select_operatives
     ranged_weapons:
@@ -218,18 +183,12 @@ operatives:
     abilities:
       - name: Doctrine Warfare
         effect: >-
-          Whenever you would use the Combat Doctrine strategic ploy and then
-          select Devastator or Tactical, if this operative is in the killzone,
-          it costs you 0CP.
+          Whenever you would use the Combat Doctrine strategic ploy and then select Devastator or Tactical, if this operative is in the killzone, it costs you 0CP.
         when: 
           - strategy_phase
       - name: Chapter Veteran
         effect: >-
-          At the end of the Select Operatives step, if this operative is
-          selected for deployment, select one additional CHAPTER TACTIC for it
-          to have for the battle. Unlike primary and secondary CHAPTER TACTICS,
-          you don’t have to select the same one for each battle in a campaign
-          or tournament.
+          At the end of the Select Operatives step, if this operative is selected for deployment, select one additional CHAPTER TACTIC for it to have for the battle. Unlike primary and secondary CHAPTER TACTICS, you don’t have to select the same one for each battle in a campaign or tournament.
         when: 
           - select_operatives
     ranged_weapons:
@@ -306,17 +265,12 @@ operatives:
     abilities:
       - name: Heroic Leader
         effect: >-
-          Once per turning point, you can use a firefight ploy for 0CP if this
-          is the specified ANGEL OF DEATH operative (excluding Command
-          Re-roll), or the Adjust Doctrine firefight ploy for 0CP if this
-          operative is in the killzone and not within control range of enemy
-          operatives.
+          Once per turning point, you can use a firefight ploy for 0CP if this is the specified ANGEL OF DEATH operative (excluding Command Re-roll), or the Adjust Doctrine firefight ploy for 0CP if this operative is in the killzone and not within control range of enemy operatives.
         when: 
           - firefight_phase
       - name: Iron Halo
         effect: >-
-          Once per battle, when an attack dice inflicts Normal Dmg on this
-          operative, you can ignore that inflicted damage.
+          Once per battle, when an attack dice inflicts Normal Dmg on this operative, you can ignore that inflicted damage.
         when: 
           - firefight_phase
     ranged_weapons:
@@ -349,11 +303,7 @@ operatives:
     abilities:
       - name: Grenadier
         effect: >-
-          This operative can use frag and krak grenades (see universal
-          equipment). Doing so doesn’t count towards any limited uses you have
-          (i.e. if you also select those grenades from equipment for other
-          operatives). Whenever it’s doing so, improve the Hit stat of that
-          weapon by 1.
+          This operative can use frag and krak grenades (see universal equipment). Doing so doesn’t count towards any limited uses you have (i.e. if you also select those grenades from equipment for other operatives). Whenever it’s doing so, improve the Hit stat of that weapon by 1.
         when: 
           - firefight_phase
     ranged_weapons:
@@ -533,21 +483,16 @@ operatives:
     abilities:
       - name: Camo Cloak
         effect: >-
-          Whenever an operative is shooting this operative, ignore the Saturate
-          weapon rule. This operative has the Stealthy CHAPTER TACTIC. If you
-          selected that CHAPTER TACTIC, you can do both of its options (i.e.
-          retain two cover saves – one normal and one critical success).
+          Whenever an operative is shooting this operative, ignore the Saturate weapon rule. This operative has the Stealthy CHAPTER TACTIC. If you selected that CHAPTER TACTIC, you can do both of its options (i.e. retain two cover saves – one normal and one critical success).
         when:
           - firefight_phase
     actions:   
       - name: Optics
         ap: 1
         description: >-
-          Until the start of this operative’s next activation, whenever it’s
-          shooting, enemy operatives cannot be obscured.
+          Until the start of this operative’s next activation, whenever it’s shooting, enemy operatives cannot be obscured.
         conditions: >-
-          This operative cannot perform this action while within control range
-          of an enemy operative.
+          This operative cannot perform this action while within control range of an enemy operative.
     ranged_weapons:
       - name: bolt pistol
         atk: 4
