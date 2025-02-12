@@ -221,11 +221,8 @@ units:
     unit_count: 2
     loadout_description: |
       * 1 Shock Trooper Sergeant is equipped with: laspistol; chainsword.
-
       * 7 Shock Troopers are equipped with: lasgun; close combat weapon.
-
       * 1 Shock Trooper is equipped with: flamer; close combat weapon.
-
       * 1 Shock Trooper is equipped with: meltagun; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -302,7 +299,6 @@ units:
     loadout_description: |
       * 1 model is equipped with: bombast field gun; lasgun; laspistol; battery
       close combat weapons.
-
       * 1 model is equipped with: malleus rocket launcher; lasgun; laspistol;
       battery close combat weapons.
     keywords:

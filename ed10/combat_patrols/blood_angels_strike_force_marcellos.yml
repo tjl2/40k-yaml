@@ -131,7 +131,6 @@ units:
     model_count: 5
     loadout_description: |
       * 1 Intercessor Sergeant is equipped with: bolt pistol; Astartes chainsword.
-
       * 4 Intercessors are equipped with: bolt rifle; bolt pistol; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -190,9 +189,7 @@ units:
     model_count: 5
     loadout_description: |
       * 1 Incursor Sergeant is equipped with: bolt pistol; occulus bolt carbine; paired combat blades.
-
       * 3 Incursors are equipped with: bolt pistol; occulus bolt carbine; paired combat blades.
-
       * 1 Incursor is equipped with: bolt pistol; occulus bolt carbine; paired combat blades; haywire mine.
     keywords:
       - models: ALL MODELS

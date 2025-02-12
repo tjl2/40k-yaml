@@ -11,9 +11,9 @@ abilities:
       Judgement tokens, until that model's attacks have been resolved, apply the relevant bonus
       from the table below to that attack.
 
-      1 Judgement Token - Eminent Threat: Add 1 to the Hit roll.
-      2 Judgement Tokens - Now We've Got a Grudge to Settle: Add 1 to the Hit roll and add 1 to
-      the Wound roll.
+      * 1 Judgement Token - Eminent Threat: Add 1 to the Hit roll.
+      * 2 Judgement Tokens - Now We've Got a Grudge to Settle: Add 1 to the Hit roll and add 1 to
+        the Wound roll.
     phases:
       - shooting
       - fight
@@ -116,17 +116,11 @@ units:
     patrol_squads_model_count: 5
     loadout_description: |
       * 1 Theyn is equipped with: EtaCarn plasma pistol; Kin melee weapon; weavefield crest.
-
       * 4 Hearthkyn Warriors are equipped with: Autoch-pattern bolt pistol; ion blaster; close combat weapon.
-      
       * 1 Hearthkyn Warrior is equipped with: Autoch-pattern bolt pistol; ion blaster; close combat weapon; comms array.
-      
       * 1 Hearthkyn Warrior is equipped with: Autoch-pattern bolt pistol; ion blaster; close combat weapon; medipack.
-      
       * 1 Hearthkyn Warrior is equipped with: Autoch-pattern bolt pistol; ion blaster; close combat weapon; pan-spectral scanner.
-      
       * 1 Hearthkyn Warrior is equipped with: Autoch-pattern bolt pistol; HYLas auto rifle; close combat weapon.
-      
       * 1 Hearthkyn Warrior is equipped with: Autoch-pattern bolt pistol; magna-rail rifle; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -224,9 +218,7 @@ units:
     model_count: 3
     loadout_description: |
       * 1 model is equipped with: bolt revolver; bolt shotgun; magna-coil autocannon; plasma knife; comms array.
-
       * 1 model is equipped with: bolt revolver; bolt shotgun; magna-coil autocannon; plasma knife; rollbar searchlight.
-      
       * 1 model is equipped with: bolt revolver; bolt shotgun; HYLas rotary cannon; magna-coil autocannon; plasma knife.
     keywords:
       - models: ALL MODELS
@@ -301,9 +293,7 @@ units:
     model_count: 5
     loadout_description: |
       * 3 models are equipped with: heavy plasma axe.
-
       * 1 model is equipped with: mole grenade launcher; heavy plasma axe.
-      
       * 1 model is equipped with: twin concussion gauntlet.
     keywords:
       - models: ALL MODELS

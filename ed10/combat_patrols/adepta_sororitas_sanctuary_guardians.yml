@@ -142,13 +142,9 @@ units:
     patrol_squads_model_count: 5
     loadout_description: |
       * The Sister Superior is equipped with: bolt pistol; combi-weapon; power weapon.
-      
       * 1 Battle Sister is equipped with: bolt pistol; Ministorum flamer; close combat weapon.
-      
       * 1 Battle Sister is equipped with: bolt pistol; Ministorum heavy flamer; close combat weapon.
-      
       * 1 Battle Sister is equipped with: bolt pistol; boltgun; close combat weapon; simulacrum imperialis.
-
       * 6 Battle Sisters are equipped with: bolt pistol; boltgun; close combat weapon.
     keywords:
       - models: ALL MODELS

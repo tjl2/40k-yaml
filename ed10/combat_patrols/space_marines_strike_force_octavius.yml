@@ -259,9 +259,7 @@ units:
     model_count: 5
     loadout_description: |
       * The Terminator Sergeant is equipped with: storm bolter; power weapon.
-
       * 1 Terminator is equipped with: assault cannon; power fist.
-      
       * 3 Terminators are equipped with: storm bolter; power fist.
     keywords:
       - models: ALL MODELS

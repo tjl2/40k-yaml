@@ -108,7 +108,6 @@ units:
     model_count: 5
     loadout_description: |
       * 1 Intercessor Sergeant is equipped with: bolt pistol; power weapon.
-
       * 4 Intercessors are equipped with: bolt pistol; bolt rifle; close combat weapon.
     keywords:
       - models: ALL MODELS

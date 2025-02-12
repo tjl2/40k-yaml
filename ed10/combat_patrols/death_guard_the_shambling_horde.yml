@@ -8,9 +8,7 @@ abilities:
       battle, as shown below:
 
       * 1st Battle Round - 3"
-
       * 2nd Battle Round - 6"
-
       * 3rd Battle Round onwards - 9"
     phases:
       - shooting
@@ -179,11 +177,8 @@ units:
     model_count: 7
     loadout_description: |
       * 1 Plague Champion is equipped with: plague boltgun; heavy plague weapon.
-
       * 1 Plague Marine is equipped with: plague spewer; plague knives.
-      
       * 1 Plague Marine is equipped with: blight launcher; plague knives.
-      
       * 4 Plague Marines are equipped with: plague boltgun; plague knives.
     keywords:
       - models: ALL MODELS

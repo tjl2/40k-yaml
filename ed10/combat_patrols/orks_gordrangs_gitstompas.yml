@@ -7,9 +7,7 @@ abilities:
       start of the next battle round:
 
       * ORKS units from your army are eligible to declare a charge in a turn in which they Advanced.
-      
       * Add 1 to the Strength and Attacks characteristics of melee weapons equipped by ORKS models from your army.
-      
       * ORKS models from your army have a 5+ invulnerable save.
     phases: [command]
     player_turn: your
@@ -108,11 +106,8 @@ units:
     unit_count: 2
     loadout_description: |
       * 1 Boss Nob is equipped with: slugga; big choppa.
-
       * 5 Boyz are equipped with: slugga; choppa.
-      
       * 3 Boyz are equipped with: shoota; close combat weapon.
-      
       * 1 Boy is equipped with: big shoota; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -202,7 +197,6 @@ units:
     model_count: 3
     loadout_description: |
       * 1 model is equipped with: kustom mega-blasta; slugga; spinnin' blades.
-
       * 2 models are equipped with: kopta rokkits; slugga; spinnin' blades.
     keywords:
       - models: ALL MODELS

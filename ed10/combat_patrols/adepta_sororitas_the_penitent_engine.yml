@@ -15,7 +15,6 @@ abilities:
       You gain 1 Miracle dice:
 
       * At the start of each turn.
-      
       * Each time an Adepta Sororitas unit from your army is destroyed.
 
       Each time you gain a Miracle dice, roll one D6. The number you roll is the
@@ -46,17 +45,11 @@ abilities:
       the following types of dice roll:
 
       * Advance roll
-
       * Battle-shock test
-      
       * Charge roll
-      
       * Damage roll
-      
       * Hit roll
-      
       * Saving throw
-      
       * Wound roll
     player_turn: either
 stratagems:
@@ -193,13 +186,9 @@ units:
     model_count: 10
     loadout_description: |
       * 1 Sister Superior is equipped with: boltgun; bolt pistol; chainsword.
-
       * 6 Battle Sisters are equipped with: boltgun; bolt pistol; close combat weapon.
-      
       * 1 Battle Sister is equipped with: boltgun; bolt pistol; close combat weapon; simulacrum Imperialis.
-      
       * 1 Battle Sister is equipped with: artificer- crafted storm bolter; bolt pistol; close combat weapon.
-      
       * 1 Battle Sister is equipped with: ministorum flamer; bolt pistol; close combat weapon
     keywords:
       - models: ALL MODELS
@@ -278,7 +267,6 @@ units:
     model_count: 5
     loadout_description: |
       * 1 Seraphim Superior is equipped with: plasma pistol; power weapon.
-
       * 4 Seraphim are equipped with: 2 bolt pistols; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -359,7 +347,6 @@ units:
     model_count: 5
     loadout_description: |
       * 1 Repentia Superior is equipped with: bolt pistol; neural whips.
-
       * 4 Sisters Repentia are equipped with: penitent eviscerator.
     keywords:
       - models: ALL MODELS

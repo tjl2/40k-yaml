@@ -6,9 +6,7 @@ abilities:
       Units from your army can become Empowered Through Pain. This is done using Pain tokens. You gain 1 Pain token:
 
       * At the start of the battle.
-      
       * Each time an enemy unit is destroyed.
-      
       * Each time an enemy unit fails a Battle-shock test.
 
       Each time you gain a Pain token, keep it to one side – this is your Pain token pool.
@@ -133,11 +131,8 @@ units:
     model_count: 10
     loadout_description: |
       * 1 Sybarite is equipped with: splinter pistol; Sybarite weapon.
-
       * 7 Kabalite Warriors are equipped with: splinter rifle; close combat weapon.
-      
       * 1 Kabalite Warrior is equipped with: shredder; close combat weapon.
-      
       * 1 Kabalite Warrior is equipped with: splinter cannon; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -220,7 +215,6 @@ units:
     model_count: 5
     loadout_description: |
       * 1 Klaivex is equipped with: demiklaives.
-
       * 4 Incubi are equipped with: klaive.
     keywords:
       - models: ALL MODELS

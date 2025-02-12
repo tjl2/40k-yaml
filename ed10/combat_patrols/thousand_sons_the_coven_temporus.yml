@@ -150,11 +150,8 @@ units:
     model_count: 5
     loadout_description: |
       * 1 Scarab Occult Sorcerer is equipped with: Warpsmite; force weapon; Prosperine khopesh.
-      
       * 2 Scarab Occult Terminators are equipped with: inferno combi-bolter; Prosperine khopesh.
-      
       * 1 Scarab Occult Terminator is equipped with: soulreaper cannon; Prosperine khopesh.
-
       * 1 Scarab Occult Terminator is equipped with: hellfyre missile rack; inferno combi-bolter; Prosperine khopesh.
     keywords:
       - models: ALL MODELS

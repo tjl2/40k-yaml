@@ -190,9 +190,7 @@ units:
     model_count: 4
     loadout_description: |
       * 2 models are equipped with: guardian spear.
-
       * 1 model is equipped with: misericordia, praesidium shield; vexilla.
-      
       * 1 model is equipped with: sentinel blade; praesidium shield.
     alternative_to: Vertus Praetors
     keywords:

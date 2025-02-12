@@ -124,7 +124,6 @@ units:
     patrol_squads_model_count: 5
     loadout_description: |
       * 1 Intercessor Sergeant is equipped with: bolt pistol; Astartes chainsword.
-
       * 9 Intercessors are equipped with: bolt rifle; bolt pistol; close combat weapon.
     keywords:
       - models: ALL MODELS

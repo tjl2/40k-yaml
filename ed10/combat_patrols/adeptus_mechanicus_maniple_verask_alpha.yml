@@ -11,14 +11,12 @@ abilities:
       ### Protector Imperative
 
       * Ranged weapons equipped by models in this unit have the [HEAVY] ability.
-
       * Each time a ranged attack targets this unit, if this unit is within your
       deployment zone, worsen the Armour Penetration characteristic of that attack by 1.
 
       ### Conqueror Imperative
 
       * Ranged weapons equipped by models in this unit have the [ASSAULT] ability.
-
       * Each time a model in this unit makes a ranged attack, if the target of that
       attack is within your opponent's deployment zone, improve the Armour Penetration
       characteristic of that attack by 1.
@@ -156,13 +154,9 @@ units:
     model_count: 10
     loadout_description: |
       * 1 Skitarii Ranger Alpha is equipped with: Mechanicus pistol; Alpha combat weapon.
-
       * 6 Skitarii Rangers are equipped with: galvanic rifle; close combat weapon.
-      
       * 1 Skitarii Ranger is equipped with: galvanic rifle; close combat weapon; enhanced data-tether.
-      
       * 1 Skitarii Ranger is equipped with: arc rifle; close combat weapon.
-      
       * 1 Skitarii Ranger is equipped with: transuranic arquebus; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -243,7 +237,6 @@ units:
     model_count: 3
     loadout_description: |
       * 1 Kataphron Destroyer is equipped with: heavy grav-cannon; phosphor blaster; close combat weapon.
-
       * 2 Kataphron Destroyers are equipped with: Kataphron plasma culverin; cognis flamer; close combat weapon.
     keywords:
       - models: ALL MODELS

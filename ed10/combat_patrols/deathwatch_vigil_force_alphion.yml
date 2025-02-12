@@ -32,7 +32,6 @@ stratagems:
       equipped by models in your unit have that set of abilities:
 
       * [ANTI-MONSTER 5+, ANTI-VEHICLE 5+, MELTA 2]
-      
       * [ASSAULT, IGNORES COVER, SUSTAINED HITS 2]
     phases: [shooting]
     player_turn: your
@@ -183,9 +182,7 @@ units:
     patrol_squads_model_count: 5
     loadout_description: |
       * 1 Intercessor Sergeant is equipped with: bolt rifle; bolt pistol; close combat weapon.
-
       * 7 Intercessors are equipped with: bolt rifle; bolt pistol; close combat weapon.
-      
       * 2 Intercessors are equipped with: Astartes grenade launcher; bolt rifle; bolt pistol; close combat weapon.
     keywords:
       - models: ALL MODELS

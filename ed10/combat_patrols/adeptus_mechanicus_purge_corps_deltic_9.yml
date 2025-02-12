@@ -11,14 +11,12 @@ abilities:
       ### Protector Imperative
 
       * Ranged weapons equipped by models in this unit have the [HEAVY] ability.
-
       * Each time a ranged attack targets this unit, if this unit is within your
       deployment zone, worsen the Armour Penetration characteristic of that attack by 1.
 
       ### Conqueror Imperative
 
       * Ranged weapons equipped by models in this unit have the [ASSAULT] ability.
-
       * Each time a model in this unit makes a ranged attack, if the target of that
       attack is within your opponent's deployment zone, improve the Armour Penetration
       characteristic of that attack by 1.
@@ -138,11 +136,8 @@ units:
     model_count: 10
     loadout_description: |
       * The Skitarii Vanguard Alpha model is equipped with: Mechanicus pistol; Alpha combat weapon.
-
       * 1 Skitarii Vanguard model is equipped with: arc rifle; close combat weapon.
-      
       * 1 Skitarii Vanguard model is equipped with: plasma caliver; close combat weapon.
-      
       * 7 Skitarii Vanguard models are equipped with: radium carbine; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -235,10 +230,8 @@ units:
     loadout_description: |
       * The Serberys Sulphurhound Alpha model is equipped with: Mechanicus pistol; sulphur
         breath; cavalry arc maul; clawed limbs.
-
       * 1 Serberys Sulphurhound model is equipped with: phosphor blast carbine; phosphor pistol;
         sulphur breath; clawed limbs.
-      
       * 1 Serberys Sulphurhound model is equipped with: 2 phosphor pistols; sulphur breath;
         clawed limbs.
     keywords:
@@ -334,7 +327,6 @@ units:
     model_count: 5
     loadout_description: |
       * The Pteraxii Sterylizor Alpha model is equipped with: flechette blaster; taser goad.
-
       * Every Pteraxii Sterylizor model is equipped with: phosphor torch; Pteraxii talons.
     keywords:
       - models: ALL MODELS

@@ -7,7 +7,6 @@ abilities:
       select one of the following abilities for that unit's weapons to gain until the end of the phase:
 
       * [LETHAL HITS]
-      
       * [SUSTAINED HITS 1]
       
       Each time a unit makes a Dark Pact, after it has resolved its attacks, it must take a Leadership
@@ -57,7 +56,6 @@ units:
     model_count: 3
     loadout_description: |
       * 1 Ghallaron the Pious is equipped with: bolt pistol; accursed crozius.
-
       * 2 Dark Disciples are equipped with: close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -144,15 +142,10 @@ units:
     patrol_squads_model_count: 5
     loadout_description: |
       * 1 Aspiring Champion is equipped with: plasma pistol; accursed weapon.
-
       * 4 Legionaries are equipped with: bolt pistol; boltgun; close combat weapon.
-      
       * 2 Legionaries are equipped with: bolt pistol; Astartes chainsword.
-      
       * 1 Legionary is equipped with: bolt pistol; Astartes chainsword; Chaos icon.
-      
       * 1 Legionary is equipped with: bolt pistol; heavy bolter; close combat weapon.
-      
       * 1 Legionary is equipped with: bolt pistol; meltagun; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -248,13 +241,9 @@ units:
     model_count: 5
     loadout_description: |
       * 1 Havoc Champion is equipped with: plasma gun; Astartes chainsword.
-
       * 1 Havoc is equipped with: Havoc heavy bolter; close combat weapon.
-      
       * 1 Havoc is equipped with: Havoc lascannon; close combat weapon.
-      
       * 1 Havoc is equipped with: Havoc missile launcher; close combat weapon.
-      
       * 1 Havoc is equipped with: Havoc reaper chaincannon; close combat weapon.
     keywords:
       - models: ALL MODELS
