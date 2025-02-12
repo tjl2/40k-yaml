@@ -1,22 +1,21 @@
 - name: Ammo Cache
   id: 40e79136-b5cb-4928-b7bb-29794004a9d4
   quantity: 1
-  description: >-
+  description: |
     Before the battle, you can set up one of your Ammo Cache markers wholly within your territory. Friendly operatives can perform the following mission action during the battle:
   actions:
     - ap: 0
       name: Ammo Resupply
-      description: >-
+      description: |
         * One of your Ammo Cache markers the active operative controls is used this turning point.
-
         * Until the start of the next turning point, whenever this operative is shooting with a weapon from its datacard, you can re-roll one of your attack dice.
-      conditions: >-
+      conditions: |
         An operative cannot perform this action while within control range of an enemy operative, if that marker isn't yours or if that marker has been used this turning point.
 
 - name: Razor Wire
   id: 9f5d8815-c5a2-4ef7-884a-664822182ca1
   quantity: 1
-  description: >-
+  description: |
     Razor wire is [Exposed] and [Obstructing] terrain. Before the battle, you can set it up wholly within your territory, on the killzone floor and more than 2" from other equipment terrain features.
 
     *Obstructing terrain:* Whenever an operative would cross this terrain feature within 1" of it, treat the distance as an additional 2".
@@ -24,7 +23,7 @@
 - name: Comms Device
   id: 1fab6ed5-85c7-45e3-a9b7-7355eaf8d6b9
   quantity: 1
-  description: >-
+  description: |
     Before the battle, you can set up one of your Comms Device markers wholly within your territory. While a friendly operative controls this marker, add 3" to the distance requirements of its *[SUPPORT]* rules that refer to friendly operatives (e.g. 'select one friendly operative within 6"' would be 9" instead). Note that you cannot benefit from your opponent's Comms Device markers.
 
 - name: Mines
@@ -36,27 +35,24 @@
 - name: Light Barricades
   id: b245abff-94bf-45fd-95ae-f9eafcc29e68
   quantity: 2
-  description: >-
+  description: |
     Light barricades are [Light terrain], except the feet, which are [Insignificant] and [Exposed]. Before the battle, you can set up any of them wholly within your territory, on the killzone floor and more than 2" from other equipment terrain features, access points and [Accessible] terrain.
 
 - name: Heavy Barricade
   id: af3f3113-ef4f-4bd7-966d-652765829204
   quantity: 1
-  description: >-
+  description: |
     A heavy barricade is [Heavy terrain]. Before the battle, you can set it up wholly within 4" of your drop zone, on the killzone floor and more than 2" from other equipment terrain features, access points and [Accessible terrain].
 
 - name: Ladders
   id: 09f43bfb-03f7-452d-b1f9-ca1aa0a93840
   quantity: 2
-  description: >-
+  description: |
     Ladders are [Exposed terrain]. Before the battle, you can set up any of them as follows:
 
     * Wholly within your territory.
-
     * Upright against terrain that's at least 2" tall.
-
     * More than 2" from other equipment terrain features.
-
     * More than 1" from doors and access points.
 
     In addition, an operative can either move through ladders as if they aren’t there (but cannot finish on them), or climb them. Once per action, whenever an operative is climbing this terrain feature, treat the vertical distance as 1". Note that if an operative then continues climbing another terrain feature during that action (including another ladder), that distance is determined as normal.
@@ -65,7 +61,7 @@
 - name: Portable Barricade
   id: 2bfbb40c-1603-43e4-adbc-b6f91cd394c0
   quantity: 1
-  description: >-
+  description: |
     A portable barricade is [Light], Protective and Portable terrain. Before the battle, you can set it up wholly within your territory, on the killzone floor and more than 2" from other equipment terrain features, access points and [Accessible terrain].
 
     Protective: While an operative is in cover from this terrain feature, improve its Save stat by 1 (to a maximum of 2+).
@@ -74,43 +70,45 @@
   actions:
     - ap: 1
       name: Move With Barricade
-      description: >-
+      description: |
         The same as the Reposition action, except the active operative can move no more than its Move stat minus 2" and cannot climb, drop, jump or use any kill team’s rules that remove it and set it back up again (e.g. HEARTHKYN SALVAGER FLY, MANDRAKE SHADOW PASSAGE).
 
         Before this operative moves, remove the portable barricade it’s connected to. After it moves, set up the portable barricade so it’s connected again.
-      conditions: >-
+      conditions: |
         This action is treated as a Reposition action. An operative cannot perform this action while within control range of an enemy operative, or during the same activation
 
 - name: Utility Grenades
   id: 156c6894-926c-4519-b15b-eca1ad6caab9
   quantity: 2
-  description: >-
+  description: |
     When you select this equipment, select two utility grenades (2 smoke, 2 stun, or 1 smoke and 1 stun). Each selection is a unique action your operatives can perform, but your kill team can only perform that action a total number of times during the battle equal to your selection.
   actions:
     - ap: 1
       name: Stun Grenade
-      description: >-
+      description: |
         Select one enemy operative visible to and within 6" of this operative. That operative and each other operative within 1" of it takes a stun test. For an operative to take a stun test, roll one D6: on a 3+, subtract 1 from its APL stat until the end of its next activation.
-      conditions: >-
+      conditions: |
         An operative cannot perform this action while within control range of an enemy operative, or if you have reached the total number of times your kill team can perform it.
     - ap: 1
       name: Smoke Grenade
-      description: >-
+      description: |
         Place one of your Smoke Grenade markers within 6" of this operative. It must be visible to this operative, or on [Vantage terrain] of a terrain feature that’s visible to this operative. The marker creates an area of smoke 1" horizontally and unlimited height vertically from (but not below) it.
 
         While an operative is wholly within an area of smoke, it’s [obscured] to operatives more than 2" from it, and vice versa. In addition, whenever an operative is shooting an enemy operative wholly within an area of smoke, ignore the [Piercing] weapon rule unless they are within 2" of each other.
 
         In the Ready step of the next Strategy phase, roll one D3. Remove that Smoke Grenade marker after a number of activations equal to that D3 have been completed or at the end of the turning point (whichever comes first).
-      conditions: >-
+      conditions: |
         An operative cannot perform this action while within control range of an enemy operative, or if you have reached the total number of times your kill team can perform it.
 
 - name: Explosive Grenades
   id: efe2820a-1e05-4ee3-88bb-a39ffb3b2191
   quantity: 2
-  description: >-
+  description: |
     When you select this equipment, select two explosive grenades (2 frag, 2 krak, or 1 frag and 1 krak). Each selection is a ranged weapon your operatives can use, but your kill team can only use that weapon a total number of times during the battle equal to your selection.
 
     | NAME | ATK | HIT | DMG | WR |
-    | ---- | --- | --- | --- |
+    | :--- | :-: | :-: | :-: | -: |
     | Frag grenade | 4 | 4+ | 2/4 | Range 6", Blast 2", Saturate |
     | Krak grenade | 4 | 4+ | 4/5 | Range 6", Piercing 1, Saturate |
+
+
