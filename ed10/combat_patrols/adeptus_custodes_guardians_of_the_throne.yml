@@ -2,7 +2,7 @@ name: "Adeptus Custodes: Guardians of the Throne"
 id: a3d41f12-cd9a-459d-9b4f-bef03f4c08aa
 abilities:
   - name: Martial Ka'tah
-    description: >-
+    description: |
       Created deep in the Emperor's Palace using esoteric gene-alchemies and other,
       even more mysterious processes, the warriors of the Adeptus Custodes are the
       Emperor's personal bodyguards. Known as the Ten Thousand, they are the most
@@ -12,12 +12,12 @@ abilities:
       tanks. It is in melee combat that they truly excel, however, each warrior having
       mastered the nuanced and subtle fighting stances designed to dominate the
       Custodians' many enemies.
-    usage: >-
+    usage: |
       At the start of the Fight phase, select one Ka'tah
       Stance from the list below to be active for your army until the end of the
       phase. While a Ka'tah Stance is active for your army, each unit from your army
       with this ability gains the relevant ability.
-    effect: >-
+    effect: |
       DACATARAI STANCE
       This aggressive fighting style has been adapted for the
       Custodes to deal with hordes of foes who vastly outnumber them. Melee
@@ -34,11 +34,11 @@ stratagems:
     category: Battle Tactic
     cp: 1
     when: Any phase
-    target: >-
+    target: |
       One SHIELD-CAPTAIN model from your army that was just destroyed
       by an attack made by an enemy model. You can use this Stratagem on that
       model even though it was just destroyed.
-    effect: >-
+    effect: |
       Until the end of the battle, ranged weapons equipped by _ADEPTUS
       CUSTODES_ models from your army have the _[SUSTAINED HITS 1]_ ability
       while targeting that enemy model's unit.
@@ -49,7 +49,7 @@ stratagems:
     cp: 2
     when: Your command phase
     target: One ADEPTUS CUSTODES unit from your army.
-    effect: >-
+    effect: |
       Until the start of your next Command phase, add 1 to the Objective
       Control characteristic of models in your unit.
     phases: [command]
@@ -57,13 +57,13 @@ stratagems:
   - name: Tireless Pursuit
     category: Strategic Ploy
     cp: 1
-    when: >-
+    when: |
       Your opponent's Movement phase, just after an enemy unit ends a Fall
       Back move.
-    target: >-
+    target: |
       One ADEPTUS CUSTODES INFANTRY unit from your army that was within
       Engagement Range of that enemy unit at the start of the phase.
-    effect: >-
+    effect: |
       If your unit is not within Engagement Range of one or more enemy
       models, it can make a Normal move.
     phases: [movement]
@@ -124,7 +124,7 @@ units:
     enhancements:
       - id: e71b2f07-4a32-4412-bb23-d2fec4420da3
         name: Auramite Thunderbolt
-        effect: >-
+        effect: |
           You can re-roll Advance and Charge rolls made for the bearer's unit.
         phases:
           - movement
@@ -132,7 +132,7 @@ units:
         player_turn: your
       - id: ed83ddb6-8c1c-49b6-85fe-0cf4bac5c98b
         name: Blade of the Vaults
-        effect: >-
+        effect: |
           Each time the bearer makes an attack, on a Critical Wound, improve the Armour
           Penetration characteristic of that attack by 1.
         phases:
@@ -188,7 +188,7 @@ units:
   - name: Custodian Guard
     id: 4fff5393-5e7a-4c7c-b236-918c26624541
     model_count: 4
-    loadout_description: >-
+    loadout_description: |
       * 2 models are equipped with: guardian spear.
 
       * 1 model is equipped with: misericordia, praesidium shield; vexilla.
@@ -249,7 +249,7 @@ units:
         player_turn: opponent
     abilities:
       - name: Stand Vigil
-        effect: >-
+        effect: |
           Each time a model in this unit makes an attack, re-roll a Wound roll
           of 1. While this unit is within range of an objective marker you
           control, you can re-roll the Wound roll instead.
@@ -301,7 +301,7 @@ units:
         damage: 1
     abilities:
       - name: Purity of Execution
-        effect: >-
+        effect: |
           Each time a model in this unit makes a ranged attack that targets a
           PSYKER unit, that attack has the _[PRECISION]_ and _[DEVASTATING WOUNDS]_
           abilities.

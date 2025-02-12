@@ -2,7 +2,7 @@ name: "Adeptus Mechanicus: Purge Corps Deltic-9"
 id: 8a5f8b9e-d7d2-4f3c-a9d5-1c8f5e6b0c7a
 abilities:
   - name: Doctrina Imperatives
-    effect: >-
+    effect: |
       At the start of the battle round, you can select one of the Doctrina
       Imperatives below. Until the end of the battle round, that Doctrina
       Imperative is active for your army, and all units from your army that
@@ -30,13 +30,13 @@ stratagems:
   - name: An Evaluation of Mettle
     category: Battle Tactic
     cp: 1
-    when: >-
+    when: |
       Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected
       its targets.
-    target: >-
+    target: |
       One ADEPTUS MECHANICUS unit from your army that was selected as the target of one or more
       of the attacking unit's attacks.
-    effect: >-
+    effect: |
       Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.
     phases:
       - shooting
@@ -47,7 +47,7 @@ stratagems:
     cp: 1
     when: Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back.
     target: That ADEPTUS MECHANICUS unit.
-    effect: >-
+    effect: |
       Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn
       in which it Fell Back.
     phases: [movement]
@@ -57,7 +57,7 @@ stratagems:
     cp: 1
     when: Your Shooting phase.
     target: One ADEPTUS MECHANICUS unit from your army that has not been selected to shoot this phase.
-    effect: >-
+    effect: |
       Until the end of the phase, improve the Armour Penetration characteristic of ranged
       weapons equipped by models in your unit by 1 and those weapons have the
       [HAZARDOUS] ability.
@@ -100,7 +100,7 @@ units:
         damage: 2
     abilities:
       - name: Galvanic Field
-        effect: >-
+        effect: |
           While this model is leading a unit, weapons equipped by models in that unit have
           the [LETHAL HITS] ability.
         phases: [shooting]
@@ -127,7 +127,7 @@ units:
         player_turn: opponent
       - id: 35630471-3b26-4e3d-8372-5b44c5ed4d41
         name: Overcharged Electropositors
-        effect: >-
+        effect: |
           Add 6" to the Range characteristic of ranged weapons equipped by models in the
           bearer's unit, and those weapons have the [IGNORES COVER] ability.
         phases: [shooting]
@@ -136,7 +136,7 @@ units:
   - name: Skitarii Vanguard
     id: b6d8e9f1-c7e2-4d3a-8a5b-9c6d7e8f0a1b
     model_count: 10
-    loadout_description: >-
+    loadout_description: |
       * The Skitarii Vanguard Alpha model is equipped with: Mechanicus pistol; Alpha combat weapon.
 
       * 1 Skitarii Vanguard model is equipped with: arc rifle; close combat weapon.
@@ -213,7 +213,7 @@ units:
     faction_abilities: [Doctrina Imperatives]
     abilities:
       - name: Rad-saturation (Aura)
-        effect: >-
+        effect: |
           While an enemy unit (excluding VEHICLE units) is within 3" of this unit, subtract 1
           from the Objective Control characteristic of models in that enemy unit.
         phases: [command]
@@ -232,7 +232,7 @@ units:
   - name: Serberys Sulphurhounds
     id: c7e8f9a1-d5b2-4c3a-9e6f-7d8c9b0a1d5e
     model_count: 3
-    loadout_description: >-
+    loadout_description: |
       * The Serberys Sulphurhound Alpha model is equipped with: Mechanicus pistol; sulphur
         breath; cavalry arc maul; clawed limbs.
 
@@ -309,7 +309,7 @@ units:
         damage: 1
     abilities:
       - name: Line-breakers
-        effect: >-
+        effect: |
           Each time this unit ends a Charge move, select one enemy unit within Engagement Range
           of it and roll one D6 for each model in this unit that is within Engagement Range of
           that enemy unit, adding 2 to the result if this unit started its Charge move within 6"
@@ -332,7 +332,7 @@ units:
   - name: Pteraxii Sterylizors
     id: d8f9a0b1-e5c2-4d2a-9e5f-6d7c8b9a0d1e
     model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * The Pteraxii Sterylizor Alpha model is equipped with: flechette blaster; taser goad.
 
       * Every Pteraxii Sterylizor model is equipped with: phosphor torch; Pteraxii talons.
@@ -381,7 +381,7 @@ units:
         damage: 1
     abilties:
       - name: Searing Conflagration
-        effect: >-
+        effect: |
           Each time a model in this unit makes an attack with a phosphor torch that targets an
           enemy unit within range of an objective marker, re-roll a Wound roll of 1. If this
           unit is also within 6" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units,

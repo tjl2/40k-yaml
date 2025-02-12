@@ -2,7 +2,7 @@ name: "Death Guard: The Shambling Horde"
 id: 98b9cf0e-7c45-4071-a925-314bef2c8840
 abilities:
   - name: Nurgle's Gift (Aura)
-    effect: >-
+    effect: |
       While an enemy unit is within Contagion Range of this unit, subtract 1 from the Toughness
       characteristic of models in that enemy unit. Contagion Range changes over the course of the
       battle, as shown below:
@@ -98,7 +98,7 @@ units:
     enhancements:
       - name: Walking Plague
         id: 9d79554e-2f78-467a-9906-4c721299df2c
-        effect: >-
+        effect: |
           In your Command phase, select one friendly POXWALKER unit within Contagion Range of the
           bearer. Return up to D6 destroyed POXWALKER models to that unit.
         phases: [command]
@@ -151,7 +151,7 @@ units:
         damage: 1
     abilities:
       - name: Foul Infusion
-        effect: >-
+        effect: |
           While this model is leading a unit, weapons equipped by models in that unit have the
           [LETHAL HITS] ability. In addition, each time a model in that unit makes an attack, a
           Critical Hit is scored on an unmodified Hit roll of 5+, instead of only a 6.
@@ -177,7 +177,7 @@ units:
   - name: Plague Marines
     id: 1c915762-47c5-471c-96cb-4e096a8e9368
     model_count: 7
-    loadout_description: >-
+    loadout_description: |
       * 1 Plague Champion is equipped with: plague boltgun; heavy plague weapon.
 
       * 1 Plague Marine is equipped with: plague spewer; plague knives.
@@ -238,7 +238,7 @@ units:
         damage: 1
     abilities:
       - name: Remorseless
-        effect: >-
+        effect: |
           While this unit is within range of an objective marker you control, each time you take a
           Battle-shock test for this unit, add 1 to that test.
         phases: [command]
@@ -276,7 +276,7 @@ units:
         damage: 1
     abilities:
       - name: Curse of the Walking Pox
-        effect: >-
+        effect: |
           Each time a model in this unit makes an attack that destroys an enemy model (excluding
           MONSTER and VEHICLE models), you can return one destroyed POXWALKERS model to this unit.
         phases:

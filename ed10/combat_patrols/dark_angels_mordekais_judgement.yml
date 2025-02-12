@@ -2,7 +2,7 @@ name: "Dark Angels: Mordekai's Judgement"
 id: 6b0cc11c-87b7-4314-90be-e7e1bc3ecda6
 abilities:
   - name: Oath of Moment
-    effect: >-
+    effect: |
       At the start of your Command phase, select one unit from your opponent's army. Until the
       start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a
       model with this ability makes an attack that targets your Oath of Moment target, you can
@@ -30,7 +30,7 @@ stratagems:
     category: Battle Tactic
     cp: 1
     when: Your opponent's Shooting phase, just after an enemy unit has selected its targets.
-    target: >-
+    target: |
       One ADEPTUS ASTARTES INFANTRY unit from your army that was selected as the target of one or
       more of the attacking unit's attacks and is within range of an objective marker you control.
     effect: Until the end of the phase, each time an attack targets your unit, your unit has the Benefit of Cover against that attack.
@@ -89,7 +89,7 @@ units:
     enhancements:
       - name: Stoic Exemplar
         id: 35045abc-e931-44a7-9226-55db2c2c42bc
-        effect: >-
+        effect: |
           Each time a melee attack targets the bearer's unit, if one or more enemy units ended a
           Charge move within Engagement Range of the bearer's unit this turn, subtract 1 from the
           Wound roll.
@@ -106,7 +106,7 @@ units:
   - name: Intercessor Squad
     id: 9ada1f99-d5fa-46f5-91a4-a79c5db12672
     model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * 1 Intercessor Sergeant is equipped with: bolt pistol; power weapon.
 
       * 4 Intercessors are equipped with: bolt pistol; bolt rifle; close combat weapon.
@@ -212,7 +212,7 @@ units:
   - name: Redemptor Dreadnought
     id: 30bf4b6e-2ec2-4757-826b-a315733bdc8b
     model_count: 1
-    loadout_description: >-
+    loadout_description: |
       This model is equipped with: icarus rocket pod; macro plasma incinerator; onslaught gatling
       cannon; twin fragstorm grenade launcher; Redemptor fist.
     keywords:

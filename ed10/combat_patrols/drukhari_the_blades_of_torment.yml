@@ -2,7 +2,7 @@ name: "Drukhari: The Blades of Torment"
 id: 5ff1be86-60c9-4c4c-a993-c9fc91d7a488
 abilities:
   - name: Power from Pain
-    effect: >-
+    effect: |
       Units from your army can become Empowered Through Pain. This is done using Pain tokens. You gain 1 Pain token:
 
       * At the start of the battle.
@@ -89,7 +89,7 @@ units:
         damage: 2
     abilities:
       - name: Invulnerable Save
-        effect: >-
+        effect: |
           You cannot re-roll invulnerable saving throws made for this model. The first time an
           invulnerable saving throw made for this model is failed, until the end of the battle,
           this model has no invulnerable saving throw.
@@ -131,7 +131,7 @@ units:
   - name: Kabalite Warriors
     id: da3d7e29-7395-4014-85ca-c58375691aa8
     model_count: 10
-    loadout_description: >-
+    loadout_description: |
       * 1 Sybarite is equipped with: splinter pistol; Sybarite weapon.
 
       * 7 Kabalite Warriors are equipped with: splinter rifle; close combat weapon.
@@ -218,7 +218,7 @@ units:
   - name: Incubi
     id: 9c9c4bad-2cd8-408c-9935-3da7e12b4ba1
     model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * 1 Klaivex is equipped with: demiklaives.
 
       * 4 Incubi are equipped with: klaive.

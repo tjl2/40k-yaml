@@ -2,7 +2,7 @@ name: "Adepta Sororitas: Sanctuary Guardians"
 id: ddbcf8ec-3bee-43a9-985e-ef5f9b31d86c
 abilities:
   - name: Acts of Faith
-    effect: >-
+    effect: |
       Each unit from your army can perform one Act of Faith per phase. This is done using Miracle
       dice. You gain 1 Miracle dice at the start of each turn and each time an ADEPTA SORORITAS unit
       from your army is destroyed. Before making a dice roll for a model or unit from your army with
@@ -33,7 +33,7 @@ stratagems:
     cp: 1
     when: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
     target: One ADEPTA SORORITAS unit from your army that was selected as the target of one or more of the attacking unit's attacks.
-    effect: >-
+    effect: |
       Each time you use this Stratagem, you can discard 1 Miracle dice. Until the end of the phase,
       each time a model in your unit is destroyed, if that model has not shot or fought this phase,
       roll one D6, adding 1 to the result if you discarded a Miracle dice when using this Stratagem.
@@ -117,7 +117,7 @@ units:
     enhancements:
       - name: Defender of the Faith
         id: f9b31cf3-6c23-4953-a858-ce406b2f4716
-        effect: >-
+        effect: |
           Improve the Save characteristic of models in the bearer's unit by 1. In your Command
           phase, you can discard 1 Miracle dice. If you do, until the start of your next Command
           phase, add 1 to the Objective Control characteristic of models in the bearer's unit.
@@ -126,7 +126,7 @@ units:
         player_turn: your
       - name: Righteous Fury
         id: 0e20d6dd-8aca-4918-a58d-1b1f6a92ad89
-        effect: >-
+        effect: |
           The bearer's unit is eligible to shoot and declare a charge in a turn in which it Advanced
           or Fell Back. In your Command phase, you can discard 1 Miracle dice. If you do, until the
           end of the turn, you can re-roll Charge rolls made for the bearer's unit.
@@ -140,7 +140,7 @@ units:
     id: c39b606a-b20d-4f0c-8fda-c03b08594990
     model_count: 10
     patrol_squads_model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * The Sister Superior is equipped with: bolt pistol; combi-weapon; power weapon.
       
       * 1 Battle Sister is equipped with: bolt pistol; Ministorum flamer; close combat weapon.
@@ -220,7 +220,7 @@ units:
         damage: 1
     wargear_abilities:
       - name: Simulacrum Imperialis
-        effect: >-
+        effect: |
           At the end of your Command phase, for each objective marker you control that has one or
           more units from your army with this ability within range of it, roll one D6: on a 4+, you
           gain 1 Miracle dice with a value equal to that result.
@@ -302,7 +302,7 @@ units:
         damage: 1
     abilities:
       - name: Extremis Trigger Word
-        effect: >-
+        effect: |
           Each time this unit is selected to fight, you can choose to invoke its extremis trigger
           word. If you do, then until the end of the phase, arco-flails equipped by models in this
           unit have an Attacks characteristic of 6 and the [HAZARDOUS] ability.

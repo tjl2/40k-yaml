@@ -2,7 +2,7 @@ name: "Grey Knights: Aurellios' Banishers"
 id: e6603ba1-305e-4009-8679-6a2d3ac91692
 abilities:
   - name: Teleport Assault
-    effect: >-
+    effect: |
       At the end of your opponent's turn, you can select one GREY KNIGHTS unit from your army with
       this ability (excluding units that are within Engagement Range of one or more enemy units).
       Remove that unit from the battlefield.
@@ -19,7 +19,7 @@ stratagems:
     cp: 1
     when: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
     target: One GREY KNIGHTS INFANTRY unit from your army that was selected as the target of one or more of the attacking unit's attacks.
-    effect: >-
+    effect: |
       Until the end of the phase, each time an attack targets your unit, if the Strength
       characteristic of that attack is greater than your unit's Toughness characteristic, subtract 1
       from the Wound roll.
@@ -32,7 +32,7 @@ stratagems:
     cp: 1
     when: Fight phase, just after an enemy unit has selected its targets.
     target: One GREY KNIGHTS INFANTRY unit from your army that was selected as the target of one or more of the attacking unit's attacks.
-    effect: >-
+    effect: |
       Until the end of the phase, each time a model in your unit is destroyed, if that model has not
       fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can
       fight after the attacking model's unit has finished making its attacks, and is then removed
@@ -132,7 +132,7 @@ units:
   - name: Strike Squad
     id: 853b97b1-3d5b-4b26-87c6-4cab60ad5bbb
     model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * 1 Justicar is equipped with: storm bolter; Nemesis force weapon.
 
       * 3 Grey Knights are equipped with: storm bolter; Nemesis force weapon.
@@ -194,7 +194,7 @@ units:
   - name: Brotherhood Terminator Squad
     id: f68700ac-86a6-4324-8fb8-0ec42f547992
     model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * 1 Terminator Justicar is equipped with: storm bolter; Nemesis force weapon.
 
       * 3 Brotherhood Terminators are equipped with: storm bolter; Nemesis force weapon.
@@ -236,7 +236,7 @@ units:
         damage: 2
     abilities:
       - name: Hammerhand (Psychic)
-        effect: >-
+        effect: |
           Each time a model in this unit makes a Charge move, until the end of the turn, melee
           weapons equipped by models in this unit have the [LETHAL HITS] ability.
         phases: [charge]

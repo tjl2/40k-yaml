@@ -2,7 +2,7 @@ name: "Orks: Gordrang's Gitstompas"
 id: 9df92686-f1ed-4f9f-8737-0cdacfb1da34
 abilities:
   - name: Waaagh!
-    effect: >-
+    effect: |
       Once per battle, at the start of the battle round, you can call a Waaagh!. If you do, until the
       start of the next battle round:
 
@@ -93,7 +93,7 @@ units:
         player_turn: opponent
       - name: Tellyporta
         id: 484cf8aa-e218-4997-96e9-3acf5be91ffe
-        effect: >-
+        effect: |
           In the Declare Battle Formations step, select one BOYZ unit from your army. Until the end
           of the battle, the bearer and every model in that BOYZ unit have the Deep Strike ability.
           When setting these units up on the battlefield using the Deep Strike ability, they must be
@@ -106,7 +106,7 @@ units:
     id: 1c7f1d1d-273d-4f26-856d-7e6ac8f9f840
     model_count: 10
     unit_count: 2
-    loadout_description: >-
+    loadout_description: |
       * 1 Boss Nob is equipped with: slugga; big choppa.
 
       * 5 Boyz are equipped with: slugga; choppa.
@@ -200,7 +200,7 @@ units:
   - name: Deffkoptas
     id: ab5071ee-6e7a-470f-bb89-a579866ceb90
     model_count: 3
-    loadout_description: >-
+    loadout_description: |
       * 1 model is equipped with: kustom mega-blasta; slugga; spinnin' blades.
 
       * 2 models are equipped with: kopta rokkits; slugga; spinnin' blades.

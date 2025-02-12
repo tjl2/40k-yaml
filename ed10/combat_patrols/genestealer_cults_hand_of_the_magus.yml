@@ -2,7 +2,7 @@ name: "Genestealer Cults: Hand of the Magus"
 id: d1386773-84e7-4633-9287-89df425366cb
 abilities:
   - name: Cult Ambush
-    effect: >-
+    effect: |
       Each time a unit with this ability is destroyed, roll one D6, adding 3 to the result if it is a
       BATTLELINE unit. On a 4+, that unit is placed into Cult Ambush and you can place one Cult Ambush
       marker anywhere on the battlefield that is more than 9" horizontally away from all enemy units
@@ -31,7 +31,7 @@ stratagems:
     cp: 1
     when: Start of your Shooting phase or start of the Fight phase.
     target: One MAGUS unit from your army and one enemy unit within Engagement Range of that MAGUS unit.
-    effect: >-
+    effect: |
       Until the end of the phase, each time a GENESTEALER CULTS model from your army makes an attack
       that targets that enemy unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
     phases:
@@ -51,7 +51,7 @@ stratagems:
     cp: 1
     when: Your opponent's Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.
     target: One GENESTEALER CULTS INFANTRY unit from your army that is within 9" of that enemy unit.
-    effect: >-
+    effect: |
       Your unit can make a Normal move of up to D6". If your unit has the MAGUS keyword, it can make
       a Normal move of up to 6" instead.
     phases: [movement]
@@ -127,7 +127,7 @@ units:
     id: acaef8e1-8648-48dd-93dc-2ec9643ca908
     model_count: 10
     unit_count: 2
-    loadout_description: >-
+    loadout_description: |
       * 1 Neophyte Leader is equipped with: autopistol; leader pistol; power weapon.
 
       * 5 Neophyte Hybrids are equipped with: autopistol; hybrid firearm; close combat weapon.
@@ -227,7 +227,7 @@ units:
   - name: Acolyte Hybrids
     id: c7cec220-4a79-4103-97be-4a3daa40d5ee
     model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * 1 Acolyte Leader is equipped with: leader's cult weapons; autopistol.
 
       * 2 Acolyte Hybrids are equipped with: autopistol; cult claws and knife.
@@ -284,7 +284,7 @@ units:
         damage: 1
     abilities:
       - name: Vile Insurrectionists
-        effect: >-
+        effect: |
           Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of
           that attack is an enemy unit within range of an objective marker, re-roll a Wound roll of 1
           as well.
@@ -307,7 +307,7 @@ units:
   - name: Aberrants
     id: c9b9c9aa-4067-4268-a8d8-10bf96aafc56
     model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * 1 Aberrant Hypermorph is equipped with: heavy improvised weapon; hypermorph tail.
 
       * 4 Aberrants are equipped with: heavy power weapon.
@@ -349,7 +349,7 @@ units:
   - name: Goliath Rockgrinder
     id: 74b7c0a7-f97c-4c6a-9752-08c9c0357743
     model_count: 1
-    loadout_description: >-
+    loadout_description: |
       This model is equipped with: clearance incinerator; demolition charge cache; heavy stubber; drilldozer blade.
     keywords:
       - models: ALL MODELS

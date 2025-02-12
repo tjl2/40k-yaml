@@ -2,7 +2,7 @@ name: "Space Wolves: Thoryk's Void Hunters"
 id: ef336d72-a07f-4928-a466-c59a5fb1ce4d
 abilities:
   - name: Oath of Moment
-    effect: >-
+    effect: |
       At the start of your Command phase, select one unit from your opponent's army. Until the
       start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a
       model with this ability makes an attack that targets your Oath of Moment target, you can
@@ -15,7 +15,7 @@ stratagems:
     cp: 1
     when: Fight phase, just after an enemy unit has selected its targets.
     target: One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.
-    effect: >-
+    effect: |
       Until the end of the phase, each time a model in your unit is destroyed, if that model has not
       fought this phase, roll one D6. On a 4+, do not remove the destroyed model from play; it can
       fight after the attacking model's unit has finished making its attacks, and is then removed
@@ -27,7 +27,7 @@ stratagems:
     cp: 1
     when: Your Shooting phase.
     target: One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.
-    effect: >-
+    effect: |
       Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES
       COVER] ability and each time a model in your unit makes an attack that targets a CHARACTER
       unit, re-roll a Hit roll of 1.
@@ -103,7 +103,7 @@ units:
     enhancements:
       - name: Tireless Hunter
         id: becfe50a-b9ec-4cdd-9b9b-0ce97665d7eb
-        effect: >-
+        effect: |
           At the start of the first battle round, select one enemy unit. Each time the bearer makes
           an attack that targets that unit, add 1 to the Wound roll.
         phases:
@@ -113,7 +113,7 @@ units:
         player_turn: your
       - name: Ferocious
         id: 2720fab9-e7dc-4263-96a0-cd52cacaf1ab
-        effect: >-
+        effect: |
           You can target the bearer's unit with the Heroic Intervention Stratagem for 0CP, and can
           do so even if you have already used that Stratagem on a different unit this phase.
         phases: [fight]
@@ -122,7 +122,7 @@ units:
     id: e728226f-18a8-4411-a825-c0b52893edcd
     model_count: 10
     patrol_squads_model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * 1 Intercessor Sergeant is equipped with: bolt pistol; Astartes chainsword.
 
       * 9 Intercessors are equipped with: bolt rifle; bolt pistol; close combat weapon.
@@ -234,7 +234,7 @@ units:
   - name: Invictor Tactical Warsuit
     id: c6132eda-ce90-413b-862a-42f7ce7dce5e
     model_count: 1
-    loadout_description: >-
+    loadout_description: |
       This model is equipped with: fragstorm grenade launcher; heavy bolter; twin ironhail
       autocannon; twin ironhail heavy stubber; Invictor fist.
     keywords:

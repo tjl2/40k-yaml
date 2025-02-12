@@ -2,7 +2,7 @@ name: "T'au Empire: Protectors of Aun'shar"
 id: 6e6167e1-c7e1-44ed-86da-93b001ce7959
 abilities:
   - name: For the Greater Good
-    effect: >-
+    effect: |
       In your Shooting phase, units from your army can work in pairs to help each other target
       specific enemy units. When they do this, one unit is the Observer unit and the other is their
       Guided unit. The enemy they are targeting is called their Spotted unit. Each time you select
@@ -35,7 +35,7 @@ stratagems:
     cp: 1
     when: End of your Shooting phase.
     target: One T'AU EMPIRE unit from your army that is not within Engagement Range of one or more enemy units.
-    effect: >-
+    effect: |
       Your unit can make a Normal move up to D6". If your unit has the BATTLESUIT keyword, it can
       make a Normal move of up to 6" instead.
     restrictions: Until the end of the turn, your unit is not eligible to declare a charge.
@@ -45,10 +45,10 @@ stratagems:
     category: Strategic Ploy
     cp: 1
     when: Your opponent's Charge phase, just after an enemy unit has declared a charge.
-    target: >-
+    target: |
       One T'AU EMPIRE unit from your army that was selected as a target of that charge and is not
       within Engagement Range of one or more enemy units.
-    effect: >-
+    effect: |
       Your unit can shoot that enemy unit as if it were your Shooting phase. When doing so, each
       time a model in your unit makes a ranged attack, an unmodified Hit roll of 6 is required to
       score a hit, irrespective of the attacking weapon's Ballistic Skill or any modifiers. Until
@@ -99,7 +99,7 @@ units:
     enhancements:
       - name: DS13 Experimental Drone (Aura)
         id: 77a51bbc-46ff-4ec1-ad6d-3b710b214839
-        effect: >-
+        effect: |
           The bearer has the Lone Operative and Stealth abilities. While a friendly T'AU EMPIRE
           INFANTRY unit is within 6" of the bearer, improve the Save characteristic of models in
           that unit by 1 and those models have the Feel No Pain 5+ ability.
@@ -111,7 +111,7 @@ units:
         player_turn: either
       - name: DS15 Experimental Drone (Aura)
         id: 140ef990-0836-4782-a1f8-14d02522f16e
-        effect: >-
+        effect: |
           The bearer has the Lone Operative and Stealth abilities. While a friendly T'AU EMPIRE unit
           is within 6" of the bearer, ranged weapons equipped by models in that unit have the
           [LETHAL HITS] ability.
@@ -169,7 +169,7 @@ units:
   - name: Strike Team
     id: fa317562-37b3-4c24-97fa-66e4747efba9
     model_count: 10
-    loadout_description: >-
+    loadout_description: |
       * 1 Fire Warrior Shas'ui is equipped with: pulse carbine; pulse pistol; close combat weapon;
         support turret missile system; marker drone.
 
@@ -227,14 +227,14 @@ units:
         damage: 1
     abilities:
       - name: Cover Fire
-        effect: >-
+        effect: |
           While this unit is within range of an objective marker you control, each time you select
           it as the target of the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls
           of 4+ when resolving that Stratagem.
         phases: [shooting]
         player_turn: opponent
       - name: DS8 Support Turret
-        effect: >-
+        effect: |
           In your Movement phase, if this unit Remains Stationary, until the start of your next
           Movement phase, its Fire Warrior Shas'ui model is equipped with the support turret missile
           system weapon.
@@ -253,7 +253,7 @@ units:
   - name: Stealth Battlesuits
     id: c7ca1024-49fc-4581-9be6-dc732cba4d51
     model_count: 3
-    loadout_description: >-
+    loadout_description: |
       * 1 Stealth Shas'vre is equipped with: fusion blaster; battlesuit fists; battlesuit support
         system; marker drone.
 
@@ -290,14 +290,14 @@ units:
         damage: 1
     wargear_abilities:
       - name: Marker Drone
-        effect: >-
+        effect: |
           The bearer's unit has the MARKERLIGHT keyword and can act as an Observer unit for another
           unit even if it Advanced this turn.
         player_turn: your
         phases: [shooting]
     abilities:
       - name: Forward Observers
-        effect: >-
+        effect: |
           Each time this unit is an Observer unit, until the end of the phase, each time a ranged
           attack is made by a model in their Guided unit that targets their Spotted unit, re-roll a
           Wound roll of 1.

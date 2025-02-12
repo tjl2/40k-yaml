@@ -2,7 +2,7 @@ name: "Blood Angels: Strike Force Marcellos"
 id: 22b82c94-e8da-465a-bdb3-02b5e09b040b
 abilities:
   - name: Oath of Moment
-    effect: >-
+    effect: |
       At the start of your Command phase, select one unit from your opponent's army. Until the
       start of your next Command phase, that enemy unit is your Oath of Moment target. Each time
       a model with this ability makes an attack that targets your Oath of Moment target, you can
@@ -14,7 +14,7 @@ stratagems:
     category: Battle Tactic
     cp: 1
     when: Fight phase, just after an enemy unit has selected its targets.
-    target: >-
+    target: |
       One Adeptus Astartes Infantry unit from your army that was selected as the target of one or
       more of the attacking unit's attacks.
     effect: Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.
@@ -25,7 +25,7 @@ stratagems:
     cp: 1
     when: Fight phase.
     target: One Adeptus Astartes Infantry unit from your army that has not been selected to fight this phase.
-    effect: >-
+    effect: |
       Until the end of the phase, each time a model in your unit makes an attack, re-roll a Wound
       roll of 1. If that attack targets a Monster or Vehicle unit, you can re-roll the Wound roll instead.
     phases: [fight]
@@ -34,7 +34,7 @@ stratagems:
     category: Strategic Ploy
     cp: 1
     when: End of your Shooting phase.
-    target: >-
+    target: |
       One Intercessor Squad or Incursor Squad unit from your army that is not within Engagement
       Range of one or more enemy units.
     effect: Your unit can make a Normal move. It cannot embark within a Transport at the end of that move.
@@ -129,7 +129,7 @@ units:
   - name: Intercessor Squad
     id: fe9f5973-7670-4e78-a1db-fb78314f053d
     model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * 1 Intercessor Sergeant is equipped with: bolt pistol; Astartes chainsword.
 
       * 4 Intercessors are equipped with: bolt rifle; bolt pistol; close combat weapon.
@@ -188,7 +188,7 @@ units:
   - name: Incursor Squad
     id: 34cfe777-3dfa-4dd3-b056-00a4c671496e
     model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * 1 Incursor Sergeant is equipped with: bolt pistol; occulus bolt carbine; paired combat blades.
 
       * 3 Incursors are equipped with: bolt pistol; occulus bolt carbine; paired combat blades.
@@ -233,7 +233,7 @@ units:
       - Oath of Moment
     abilities:
       - name: Multi-spectrum Array
-        effect: >-
+        effect: |
           In your Shooting phase, after this unit has shot, select one enemy unit that was hit by
           one or more attacks made by this unit this phase. Until the end of the phase, each time
           a friendly Adeptus Astartes unit makes an attack that targets that enemy unit, add 1 to
@@ -298,7 +298,7 @@ units:
   - name: Impulsor
     id: 7f3ca873-1875-404e-adef-9082c9b12718
     model_count: 1
-    loadout_description: >-
+    loadout_description: |
       This model is equipped with: bellicatus missile array; 2 storm bolters; armoured hull.
     keywords:
       - models: ALL MODELS

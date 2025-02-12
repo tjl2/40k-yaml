@@ -2,7 +2,7 @@ name: "Chaos Space Marines: Dark Zealots"
 id: 2c213f23-48f2-4224-a88b-a771eced9ad0
 abilities:
   - name: Dark Pacts
-    effect: >-
+    effect: |
       Each time a unit from your army is selected to shoot or fight, it can make a Dark Pact. If it does,
       select one of the following abilities for that unit's weapons to gain until the end of the phase:
 
@@ -32,7 +32,7 @@ stratagems:
     cp: 1
     when: Fight phase, just after an enemy unit has selected its targets.
     target: One HERETIC ASTARTES INFANTRY unit from your army that was selected as the target of one or more of the attacking unit's attacks.
-    effect: >-
+    effect: |
       Until the end of the phase, each time a model in your unit is destroyed, if that model has not
       fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can
       fight after the attacking model's unit has finished making its attacks, and is then removed
@@ -44,7 +44,7 @@ stratagems:
     cp: 1
     when: Your Shooting phase.
     target: One HERETIC ASTARTES INFANTRY unit from your army that has not been selected to shoot this phase.
-    effect: >-
+    effect: |
       Until the end of the phase, each time a model in your unit makes an attack, re-roll a Hit roll
       of 1. If that attack targets a unit that is Below Half-strength, you can re-roll the Hit
       roll instead.
@@ -55,7 +55,7 @@ units:
   - name: Ghallaron the Pious
     id: 3d120da7-3cd5-4710-8588-cf30a02782b2
     model_count: 3
-    loadout_description: >-
+    loadout_description: |
       * 1 Ghallaron the Pious is equipped with: bolt pistol; accursed crozius.
 
       * 2 Dark Disciples are equipped with: close combat weapon.
@@ -93,7 +93,7 @@ units:
         damage: 1
     abilities:
       - name: Dark Zealotry
-        effect: >-
+        effect: |
           While this unit is leading a unit and contains a GHALLARON THE PIOUS model, each time a
           model in that unit makes a melee attack, add 1 to the Wound roll.
         phases: [fight]
@@ -124,7 +124,7 @@ units:
     enhancements:
       - name: Hateful Exhortation
         id: a38a7463-d7fe-477f-abcf-ff0fbe3fcace
-        effect: >-
+        effect: |
           At the start of the first battle round, select one enemy unit. Until the end of the battle,
           each time a model in the bearer's unit makes an attack that targets that enemy unit, on a
           Critical Wound, improve the Armour Penetration characteristic of that attack by 1.
@@ -142,7 +142,7 @@ units:
     id: a36c0ae1-5c07-4437-84f5-23a95498fa3e
     model_count: 10
     patrol_squads_model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * 1 Aspiring Champion is equipped with: plasma pistol; accursed weapon.
 
       * 4 Legionaries are equipped with: bolt pistol; boltgun; close combat weapon.
@@ -246,7 +246,7 @@ units:
   - name: Havocs
     id: d39d1a91-1b5d-4157-95a0-3082903368b5
     model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * 1 Havoc Champion is equipped with: plasma gun; Astartes chainsword.
 
       * 1 Havoc is equipped with: Havoc heavy bolter; close combat weapon.

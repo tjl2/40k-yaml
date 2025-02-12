@@ -2,7 +2,7 @@ name: "Black Templars: Siguard's Crusaders"
 id: 6ab799a6-9551-4586-bfe2-3c9909782466
 abilities:
   - name: Oath of Moment
-    effect: >-
+    effect: |
       At the start of your Command phase, select one unit from your opponent's army. Until the
       start of your next Command phase, that enemy unit is your Oath of Moment target. Each time
       a model with this ability makes an attack that targets your Oath of Moment target, you can
@@ -14,10 +14,10 @@ stratagems:
     category: Battle Tactic
     cp: 1
     when: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
-    target: >-
+    target: |
       One ADEPTUS ASTARTES INFANTRY unit from your army that was selected as the target of one or
       more of the attacking unit's attacks.
-    effect: >-
+    effect: |
       Until the end of the phase, each time an attack targets your unit, if the attacking model is
       within 6" of your unit, models in your unit have a 4+ invulnerable save against that attack.
       Primaris Neophyte models have a 5+ invulnerable save against that attack instead.
@@ -30,7 +30,7 @@ stratagems:
     cp: 1
     when: Your Shooting phase or the Fight phase.
     target: One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to shoot or fight this phase.
-    effect: >-
+    effect: |
       Until the end of the phase, each time a model in your unit makes an attack that targets the
       closest eligible target, you can re-roll the Hit roll.
     phases:
@@ -41,7 +41,7 @@ stratagems:
     category: Strategic Ploy
     cp: 1
     when: Your opponent's Shooting phase, just after an enemy unit has shot.
-    target: >-
+    target: |
       One ADEPTUS ASTARTES INFANTRY unit from your army that was selected as the target of one or
       more of the attacking unit's attacks.
     effect: Your unit can make a Normal move, but must end that move as close as possible to that enemy unit.
@@ -113,7 +113,7 @@ units:
         player_turn: either
       - id: 400c8d09-b19a-492d-9c0d-d71bb306fc92
         name: Righteous Defiance
-        effect: >-
+        effect: |
           The bearer has the Feel No Pain 5+ ability. In addition, once per battle, when the bearer's
           unit is selected as the target of an attack, it can use this ability. If it does, until the
           end of the phase, models in the bearer's unit have the Feel No Pain 4+ ability.
@@ -126,7 +126,7 @@ units:
     id: 976b33d7-eaf2-45d1-b0b1-0beae765b62a
     model_count: 10
     patrol_squads_model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * 1 Primaris Sword Brother is equipped with: heavy bolt pistol; power weapon.
       
       * 2 Primaris Initiates are equipped with: heavy bolt pistol; Astartes chainsword.
@@ -292,7 +292,7 @@ units:
   - name: Black Templars Impulsor
     id: d07074b0-f79b-40a0-8193-81c0a5e67a2a
     model_count: 1
-    loadout_description: >-
+    loadout_description: |
       This model is equipped with: multi-melta; 2 storm bolters; armoured hull; orbital comms array.
     keywords:
       - models: ALL MODELS
@@ -328,7 +328,7 @@ units:
         damage: 1
     abilities:
       - name: Assault Vehicle
-        effect: >-
+        effect: |
           Units can disembark from this TRANSPORT after it has Advanced. Units that do so count
           as having made a Normal move, and cannot declare a charge that turn.
         phases: [movement]

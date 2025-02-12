@@ -2,10 +2,10 @@ name: "World Eaters: Karagar's Rampagers"
 id: 5590babe-4faf-4fc5-a471-d2903720a529
 abilities:
   - name: Blessings of Khorne
-    description: >-
+    description: |
       Khorne is the god of warfare and slaughter, and provides for those who
       consecrate the battlefield in his name.
-    usage: >-
+    usage: |
       At the start of the battle round, you can make a Blessings of Khorne roll.
       To do so, roll eight D6. You can then use those dice to activate up to two
       Blessings of Khorne from the Blessings of Khorne list (see below). Each
@@ -16,7 +16,7 @@ abilities:
 
       Once activated, each Blessing of Khorne applies to all units from your
       army until the end of the battle round.
-    effect: >-
+    effect: |
       ### WRATHFUL DEVOTION
       
       **Any double.** Models in this unit have the Feel No Pain 6+ ability. If
@@ -43,7 +43,7 @@ stratagems:
     cp: 1
     when: Fight phase
     target: One WORLD EATERS unit from your army.
-    effect: >-
+    effect: |
       Until the end of the phase, each time a model in this unit makes a melee attack,
       add 1 to the Wound roll.
     phases: [fight]
@@ -53,7 +53,7 @@ stratagems:
     cp: 1
     when: Charge phase
     target: One WORLD EATERS unit from your army that made a Charge move this phase.
-    effect: >-
+    effect: |
       Until the end of the turn:
       
       * That unit is eligible to declare a charge in the Charge phase even if it Advanced or Fell Back this turn.
@@ -66,7 +66,7 @@ stratagems:
     cp: 1
     when: Fight phase, after an enemy unit has fought
     target: One WORLD EATERS unit from your army that is within Engagement Range of that enemy unit.
-    effect: >-
+    effect: |
       That WORLD EATERS unit is eligible to fight, even if it has already fought this phase.
     phases: [fight]
     player_turn: your
@@ -133,7 +133,7 @@ units:
     enhancements:
       - id: 6d0da6e3-ec22-4bd2-9c96-73cd0deb5ca6
         name: Skulls for Khorne
-        effect: >-
+        effect: |
           Each time the bearer destroys an enemy unit with a melee attack, roll
           one D6: on a 2+, you gain 1CP.
         phases: [fight]
@@ -148,7 +148,7 @@ units:
     id: 01bfb4e9-0d8b-4c6c-ae96-4dc9fce0d8d0
     model_count: 10
     unit_count: 2
-    loadout_description: >-
+    loadout_description: |
       
       * 1 Khorne Berzerker Champion is equipped with: plasma pistol; Berzerker chainblade.
       
@@ -219,7 +219,7 @@ units:
   - name: Jakhals
     id: a61f24ab-2a74-4fc1-a8bc-97e47babd1cb
     model_count: 10
-    loadout_description: >-
+    loadout_description: |
     
       * 1 Jakhal Pack Leader is equipped with: autopistol; Jakhal chainblades.
       

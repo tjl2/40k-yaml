@@ -2,7 +2,7 @@ name: "Adeptus Mechanicus: Maniple Verask-Alpha"
 id: 97d77e37-a3b2-4adb-829a-8b63fd6c9f3d
 abilities:
   - name: Doctrina Imperatives
-    effect: >-
+    effect: |
       At the start of the battle round, you can select one of the Doctrina
       Imperatives below. Until the end of the battle round, that Doctrina
       Imperative is active for your army, and all units from your army that
@@ -31,11 +31,11 @@ stratagems:
     category: Strategic Ploy
     cp: 1
     when: Any phase
-    target: >-
+    target: |
       One TECH-PRIEST model from your army that was just destroyed by an attack
       made by an enemy model. You can use this Stratagem on that model even though
       it was just destroyed.
-    effect: >-
+    effect: |
       Until the end of the battle, each time an ADEPTUS MECHANICUS model from your
       army makes an attack that targets that enemy model's unit, re-roll a Hit roll of 1.
     phases:
@@ -45,10 +45,10 @@ stratagems:
   - name: Reactive Field-Shroud
     category: Battle Tactic
     cp: 1
-    when: >-
+    when: |
       Your opponent's Shooting phase or the Fight phase, just after an enemy unit has
       selected its targets.
-    target: >-
+    target: |
       One TECH-PRIEST or SKITARII unit from your army that was selected as the target of
       one or more of the attacking unit's attacks.
     effect: Until the end of the phase, models in your unit have a 4+ invulnerable save.
@@ -107,13 +107,13 @@ units:
         damage: 2
     abilities:
       - name: Enginseer
-        effect: >-
+        effect: |
           While this model is within 3" of one or more friendly ADEPTUS MECHANICUS
           VEHICLE units, unless it is leading a unit, this model has the Lone Operative ability.
         phases: [shooting]
         player_turn: opponent
       - name: Omnissiah's Blessing
-        effect: >-
+        effect: |
           In your Command phase, select one friendly ADEPTUS MECHANICUS model within
           3" of this model. That model regains up to D3 lost wounds. Each model can only
           be selected for this ability once per Command phase.
@@ -122,7 +122,7 @@ units:
     enhancements:
       - id: 4544d5c2-a27d-4dab-997b-0100504b35bc
         name: Omniballistic Data Tether
-        effect: >-
+        effect: |
           Each time the bearer's unit is selected to shoot, you can re-roll one
           Hit roll and you can re-roll one Wound roll when resolving those
           attacks.
@@ -130,7 +130,7 @@ units:
         player_turn: your
       - id: 1e476808-25a0-4ef9-ae90-4dd594f4eda3
         name: Imperative Surge-Wafer
-        effect: >-
+        effect: |
           Once per battle, when the bearer's unit is selected to shoot, it can
           use this ability. If it does, until the end of the phase, ranged
           weapons equipped by models in the bearer's unit have the [PRECISION]
@@ -154,7 +154,7 @@ units:
   - name: Skitarii Rangers
     id: 98b70dd7-ecae-46ee-8a2c-0bda289855fd
     model_count: 10
-    loadout_description: >-
+    loadout_description: |
       * 1 Skitarii Ranger Alpha is equipped with: Mechanicus pistol; Alpha combat weapon.
 
       * 6 Skitarii Rangers are equipped with: galvanic rifle; close combat weapon.
@@ -241,7 +241,7 @@ units:
   - name: Kataphron Destroyers
     id: d4b4ab73-1d71-4939-a8ef-7d05df25a1ca
     model_count: 3
-    loadout_description: >-
+    loadout_description: |
       * 1 Kataphron Destroyer is equipped with: heavy grav-cannon; phosphor blaster; close combat weapon.
 
       * 2 Kataphron Destroyers are equipped with: Kataphron plasma culverin; cognis flamer; close combat weapon.
@@ -320,7 +320,7 @@ units:
   - name: Onager Dunecrawler
     id: 31ffcbf9-321f-4c52-bdfe-edb853c5abfe
     model_count: 1
-    loadout_description: >-
+    loadout_description: |
       This model is equipped with: Daedalus missile launcher; cognis heavy stubber; Icarus array;
       Dunecrawler legs; broad spectrum data-tether.
     keywords:
@@ -369,7 +369,7 @@ units:
         damage: 1
     wargear_abilities:
       - name: Damaged
-        effect: >-
+        effect: |
           While this model has 1-4 wounds remaining, each time this model makes an attack,
           subtract 1 from the Hit roll.
         phases: [shooting]

@@ -2,7 +2,7 @@ name: "Aeldari: The Fatebreakers"
 id: f97c6e1d-4b3f-45a2-9d8c-a7b2c0d3e4f5
 abilities:
   - name: Strands of Fate
-    effect: >-
+    effect: |
       At the start of the battle, make a Strands of Fate roll by rolling twelve D6.
       If you wish, you can then re-roll all of these dice, but if you do, roll one less D6.
       You can continue re-rolling all of the dice in this manner, rolling one less D6 each time
@@ -44,10 +44,10 @@ stratagems:
   - name: Whip-Fast Reactions
     category: Battle Tactic
     cp: 1
-    when: >-
+    when: |
       Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected
       its targets.
-    target: >-
+    target: |
       One AELDARI INFANTRY or AELDARI MOUNTED unit from your army that was selected as the target
       of one or more of the attacking unit's attacks.
     effect: Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.
@@ -67,7 +67,7 @@ stratagems:
     category: Strategic Ploy
     cp: 1
     when: End of your Shooting phase.
-    target: >-
+    target: |
       Up to two AELDARI MOUNTED units from your army that are not within Engagement Range of one or
       more enemy units, or one AELDARI INFANTRY unit from your army that is not within Engagement
       Range of one or more enemy units.
@@ -131,7 +131,7 @@ units:
         damage: 3
     abilities:
       - name: Fortune (Psychic)
-        effect: >-
+        effect: |
           In your Command phase, you can roll one D6: on a 2+, select one friendly AELDARI unit
           within 12" of this PSYKER. Until the start of your next Command phase, each time an
           attack targets that unit, subtract 1 from the Wound roll.
@@ -155,7 +155,7 @@ units:
     enhancements:
       - id: 4b062745-42c1-428c-a1fb-6c3769b76b3a
         name: Foresight (Psychic)
-        effect: >-
+        effect: |
           Once per turn, you can target the bearer's unit with the Fire Overwatch Stratagem for
           0CP. If the bearer's unit is within range of an objective marker you control, hits are
           scored on unmodified Hit rolls of 4+ while resolving that Stratagem. Otherwise, hits
@@ -166,7 +166,7 @@ units:
         player_turn: opponent
       - id: 2a3bdf1a-7d4d-4de5-a23e-1aa3f0684ea2
         name: Eldritch Might (Psychic)
-        effect: >-
+        effect: |
           Each time the bearer makes a Psychic attack, re-roll a Hit roll of 1, re-roll a Wound
           roll of 1 and re-roll a Damage roll of 1.
         phases:
@@ -177,7 +177,7 @@ units:
   - name: Guardian Defenders
     id: a6b7c4d2-e9f8-4c3d-b5a6-d7e8f9c0d1b2
     model_count: 11
-    loadout_description: >-
+    loadout_description: |
       * 10 Guardian Defenders are equipped with: shuriken catapult; close combat weapon.
 
       * 1 Heavy Weapon Platform is equipped with: starcannon; close combat weapon.
@@ -213,14 +213,14 @@ units:
         damage: 1
     abilities:
       - name: Defenders of Fate
-        effect: >-
+        effect: |
           At the end of your Command phase, for each objective marker you control that has
           one or more units from your army with this ability within range of it, roll one D6
           and add it to your Fate dice pool displaying the result you just rolled.
         phases: [command]
         player_turn: your
       - name: Crewed Platform
-        effect: >-
+        effect: |
           When the last Guardian Defender model in this unit is destroyed, any remaining
           Heavy Weapon Platform models in this unit are also destroyed.
         phases:
@@ -250,7 +250,7 @@ units:
     id: b5c4d3e1-f7a9-4d2b-8c6a-e7d8f9c0d1b2
     model_count: 6
     patrol_squads_model_count: 3
-    loadout_description: >-
+    loadout_description: |
       * 4 Windriders are equipped with: twin shuriken catapult; close combat weapon.
 
       * 2 Windriders are equipped with: scatter laser; close combat weapon.
@@ -287,7 +287,7 @@ units:
         damage: 1
     abilities:
       - name: Swift Demise
-        effect: >-
+        effect: |
           Each time a model in this unit makes a ranged attack that targets the closest eligible
           target, re-roll a Hit roll of 1. If the target of that attack is within range of an
           objective marker your opponent controls, you can re-roll the Hit roll instead.

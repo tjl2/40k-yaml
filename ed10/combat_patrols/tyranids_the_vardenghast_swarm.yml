@@ -2,16 +2,16 @@ name: "Tyranids: The Vardenghast Swarm"
 id: 587c6cb2-da18-44e8-9719-dfef5483926b
 abilities:
   - name: Synapse
-    description: >-
+    description: |
       Some Tyranids serve as synaptic conduits or nodal relays through which a
       portion of the Hive Mind's iron will flows, overriding the natural
       instincts of the swarm to direct the teeming warrior-beasts to function as
       a single, gestalt organism on the battlefield.
-    usage: >-
+    usage: |
       While a Tyranids unit from your army is within 6" of one or more friendly
       Synapse models, that Tyranids unit is said to be within Synapse Range of
       those models and of your army.
-    effect: >-
+    effect: |
       Each time a Tyranids unit from your army takes a Battle-shock test, if it
       is within Synapse Range of your army, take that test on 3D6 instead of
       2D6.
@@ -23,16 +23,16 @@ abilities:
       - fight
     player_turn: either
   - name: Shadow In The Warp
-    description: >-
+    description: |
       Tyranids flood the battlefield with the psychic signature of the hive
       fleet, an icy, alien dread that gnaws at the minds of their prey and
       smothers even the most stalwart courage. When faced with such unfathomable
       horror, many are driven insane or suffer catastrophic neural damage.
-    usage: >-
+    usage: |
       Once per battle, in either player's Command phase, if one or more units
       from your army with this ability are on the battlefield, you can unleash
       the Shadow in the Warp.
-    effect: >-
+    effect: |
       Each enemy unit on the battlefield must take a Battle-shock test.
     phases: [command]
     player_turn: either
@@ -40,13 +40,13 @@ stratagems:
   - name: Hyper Reactive
     category: Battle Tactic
     cp: 1
-    when: >-
+    when: |
       Your opponent's Shooting phase or the Fight phase, just after an enemy
       unit has selected its targets.
-    target: >-
+    target: |
       One _Tyranids Infantry_ unit from your army that was selected as the
       target of one or more of the attacking unit's attacks.
-    effect: >-
+    effect: |
       Until the end of the phase, each time an attack targets your unit,
       subtract 1 from the Hit roll.
     phases: [shooting, fight]
@@ -55,10 +55,10 @@ stratagems:
     category: Battle Tactic
     cp: 1
     when: Your Shooting phase or the Fight phase.
-    target: >-
+    target: |
       One _Tyranids_ unit from your army that has not been selected to shoot
       or fight this phase.
-    effect: >-
+    effect: |
       Until the end of the phase, each time a model in your unit makes an
       attack that targets the closest eligible target, you can re-roll the Hit
       roll.
@@ -68,10 +68,10 @@ stratagems:
     category: Strategic Ploy
     cp: 1
     when: The Reinforcements step of your Movement phase.
-    target: >-
+    target: |
       One _Termagants_ unit from your army. You can use this Stratagem on that
       unit even if it is destroyed.
-    effect: >-
+    effect: |
       If your unit is not destroyed, return up to D6 destroyed models to it.
       Otherwise, add a new unit to your army identical to your destroyed unit,
       in Strategic Reserves, containing 2D6 models.
@@ -104,7 +104,7 @@ units:
         damage: 2
     abilities:
       - name: Death Blow
-        effect: >-
+        effect: |
           If this model is destroyed by a melee attack, if it has not fought
           this phase, roll one D6: on a 4+, do not remove it from play. The
           destroyed model can fight after the attacking unit has finished
@@ -128,7 +128,7 @@ units:
     enhancements:
       - id: 9b9520d6-6921-468f-9579-88bebbd1a26a
         name: Psychostatic Veil
-        effect: >-
+        effect: |
           The bearer has the _Lone Operative_ ability and a 4+ invulnerable save.
           In addition, each time a melee attack targets the bearer, subtract 1
           from the Hit roll.
@@ -138,7 +138,7 @@ units:
         player_turn: opponent
       - id: 7f735c8d-1d4f-41ae-ab0e-8c730729f901
         name: Secretion Goad
-        effect: >-
+        effect: |
           Once per turn, when a friendly _Tyranids_ unit within 6" of the bearer
           is selected to shoot or fight, the bearer can use this ability. If it
           does, until the end of the phase, improve the Armour Penetration
@@ -183,7 +183,7 @@ units:
         damage: 2
     abilities:
       - name: Feeding Frenzy
-        effect: >-
+        effect: |
           Each time this model makes a melee attack that targets a unit that is
           below its Starting Strength, add 1 to the Hit roll. If that target is
           also Below Half-strength, add 1 to the Wound roll as well.
@@ -234,14 +234,14 @@ units:
         damage: 1
     abilities:
       - name: Patrol Squads
-        effect: >-
+        effect: |
           At the start of the Declare Battle Formations step, before any units
           have been set up, this unit can be split into two units, each
           containing ten models.
         phases: [command]
         player_turn: your
       - name: Skulking Horrors
-        effect: >-
+        effect: |
           Once per turn, when an enemy unit ends a Normal, Advance or Fall Back
           move within 9" of this unit, if this unit is not within Engagement
           Range of one or more enemy units, it can make a Normal move of up to D6".
@@ -291,7 +291,7 @@ units:
         damage: 1
     abilities:
       - name: Disruption Bombardment
-        effect: >-
+        effect: |
           In your Shooting phase, after this unit has shot, select one enemy
           INFANTRY unit hit by one or more of those attacks. Until the end of
           your opponent's next turn, that enemy unit is disrupted. While a unit
@@ -331,7 +331,7 @@ units:
         damage: 1
     abilities:
       - name: Pouncing Leap
-        effect: >-
+        effect: |
           You can target this unit with the Heroic Intervention Stratagem for
           0CP, and can do so even if you have already used that Stratagem on a
           different unit this phase.

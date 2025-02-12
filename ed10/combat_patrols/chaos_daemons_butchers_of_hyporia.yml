@@ -2,7 +2,7 @@ name: "Chaos Daemons: Butchers of Hyporia"
 id: e47a9145-b0b8-49c7-a79d-832db1611430
 abilities:
   - name: The Shadow of Chaos
-    effect: >-
+    effect: |
       Certain areas of the battlefield are considered to be within your army's Shadow of Chaos, as follows:
 
       * Your deployment zone is always within your army's Shadow of Chaos.
@@ -39,7 +39,7 @@ stratagems:
     cp: 1
     when: Fight phase, just after an enemy unit has selected its targets.
     target: One BLOODLETTERS unit from your army that was selected as the target of one or more of the attacking unit's attacks.
-    effect: >-
+    effect: |
       Until the end of the phase, each time a model in your unit is destroyed, if that model has not
       fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can
       fight after the attacking model's unit has finished making its attacks, and is then removed
@@ -50,7 +50,7 @@ stratagems:
     category: Strategic Ploy
     cp: 1
     when: Your opponent's Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.
-    target: >-
+    target: |
       One FLESH HOUNDS unit from your army that is within 6" of that enemy unit and has not been
       targeted with the Fire Overwatch Stratagem this phase.
     effect: Your unit can make a Normal move of up to 6".
@@ -61,7 +61,7 @@ stratagems:
     category: Battle Tactic
     cp: 1
     when: Your opponent's Shooting phase, just after an enemy unit has selected its targets.
-    target: >-
+    target: |
       One LEGIONES DAEMONICA unit from your army that was selected as the target of one or more of
       the attacking unit's attacks.
     effect: Until the end of the phase, models in your unit have a 4+ invulnerable save.
@@ -131,7 +131,7 @@ units:
     id: a6488c0f-1d1f-41e8-8bcc-bc50fcff6fd6
     model_count: 10
     unit_count: 2
-    loadout_description: >-
+    loadout_description: |
       * 8 models are equipped with: hellblade.
 
       * 1 model is equipped with: hellblade; daemonic icon.
@@ -171,7 +171,7 @@ units:
     id: a1ff98f6-a273-44db-87dd-5ef568d11c8f
     model_count: 5
     unit_count: 2
-    loadout_description: >-
+    loadout_description: |
       * 1 Gore Hound is equipped with: burning roar; gore-drenched fangs; collar of Khorne.
 
       * 4 Flesh Hounds are equipped with: gore-drenched fangs; collar of Khorne.
@@ -223,7 +223,7 @@ units:
   - name: Bloodcrushers
     id: 01923117-8863-4137-9556-4afc11440c09
     model_count: 3
-    loadout_description: >-
+    loadout_description: |
       * 1 model is equipped with: hellblade; Juggernaut's bladed horn.
       
       * 1 model is equipped with: hellblade; Juggernaut's bladed horn; daemonic icon.

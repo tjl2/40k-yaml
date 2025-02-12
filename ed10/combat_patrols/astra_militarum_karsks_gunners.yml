@@ -2,7 +2,7 @@ name: "Astra Militarum: Karsk's Gunners"
 id: 3a8f9d62-7a3c-4f2b-9e8d-c4b6a1d2e0f3
 abilities:
   - name: Voice of Command
-    effect: >-
+    effect: |
       In your Command phase, OFFICER models from your army with this ability can issue Orders.
       Each OFFICER's datasheet will specify how many Orders it can issue and which units are
       eligible to receive those Orders. Each time an OFFICER model issues an Order, select one
@@ -35,10 +35,10 @@ stratagems:
     category: Strategic Ploy
     cp: 1
     when: Reinforcements step of your Movement phase.
-    target: >-
+    target: |
       One destroyed CADIAN SHOCK TROOPS unit from your army. You can use this
       Stratagem on that unit even though it is destroyed.
-    effect: >-
+    effect: |
       Add a new unit to your army identical to your destroyed unit, at its
       original Starting Strength. Set that unit up anywhere on the battlefield
       wholly within 9" of your battlefield edge and not within Engagement Range
@@ -50,7 +50,7 @@ stratagems:
     cp: 1
     when: Your Shooting phase.
     target: Any number of ASTRA MILITARUM units from your army, and one enemy unit.
-    effect: >-
+    effect: |
       Until the end of the phase, each time a model in one of your selected
       units makes an attack that targets that enemy unit, you can re-roll the
       Hit roll.
@@ -61,7 +61,7 @@ stratagems:
     cp: 2
     when: Start of your opponent's Command phase.
     target: One OFFICER model from your army.
-    effect: >-
+    effect: |
       Until the end of the turn, halve the Move characteristic of enemy models,
       halve Advance rolls made for enemy units, enemy units cannot declare a
       charge and each time an enemy model makes a ranged attack, subtract 1
@@ -75,7 +75,7 @@ units:
     id: 25ebeb13-9d5b-44d1-8cf3-47cfd4dbda52
     warlord: true
     model_count: 5
-    loadout_description: >-
+    loadout_description: |
       - Karsk is equipped with: plasma pistol; power weapon.
 
       - 1 Cadian Veteran Guardsman is equipped with: bolt pistol; power fist.
@@ -196,7 +196,7 @@ units:
     enhancements:
       - id: 7eafaa20-4a14-443f-be01-d8760e8cbbe4
         name: Command Laurels
-        effect: >-
+        effect: |
           In your Command phase, if the bearer is on the battlefield, you gain 1CP. In addition,
           each time the bearer issues an Order, it is issued to all friendly
           **ASTRA MILITARUM** units on the battlefield.
@@ -204,7 +204,7 @@ units:
         player_turn: your
       - id: d3b7c8b3-2eb4-474b-9528-4eb9f5b51d1e
         name: Gunnery Officer (Aura)
-        effect: >-
+        effect: |
           In your Command phase, if the bearer is on the battlefield, you gain 1CP. In addition,
           while a friendly ARTILLERY unit is within 6" of the bearer's unit:
 
@@ -219,7 +219,7 @@ units:
     id: c6d7e8f9-a0b1-4c5d-8e7f-6a9b0c1d2e3f
     model_count: 10
     unit_count: 2
-    loadout_description: >-
+    loadout_description: |
       * 1 Shock Trooper Sergeant is equipped with: laspistol; chainsword.
 
       * 7 Shock Troopers are equipped with: lasgun; close combat weapon.
@@ -299,7 +299,7 @@ units:
     id: d5e6f7a8-b9c0-4d1e-8f2a-3b4c5d6e7f8a
     model_count: 2
     patrol_squads_model_count: 1
-    loadout_description: >-
+    loadout_description: |
       * 1 model is equipped with: bombast field gun; lasgun; laspistol; battery
       close combat weapons.
 
@@ -360,7 +360,7 @@ units:
         damage: 1
     abilities:
       - name: Rearm, Reload, Fire
-        effect: >-
+        effect: |
           While this unit is being affected by an Order, provided it Remained Stationary this turn,
           Heavy weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
         phases: [shooting]
@@ -378,7 +378,7 @@ units:
   - name: Armoured Sentinel
     id: e4f5a6b7-c8d9-4e1f-8a2b-3c4d5e6f7a8b
     model_count: 1
-    loadout_description: >-
+    loadout_description: |
       This model is equipped with: hunter-killer missile; plasma cannon; close combat weapon.
     keywords:
       - models: ALL MODELS
@@ -426,7 +426,7 @@ units:
         damage: 1
     abilities:
       - name: Mobile Hunter-killers
-        effect: >-
+        effect: |
           Each time a model in this unit makes an attack that targets a MONSTER or VEHICLE unit, you can
           re-roll the Wound roll.
         phases:

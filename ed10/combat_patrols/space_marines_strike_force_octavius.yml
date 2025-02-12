@@ -2,14 +2,14 @@ name: "Space Marines: Strike Force Octavius"
 id: f4d14a28-12db-42ca-a2c6-ca9e69cb8465
 abilities:
   - name: Oath of Moment
-    description: >-
+    description: |
       In battle, Space Marines swear mighty oaths to destroy the enemies of the
       Emperor…
-    usage: >-
+    usage: |
       At the start of your Command phase, select one unit from your opponent's
       army. Until the start of your next Command phase, that enemy unit is your
       Oath of Moment target.
-    effect: >-
+    effect: |
       Each time a model with this ability makes an attack that targets your Oath
       of Moment target, you can re-roll the Hit roll.
     target: One enemy unit.
@@ -21,13 +21,13 @@ stratagems:
   - name: Gene-Wrought Resilience
     category: Battle Tactic
     cp: 1
-    when: >-
+    when: |
       Your opponent's Shooting phase or the Fight phase, just after an enemy
       unit has selected its targets.
-    target: >-
+    target: |
       One _Adeptus Astartes_ unit from your army that was selected as the
       target of one or more of the attacking unit's attacks.
-    effect: >-
+    effect: |
       Until the end of the phase, each time an attack targets your unit, if
       the Strength characteristic of that attack is greater than your unit's
       Toughness characteristic, subtract 1 from the Wound roll.
@@ -37,10 +37,10 @@ stratagems:
     category: Battle Tactic
     cp: 1
     when: Fight phase.
-    target: >-
+    target: |
       One _Terminator_ unit from your army that has not been selected to fight
       this phase.
-    effect: >-
+    effect: |
       Until the end of the phase, each time a model in your unit makes an
       attack, re-roll a Wound roll of 1. If that attack targets a _Monster_ or
       _Vehicle_ unit, you can re-roll the Wound roll instead.
@@ -50,10 +50,10 @@ stratagems:
     category: Strategic Ploy
     cp: 1
     when: End of your Comand phase
-    target: >-
+    target: |
       One _Adeptus Astartes_ unit from your army that is within range of an
       objective marker you control.
-    effect: >-
+    effect: |
       That objective marker remains under your control, even if you have no
       models within range of it, until your opponent controls it at the start
       or end of any turn.
@@ -105,7 +105,7 @@ units:
     enhancements:
       - id: 37fb4aee-2e0a-40c9-be96-4b160bbf3fd6
         name: Champion Duellist
-        effect: >-
+        effect: |
           The bearer's melee weapons have the **[PRECISION]** and **[LETHAL HITS]**
           abilities.
         phases:
@@ -114,7 +114,7 @@ units:
         player_turn: your
       - id: 5593f62f-c3ac-4ca1-9550-3ae5f918f8b7
         name: Oathsworn Determination
-        effect: >-
+        effect: |
           Improve the Objective Control characteristic of models in the bearer's
           unit by 1.
         phases:
@@ -187,7 +187,7 @@ units:
     faction_abilities: [Oath of Moment]
     abilities:
       - name: Veil of Time (Psychic)
-        effect: >-
+        effect: |
           While this model is leading a unit, weapons equipped by models
           in that unit have the [SUSTAINED HITS 1] ability.
         phases: [shooting, fight]
@@ -257,7 +257,7 @@ units:
   - name: Terminator Squad
     id: f8dd1de3-2e52-4418-9704-71225f833853
     model_count: 5
-    loadout_description: >-
+    loadout_description: |
       * The Terminator Sergeant is equipped with: storm bolter; power weapon.
 
       * 1 Terminator is equipped with: assault cannon; power fist.
