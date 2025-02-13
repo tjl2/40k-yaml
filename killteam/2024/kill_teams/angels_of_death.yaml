@@ -92,18 +92,22 @@ firefight_ploys:
       - counteracting
 faction_equipment:
   - name: Purity Seals
+    id: 4a31dd6c-8ca4-4938-aa59-aed63f4f608a
     quantity: 1
     description: >-
       Once per turning point, when a friendly ANGEL OF DEATH operative is shooting, fighting or retaliating, if you roll two or more fails, you can discard one of them to retain another as a normal success instead.
   - name: Chapter Reliquaries
+    id: a7932ec5-67b5-4581-8e49-17f603c6e6c8
     quantity: 1
     description: >-
       You can use the Wrath of Vengeance firefight ploy for 0CP if the specified friendly operative has an Engage order.
   - name: Tilting Shields
+    id: 6a00848d-7f02-439d-9efc-e3863278bdd4
     quantity: 1
     description: >-
       Once per turning point, when a friendly ANGEL OF DEATH operative is fighting or retaliating, after your opponent rolls their attack dice, you can use this rule. If you do, your opponent cannot retain attack dice results of less than 6 as critical successes during that sequence (e.g. as a result of the [Lethal], [Rending] or [Severe] weapon rules).
   - name: Auspex
+    id: 9a6ac51e-9997-4584-8469-3ff343d23ad1
     quantity: 1
     description: >-
       Once per turning point, when a friendly ANGEL OF DEATH operative performs the Shoot action and you're selecting a valid target, you can use this rule. If you do, until the end of the activation/counteraction, enemy operatives within 8" of that friendly operative cannot be obscured.
