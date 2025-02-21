@@ -6,11 +6,11 @@
   actions:
     - ap: 0
       name: Ammo Resupply
-      description: |
-        * One of your Ammo Cache markers the active operative controls is used this turning point.
-        * Until the start of the next turning point, whenever this operative is shooting with a weapon from its datacard, you can re-roll one of your attack dice.
-      conditions: |
-        An operative cannot perform this action while within control range of an enemy operative, if that marker isn't yours or if that marker has been used this turning point.
+      effects: 
+        - One of your Ammo Cache markers the active operative controls is used this turning point.
+        - Until the start of the next turning point, whenever this operative is shooting with a weapon from its datacard, you can re-roll one of your attack dice.
+      conditions:
+        - An operative cannot perform this action while within control range of an enemy operative, if that marker isn't yours or if that marker has been used this turning point.
 
 - name: Razor Wire
   id: 9f5d8815-c5a2-4ef7-884a-664822182ca1
@@ -70,12 +70,11 @@
   actions:
     - ap: 1
       name: Move With Barricade
-      description: |
-        The same as the Reposition action, except the active operative can move no more than its Move stat minus 2" and cannot climb, drop, jump or use any kill team’s rules that remove it and set it back up again (e.g. HEARTHKYN SALVAGER FLY, MANDRAKE SHADOW PASSAGE).
-
-        Before this operative moves, remove the portable barricade it’s connected to. After it moves, set up the portable barricade so it’s connected again.
-      conditions: |
-        This action is treated as a Reposition action. An operative cannot perform this action while within control range of an enemy operative, or during the same activation
+      effects:
+        - The same as the Reposition action, except the active operative can move no more than its Move stat minus 2" and cannot climb, drop, jump or use any kill team’s rules that remove it and set it back up again (e.g. HEARTHKYN SALVAGER FLY, MANDRAKE SHADOW PASSAGE).
+        - Before this operative moves, remove the portable barricade it’s connected to. After it moves, set up the portable barricade so it’s connected again.
+      conditions:
+        - This action is treated as a Reposition action. An operative cannot perform this action while within control range of an enemy operative, or during the same activation
 
 - name: Utility Grenades
   id: 156c6894-926c-4519-b15b-eca1ad6caab9
@@ -85,20 +84,18 @@
   actions:
     - ap: 1
       name: Stun Grenade
-      description: |
-        Select one enemy operative visible to and within 6" of this operative. That operative and each other operative within 1" of it takes a stun test. For an operative to take a stun test, roll one D6: on a 3+, subtract 1 from its APL stat until the end of its next activation.
-      conditions: |
-        An operative cannot perform this action while within control range of an enemy operative, or if you have reached the total number of times your kill team can perform it.
+      effects:
+        - Select one enemy operative visible to and within 6" of this operative. That operative and each other operative within 1" of it takes a stun test. For an operative to take a stun test, roll one D6: on a 3+, subtract 1 from its APL stat until the end of its next activation.
+      conditions:
+        - An operative cannot perform this action while within control range of an enemy operative, or if you have reached the total number of times your kill team can perform it.
     - ap: 1
       name: Smoke Grenade
-      description: |
-        Place one of your Smoke Grenade markers within 6" of this operative. It must be visible to this operative, or on [Vantage terrain] of a terrain feature that’s visible to this operative. The marker creates an area of smoke 1" horizontally and unlimited height vertically from (but not below) it.
-
-        While an operative is wholly within an area of smoke, it’s [obscured] to operatives more than 2" from it, and vice versa. In addition, whenever an operative is shooting an enemy operative wholly within an area of smoke, ignore the [Piercing] weapon rule unless they are within 2" of each other.
-
-        In the Ready step of the next Strategy phase, roll one D3. Remove that Smoke Grenade marker after a number of activations equal to that D3 have been completed or at the end of the turning point (whichever comes first).
-      conditions: |
-        An operative cannot perform this action while within control range of an enemy operative, or if you have reached the total number of times your kill team can perform it.
+      effects:
+        - Place one of your Smoke Grenade markers within 6" of this operative. It must be visible to this operative, or on [Vantage terrain] of a terrain feature that’s visible to this operative. The marker creates an area of smoke 1" horizontally and unlimited height vertically from (but not below) it.
+        - While an operative is wholly within an area of smoke, it’s [obscured] to operatives more than 2" from it, and vice versa. In addition, whenever an operative is shooting an enemy operative wholly within an area of smoke, ignore the [Piercing] weapon rule unless they are within 2" of each other.
+        - In the Ready step of the next Strategy phase, roll one D3. Remove that Smoke Grenade marker after a number of activations equal to that D3 have been completed or at the end of the turning point (whichever comes first).
+      conditions:
+        - An operative cannot perform this action while within control range of an enemy operative, or if you have reached the total number of times your kill team can perform it.
 
 - name: Explosive Grenades
   id: efe2820a-1e05-4ee3-88bb-a39ffb3b2191

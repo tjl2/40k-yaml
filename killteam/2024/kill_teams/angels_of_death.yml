@@ -560,10 +560,10 @@ operatives:
     actions:   
       - name: Optics
         ap: 1
-        description: >-
-          Until the start of this operative’s next activation, whenever it’s shooting, enemy operatives cannot be obscured.
-        conditions: >-
-          This operative cannot perform this action while within control range of an enemy operative.
+        effects:
+          - Until the start of this operative’s next activation, whenever it’s shooting, enemy operatives cannot be obscured.
+        conditions:
+          - This operative cannot perform this action while within control range of an enemy operative.
     ranged_weapons:
       - name: bolt pistol
         atk: 4
