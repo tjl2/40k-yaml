@@ -193,19 +193,17 @@ operatives:
           - shock
           - stun
     weapon_options:
-      - option_group:
-        - ranged_choices:
+      - ranged_choices:
           - hand flamer
           - heavy bolt pistol
-        - melee_choices:
+        melee_choices:
           - chainsword
           - power fist
           - power weapon
           - thunder hammer
-      - option_group:
-        - ranged_choices:
+      - ranged_choices:
           - plasma pistol
-        - melee_choices:
+        melee_choices:
           - chainsword
 
   - name: Intercessor Sergeant
@@ -287,12 +285,11 @@ operatives:
           - shock
           - stun
     weapon_options:
-      - option_group:
-        - ranged_choices:
+      - ranged_choices:
           - auto bolt rifle
           - bolt rifle
           - stalker bolt rifle
-        - melee_choices:
+        melee_choices:
           - chainsword
           - fists
           - power fist
@@ -448,23 +445,20 @@ operatives:
         dmg: 3/4
         wr: []
     weapon_options:
-      - option_group:
-        - ranged_choices:
+      - ranged_choices:
           - auto bolt rifle
           - auxilliary grenade launcher
-        - melee_choices:
+        melee_choices:
           - fists
-      - option_group:
-        - ranged_choices:
+      - ranged_choices:
           - auxilliary grenade launcher
           - bolt rifle
-        - melee_choices:
+        melee_choices:
           - fists
-      - option_group:
-        - ranged_choices:
+      - ranged_choices:
           - auxilliary grenade launcher
           - stalker bolt rifle
-        - melee_choices:
+        melee_choices:
           - fists
 
   - name: Intercessor Warrior
@@ -510,20 +504,17 @@ operatives:
         dmg: 3/4
         wr: []
     weapon_options:
-      - option_group:
-        - ranged_choices:
+      - ranged_choices:
           - auto bolt rifle
-        - melee_choices:
+        melee_choices:
           - fists
-      - option_group:
-        - ranged_choices:
+      - ranged_choices:
           - bolt rifle
-        - melee_choices:
+        melee_choices:
           - fists
-      - option_group:
-        - ranged_choices:
+      - ranged_choices:
           - stalker bolt rifle
-        - melee_choices:
+        melee_choices:
           - fists
 
   - name: Heavy Intercessor Gunner
