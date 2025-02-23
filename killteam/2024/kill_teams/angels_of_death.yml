@@ -134,7 +134,7 @@ operatives:
         when: 
           - select_operatives
     ranged_weapons:
-      - name: hand flamer
+      - primary_name: hand flamer
         atk: 4
         hit: 2+
         dmg: 3/3
@@ -142,21 +142,23 @@ operatives:
           - range 6"
           - saturate
           - torrent 1"
-      - name: heavy bolt pistol
+      - primary_name: heavy bolt pistol
         atk: 4
         hit: 3+
         dmg: 3/4
         wr:
           - range 8"
           - piercing crits 1
-      - name: plasma pistol (standard)
+      - primary_name: plasma pistol
+        secondary_name: standard
         atk: 4
         hit: 3+
         dmg: 3/5
         wr:
           - range 8"
           - piercing 1
-      - name: plasma pistol (supercharge)
+      - primary_name: plasma pistol 
+        secondary_name: supercharge
         atk: 4
         hit: 3+
         dmg: 4/5
@@ -166,24 +168,24 @@ operatives:
           - lethal
           - piercing 1
     melee_weapons:
-      - name: chainsword
+      - primary_name: chainsword
         atk: 5
         hit: 3+
         dmg: 4/5
         wr: []
-      - name: power fist
+      - primary_name: power fist
         atk: 5
         hit: 4+
         dmg: 5/7
         wr:
           - brutal
-      - name: power weapon
+      - primary_name: power weapon
         atk: 5
         hit: 3+
         dmg: 4/6
         wr:
           - lethal 5+
-      - name: thunder hammer
+      - primary_name: thunder hammer
         atk: 5
         hit: 4+
         dmg: 5/6
@@ -227,19 +229,20 @@ operatives:
         when: 
           - select_operatives
     ranged_weapons:
-      - name: auto bolt rifle
+      - primary_name: auto bolt rifle
         atk: 4
         hit: 3+
         dmg: 3/4
         wr:
           - torrent 1"
-      - name: bolt rifle
+      - primary_name: bolt rifle
         atk: 4
         hit: 3+
         dmg: 3/4
         wr:
           - piering crits 1
-      - name: stalker bolt rifle (heavy)
+      - primary_name: stalker bolt rifle
+        secondary_name: heavy
         atk: 4
         hit: 3+
         dmg: 3/5
@@ -247,35 +250,36 @@ operatives:
           - heavy (dash only)
           - lethal 5+
           - piercing crits 1
-      - name: stalker bolt rifle (mobile)
+      - primary_name: stalker bolt rifle
+        secondary_name: mobile
         atk: 4
         hit: 3+
         dmg: 3/4
         wr: []
     melee_weapons:
-      - name: chainsword
+      - primary_name: chainsword
         atk: 4
         hit: 3+
         dmg: 4/5
         wr: []
-      - name: fists
+      - primary_name: fists
         atk: 4
         hit: 3+
         dmg: 3/4
         wr: []
-      - name: power fist
+      - primary_name: power fist
         atk: 4
         hit: 4+
         dmg: 5/7
         wr:
           - brutal
-      - name: power weapon
+      - primary_name: power weapon
         atk: 4
         hit: 3+
         dmg: 4/6
         wr:
           - lethal 5+
-      - name: thunder hammer
+      - primary_name: thunder hammer
         atk: 4
         hit: 4+
         dmg: 5/6
@@ -315,14 +319,16 @@ operatives:
         when: 
           - firefight_phase
     ranged_weapons:
-      - name: plasma pistol (standard)
+      - primary_name: plasma pistol
+        secondary_name: standard
         atk: 4
         hit: 3+
         dmg: 3/5
         wr:
           - range 8"
           - piercing 1
-      - name: plasma pistol (supercharged)
+      - primary_name: plasma pistol 
+        secondary_name: supercharged
         atk: 4
         hit: 3+
         dmg: 4/5
@@ -332,7 +338,7 @@ operatives:
           - lethal 5+
           - piercing 1
     melee_weapons:
-      - name: power fist
+      - primary_name: power fist
         atk: 5
         hit: 3+
         dmg: 5/7
@@ -348,7 +354,7 @@ operatives:
         when: 
           - firefight_phase
     ranged_weapons:
-      - name: heavy bolt pistol
+      - primary_name: heavy bolt pistol
         atk: 4
         hit: 3+
         dmg: 3/4
@@ -356,7 +362,7 @@ operatives:
           - range 8"
           - piercing crits 1
     melee_weapons:
-      - name: chainsword
+      - primary_name: chainsword
         atk: 5
         hit: 3+
         dmg: 4/5
@@ -371,7 +377,7 @@ operatives:
       - ASSAULT INTERCESSOR
       - WARRIOR
     ranged_weapons:
-      - name: heavy bolt pistol
+      - primary_name: heavy bolt pistol
         atk: 4
         hit: 3+
         dmg: 3/4
@@ -379,7 +385,7 @@ operatives:
           - range 8"
           - piercing crits 1
     melee_weapons:
-      - name: chainsword
+      - primary_name: chainsword
         atk: 5
         hit: 3+
         dmg: 4/5
@@ -394,31 +400,34 @@ operatives:
       - INTERCESSOR
       - GUNNER
     ranged_weapons:
-      - name: auto bolt rifle
+      - primary_name: auto bolt rifle
         atk: 4
         hit: 3+
         dmg: 3/4
         wr:
           - torrent 1"
-      - name: auxilliary grenade launcher (frag)
+      - primary_name: auxilliary grenade launcher
+        secondary_name: frag
         atk: 4
         hit: 3+
         dmg: 2/4
         wr:
           - blast 2"
-      - name: auxilliary grenade launcher (krak)
+      - primary_name: auxilliary grenade launcher
+        secondary_name:  krak
         atk: 4
         hit: 3+
         dmg: 4/5
         wr:
           - piercing 1
-      - name: bolt rifle
+      - primary_name: bolt rifle
         atk: 4
         hit: 3+
         dmg: 3/4
         wr:
           - piercing crits 1
-      - name: stalker bolt rifle (heavy)
+      - primary_name: stalker bolt rifle 
+        secondary_name: heavy
         atk: 4
         hit: 3+
         dmg: 3/5
@@ -426,13 +435,14 @@ operatives:
           - heavy (dash only)
           - lethal 5+
           - piercing crits 1
-      - name: stalker bolt rifle (mobile)
+      - primary_name: stalker bolt rifle 
+        secondary_name: mobile
         atk: 4
         hit: 3+
         dmg: 3/4
         wr: []
     melee_weapons:
-      - name: fists
+      - primary_name: fists
         atk: 4
         hit: 3+
         dmg: 3/4
@@ -466,19 +476,20 @@ operatives:
       - INTERCESSOR
       - WARRIOR
     ranged_weapons:
-      - name: auto bolt rifle
+      - primary_name: auto bolt rifle
         atk: 4
         hit: 3+
         dmg: 3/4
         wr:
           - torrent 1"
-      - name: bolt rifle
+      - primary_name: bolt rifle
         atk: 4
         hit: 3+
         dmg: 3/4
         wr:
           - piercing crits 1
-      - name: stalker bolt rifle (heavy)
+      - primary_name: stalker bolt rifle 
+        secondary_name: heavy
         atk: 4
         hit: 3+
         dmg: 3/5
@@ -486,13 +497,14 @@ operatives:
           - heavy (dash only)
           - lethal 5+
           - piercing crits 1
-      - name: stalker bolt rifle (mobile)
+      - primary_name: stalker bolt rifle 
+        secondary_name: mobile
         atk: 4
         hit: 3+
         dmg: 3/4
         wr: []
     melee_weapons:
-      - name: fists
+      - primary_name: fists
         atk: 4
         hit: 3+
         dmg: 3/4
@@ -523,13 +535,15 @@ operatives:
       - HEAVY INTERCESSOR
       - GUNNER
     ranged_weapons:
-      - name: heavy bolter (focused)
+      - primary_name: heavy bolter
+        secondary_name: focused
         atk: 5
         hit: 3+
         dmg: 4/5
         wr:
           - piercing crits 1
-      - name: heavy bolter (sweeping)
+      - primary_name: heavy bolter
+        secondary_name: sweeping
         atk: 4
         hit: 3+
         dmg: 4/5
@@ -537,7 +551,7 @@ operatives:
           - piering crits 1
           - torrent 1"
     melee_weapons:
-      - name: fists
+      - primary_name: fists
         atk: 4
         hit: 3+
         dmg: 3/4
@@ -565,13 +579,14 @@ operatives:
         conditions:
           - This operative cannot perform this action while within control range of an enemy operative.
     ranged_weapons:
-      - name: bolt pistol
+      - primary_name: bolt pistol
         atk: 4
         hit: 3+
         dmg: 3/4
         wr:
           - range 8"
-      - name: bolt sniper rifle (executioner)
+      - primary_name: bolt sniper rifle 
+        secondary_name: executioner
         atk: 4
         hit: 2+
         dmg: 3/4
@@ -580,7 +595,8 @@ operatives:
           - saturate
           - seek light
           - silent
-      - name: bolt sniper rifle (hyperfrag)
+      - primary_name: bolt sniper rifle
+        secondary_name: hyperfrag
         atk: 4
         hit: 2+
         dmg: 2/4
@@ -588,7 +604,8 @@ operatives:
           - blast 1"
           - heavy (dash only)
           - silent
-      - name: bolt sniper rifle (mortis)
+      - primary_name: bolt sniper rifle
+        secondary_name: mortis
         atk: 4
         hit: 2+
         dmg: 3/3
@@ -598,7 +615,7 @@ operatives:
           - piercing 1
           - silent
     melee_weapons:
-      - name: fists
+      - primary_name: fists
         atk: 4
         hit: 3+
         dmg: 3/4
