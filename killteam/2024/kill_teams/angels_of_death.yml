@@ -417,7 +417,7 @@ operatives:
         hit: 3+
         dmg: 3/4
         wr:
-          - piering crits 1
+          - piercing crits 1
       - name: stalker bolt rifle (heavy)
         atk: 4
         hit: 3+
