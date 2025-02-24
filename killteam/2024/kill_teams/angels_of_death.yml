@@ -238,7 +238,7 @@ operatives:
         hit: 3+
         dmg: 3/4
         wr:
-          - piering crits 1
+          - piercing crits 1
       - primary_name: stalker bolt rifle
         secondary_name: heavy
         atk: 4
@@ -539,7 +539,7 @@ operatives:
         hit: 3+
         dmg: 4/5
         wr:
-          - piering crits 1
+          - piercing crits 1
           - torrent 1"
     melee_weapons:
       - primary_name: fists
